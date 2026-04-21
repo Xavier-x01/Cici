@@ -1,0 +1,16 @@
+{
+  "id": "prop-20260421-001",
+  "created_at": "2026-04-21T00:00:00Z",
+  "status": "proposed",
+  "change_type": "add",
+  "target_surface": "users/cici/governed-state/research-methodology/",
+  "summary": "Create a new research-methodology governed-state surface with artifacts for tracking hypotheses, research questions, source citation standards, and experiment conventions.",
+  "rationale": "Currently no governed space exists for research work. Every session starts from scratch with no durable record of: (1) what questions Xavier is actively investigating, (2) what sources are trusted for what topics, (3) what experiments or explorations have been run and what they found, (4) how to consistently cite and cross-reference sources. Without this surface, Claude cannot proactively surface open research questions at session start, cannot accumulate a trail of findings over time, and cannot apply consistent citation standards across sessions. Activating this surface enables: structured hypothesis tracking (question → evidence → finding → status), a citation policy (how to reference sources, what constitutes a credible source per topic), an experiment log schema (setup, result, confidence, follow-up questions), and integration with the session-start ceremony to surface open research threads.",
+  "evidence_refs": [],
+  "proposed_diff_summary": "Create users/cici/governed-state/research-methodology/ directory with three artifacts: (1) methodology.json — defines research conventions: citation standards, source trust levels by topic domain, confidence annotation rules ([A]/[B]/[C] tiers consistent with memory policy), and how findings graduate from hypothesis to synthesis; (2) hypothesis-schema.json — JSON schema for a hypothesis/question entry: fields include id, question, domain, status (open/investigating/answered/abandoned), evidence_refs, finding_summary, confidence, opened_at, updated_at; (3) open-questions.json — initial seeded list of Xavier's active research questions (empty array at creation, populated by Xavier or by Claude during sessions). Update surface-map.json to add research-methodology as a new active surface. Update session-start ceremony (.claude/commands/session-start.md) to include a step that reads open-questions.json and surfaces any questions with status=open or status=investigating.",
+  "confidence": 0.88,
+  "proposer": "claude-code",
+  "reviewer": null,
+  "decided_at": null,
+  "decision_notes": null
+}
