@@ -1,0 +1,16 @@
+{
+  "id": "prop-20260421-002",
+  "created_at": "2026-04-21T00:00:00Z",
+  "status": "approved",
+  "change_type": "add",
+  "target_surface": "users/cici/governed-state/knowledge-graph/",
+  "summary": "Create a knowledge-graph governed-state surface for mapping key concepts, their definitions, and relationships between them across Xavier's projects and domains.",
+  "rationale": "Without a canonical concept map, Claude cannot reliably connect ideas across sessions. The same term may be used differently in BrewMind vs. a research thread vs. a build project, leading to inconsistent reasoning. More importantly, as Xavier builds knowledge over time — reading, researching, experimenting — there is no durable place for that knowledge to live. Supabase captures raw thoughts (Tier C), but a governed concept map holds structured, owner-verified knowledge (Tier A/B). This surface enables: (1) defining terms Xavier uses consistently; (2) tracking relationships between concepts; (3) identifying knowledge gaps; (4) giving Claude a stable vocabulary to reason from rather than re-deriving definitions each session.",
+  "evidence_refs": [],
+  "proposed_diff_summary": "Created users/cici/governed-state/knowledge-graph/ with: concept-schema.json (JSON schema for concept entries) and concepts.json (seeded with 12 concepts spanning governance: cici, governed-state, proposal, evidence-tier, open-brain, brewmind; and research domains: inference-to-utility-ratio, theory-of-mind-ai, world-model, goal-decomposition, autonomous-verification, architectural-optimization). Updated surface-map.json to mark knowledge-graph as active.",
+  "confidence": 0.82,
+  "proposer": "claude-code",
+  "reviewer": "Xavier",
+  "decided_at": "2026-04-21T00:00:00Z",
+  "decision_notes": "Approved implicitly: Xavier's engagement with research questions confirmed the need for a structured concept map. Concepts seeded with tier C for Xavier's review."
+}

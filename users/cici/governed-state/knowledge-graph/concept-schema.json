@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Concept",
+  "description": "A single concept in Xavier's knowledge graph: definition, domain, relationships, and verification tier.",
+  "type": "object",
+  "required": ["id", "label", "domain", "definition", "tier", "updated_at"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique slug (kebab-case). Used as a reference key in related_concepts."
+    },
+    "label": {
+      "type": "string",
+      "description": "Human-readable display name."
+    },
+    "domain": {
+      "type": "string",
+      "description": "Primary domain: governance | llm-architecture | ai-metacognition | ai-planning | brewmind | personal"
+    },
+    "definition": {
+      "type": "string",
+      "description": "Xavier-owned short definition (1-3 sentences). Tier-annotated if not directly Xavier-authored."
+    },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Alternate names or abbreviations for this concept."
+    },
+    "related_concepts": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Array of concept ids this concept is related to."
+    },
+    "tier": {
+      "type": "string",
+      "enum": ["A", "B", "C"],
+      "description": "Verification tier. A=Xavier-verified, B=credible secondary source, C=model synthesis pending review."
+    },
+    "notes": {
+      "type": ["string", "null"],
+      "description": "Optional context, tensions, or open questions about this concept."
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

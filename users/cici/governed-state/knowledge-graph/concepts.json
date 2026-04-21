@@ -1,0 +1,138 @@
+{
+  "version": "1.0",
+  "description": "Xavier's canonical concept map. Schema defined in concept-schema.json. Concepts marked tier C are Claude-seeded and pending Xavier review.",
+  "concepts": [
+    {
+      "id": "cici",
+      "label": "Cici",
+      "domain": "governance",
+      "definition": "Xavier's personal AI memory instance, running on the Open Brain (OB1) MCP server backed by Supabase. Provides persistent, cross-AI knowledge across Claude, ChatGPT, Cursor, and other MCP clients.",
+      "aliases": ["xavier_self"],
+      "related_concepts": ["governed-state", "open-brain", "memory-policy"],
+      "tier": "A",
+      "notes": null,
+      "updated_at": "2026-04-21T00:00:00Z"
+    },
+    {
+      "id": "governed-state",
+      "label": "Governed State",
+      "domain": "governance",
+      "definition": "Canonical durable truth stored in Git. Governed-state artifacts are the authoritative source for Cici's identity, policies, and conventions — they override Supabase runtime data when in conflict.",
+      "aliases": [],
+      "related_concepts": ["proposal", "memory-policy", "surface-map"],
+      "tier": "A",
+      "notes": null,
+      "updated_at": "2026-04-21T00:00:00Z"
+    },
+    {
+      "id": "proposal",
+      "label": "Proposal",
+      "domain": "governance",
+      "definition": "A formal JSON change request for a governed-state surface. Proposals queue in proposals/queue/, are reviewed, and require Xavier's approval before artifacts are created or modified.",
+      "aliases": ["governed-state proposal"],
+      "related_concepts": ["governed-state", "surface-map"],
+      "tier": "A",
+      "notes": null,
+      "updated_at": "2026-04-21T00:00:00Z"
+    },
+    {
+      "id": "evidence-tier",
+      "label": "Evidence Tier (A/B/C)",
+      "domain": "governance",
+      "definition": "A reliability classification applied to any factual claim. [A] = Xavier-verified or primary source. [B] = credible secondary source with traceable URL. [C] = model synthesis, recall, or unverified output. Tier C claims cannot enter proposals or governed-state without promotion.",
+      "aliases": ["A/B/C tiers", "trust tiers"],
+      "related_concepts": ["memory-policy", "research-methodology"],
+      "tier": "A",
+      "notes": null,
+      "updated_at": "2026-04-21T00:00:00Z"
+    },
+    {
+      "id": "open-brain",
+      "label": "Open Brain (OB1)",
+      "domain": "governance",
+      "definition": "The upstream MCP server project (NateBJones-Projects/OB1) that Cici is an instance of. Deployed as a Supabase Edge Function; provides persistent memory query/write tools over MCP.",
+      "aliases": ["OB1"],
+      "related_concepts": ["cici", "memory-policy"],
+      "tier": "A",
+      "notes": null,
+      "updated_at": "2026-04-21T00:00:00Z"
+    },
+    {
+      "id": "brewmind",
+      "label": "BrewMind",
+      "domain": "brewmind",
+      "definition": "Xavier's primary active project: an AI-assisted brewing and beverage intelligence platform. Cici serves as BrewMind's companion memory system.",
+      "aliases": [],
+      "related_concepts": ["cici"],
+      "tier": "A",
+      "notes": "Full contract: docs/companion-agent/brewmind-companion-contract.md",
+      "updated_at": "2026-04-21T00:00:00Z"
+    },
+    {
+      "id": "inference-to-utility-ratio",
+      "label": "Inference-to-Utility Ratio",
+      "domain": "ai-metacognition",
+      "definition": "Xavier's proposed metric for measuring the value returned per unit of compute spent on an AI inference call. Optimizing this ratio requires the AI to model the expected utility of an action before executing it. [C — Xavier's framing, definition pending refinement]",
+      "aliases": ["I/U ratio"],
+      "related_concepts": ["theory-of-mind-ai", "compute-awareness", "ai-metacognition"],
+      "tier": "C",
+      "notes": "Core concept in rq-002. Needs a more precise mathematical definition.",
+      "updated_at": "2026-04-21T00:00:00Z"
+    },
+    {
+      "id": "theory-of-mind-ai",
+      "label": "AI Theory of Mind (Computational)",
+      "domain": "ai-metacognition",
+      "definition": "The capacity of an AI system to model its own internal states, computational costs, and epistemic limits — enabling it to reason about when to act, defer, or request clarification. Distinct from the social Theory of Mind studied in psychology. [C]",
+      "aliases": ["computational ToM", "AI self-model"],
+      "related_concepts": ["inference-to-utility-ratio", "world-model", "ai-metacognition"],
+      "tier": "C",
+      "notes": "Core concept in rq-002. Related to but distinct from standard ToM in cognitive science.",
+      "updated_at": "2026-04-21T00:00:00Z"
+    },
+    {
+      "id": "world-model",
+      "label": "World Model",
+      "domain": "ai-planning",
+      "definition": "An AI system's internal representation of its environment, including the state of the world, causal relationships, and predicted outcomes of actions. A consistent world model is required for coherent long-horizon planning. [B]",
+      "aliases": ["internal model", "environment model"],
+      "related_concepts": ["goal-decomposition", "theory-of-mind-ai", "autonomous-verification"],
+      "tier": "B",
+      "notes": "Core concept in rq-003. Well-established in model-based RL literature.",
+      "updated_at": "2026-04-21T00:00:00Z"
+    },
+    {
+      "id": "goal-decomposition",
+      "label": "Goal Decomposition",
+      "domain": "ai-planning",
+      "definition": "The process by which an AI system breaks an abstract, long-horizon human goal into a sequence of concrete, executable subtasks while preserving the intent of the original goal. Quality of decomposition depends on the fidelity of the system's world model. [B]",
+      "aliases": ["task decomposition", "hierarchical planning"],
+      "related_concepts": ["world-model", "autonomous-verification", "ai-planning"],
+      "tier": "B",
+      "notes": "Core concept in rq-003. Related to HTPS, LLM-as-planner research.",
+      "updated_at": "2026-04-21T00:00:00Z"
+    },
+    {
+      "id": "autonomous-verification",
+      "label": "Autonomous Verification",
+      "domain": "llm-architecture",
+      "definition": "A process by which an AI system validates its own outputs — generated code, architectural changes, plans — without requiring a human reviewer in the loop. Requires a trusted ground-truth signal or a separate verifier model. [C]",
+      "aliases": ["self-verification", "automated validation"],
+      "related_concepts": ["architectural-optimization", "world-model", "goal-decomposition"],
+      "tier": "C",
+      "notes": "Core concept in rq-001. Key open question: what constitutes a reliable verifier signal?",
+      "updated_at": "2026-04-21T00:00:00Z"
+    },
+    {
+      "id": "architectural-optimization",
+      "label": "Architectural Optimization (LLM)",
+      "domain": "llm-architecture",
+      "definition": "Modifications to an LLM's structure, attention patterns, routing, or inference procedure that improve performance, efficiency, or capability — applied at design time or adaptively at runtime. [B]",
+      "aliases": ["model architecture search", "neural architecture optimization"],
+      "related_concepts": ["autonomous-verification", "inference-to-utility-ratio"],
+      "tier": "B",
+      "notes": "Core concept in rq-001. Includes NAS, mixture-of-experts routing, speculative decoding, etc.",
+      "updated_at": "2026-04-21T00:00:00Z"
+    }
+  ]
+}

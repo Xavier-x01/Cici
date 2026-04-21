@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "surface": "research-methodology",
+  "description": "Research conventions, citation standards, confidence annotation rules, and hypothesis lifecycle policy for this instance.",
+  "citation_standards": {
+    "required_fields": ["source", "url_or_ref", "accessed_at", "tier"],
+    "preferred_formats": {
+      "paper": "Author (Year). Title. Venue. URL.",
+      "blog_or_doc": "Author (Year). Title. Site. URL.",
+      "personal": "Xavier (Date). Context note. [A]",
+      "model_synthesis": "Claude (Date). Summary. [C] — verify before promoting."
+    },
+    "tier_assignment": {
+      "A": "Xavier-verified or primary source: original paper, direct experiment, owner decision, first-hand observation.",
+      "B": "Structured summary of A, or reputable third-party documentation with a traceable source URL.",
+      "C": "Model synthesis, brainstorm output, Supabase recall, unverified search result. Never cite as fact without promotion."
+    }
+  },
+  "source_trust_by_domain": {
+    "llm-architecture": [
+      "arxiv.org",
+      "openreview.net",
+      "anthropic.com/research",
+      "deepmind.google/research",
+      "proceedings.neurips.cc",
+      "proceedings.mlr.press"
+    ],
+    "ai-metacognition": [
+      "arxiv.org",
+      "openreview.net",
+      "lesswrong.com",
+      "alignmentforum.org"
+    ],
+    "ai-planning": [
+      "arxiv.org",
+      "openreview.net",
+      "proceedings.neurips.cc",
+      "jair.org"
+    ],
+    "brewmind": ["Xavier-primary", "governed-state"],
+    "governance": ["governed-state", "docs/"]
+  },
+  "confidence_annotation": {
+    "format": "Append [A], [B], or [C] to any factual claim not originating from Xavier directly.",
+    "escalation_path": {
+      "C_to_B": "Locate a traceable secondary source (paper, doc, verified report).",
+      "B_to_A": "Xavier verification or reproduction of the primary source."
+    },
+    "blocking_rule": "Tier C claims must never appear in proposals, synthesis docs, or governed-state artifacts without explicit promotion."
+  },
+  "hypothesis_lifecycle": {
+    "statuses": ["open", "investigating", "answered", "abandoned"],
+    "transitions": {
+      "open_to_investigating": "Xavier or Claude begins actively gathering evidence; at least one evidence_ref added.",
+      "investigating_to_answered": "finding_summary written with tier B or A evidence; confidence >= 0.7.",
+      "investigating_to_abandoned": "Question deprioritized; reason recorded in finding_summary.",
+      "answered_to_open": "New contradicting evidence found; re-opened with a Tension note."
+    },
+    "synthesis_graduation_threshold": {
+      "minimum_tier": "B",
+      "minimum_confidence": 0.7,
+      "destination": "prepared-context/synthesis/"
+    }
+  },
+  "experiment_conventions": {
+    "log_fields": ["id", "hypothesis_id", "setup", "result", "confidence", "follow_up_questions", "run_at"],
+    "storage_policy": {
+      "raw_run": "evidence/",
+      "promoted_finding": "prepared-context/synthesis/"
+    }
+  }
+}

@@ -35,16 +35,21 @@ Each entry:
 
 Then note the file was created as a DOCSYNC action.
 
-## Step 3 — Read CLAUDE.md
+## Step 3 — Read open research questions
+
+Read `users/cici/governed-state/research-methodology/open-questions.json`. List each question where `status` is `"open"` or `"investigating"` with its `id`, `question`, and `status`. If no questions are active, note that explicitly.
+
+## Step 4 — Read CLAUDE.md
 
 Confirm you have read `CLAUDE.md` and note the current default lane (PLAN).
 
-## Step 4 — Surface status paragraph
+## Step 5 — Surface status paragraph
 
 Write a single paragraph to Xavier that covers:
 1. Number of open proposals and their target surfaces (or "queue is clear")
 2. Active open loops (or "no open loops")
-3. Any tensions noted in `docs/companion-agent/brewmind-open-loops.md`
-4. Current lane: PLAN (unless Xavier has already said otherwise)
+3. Open research questions (ids + one-line summary of each, or "no open questions")
+4. Any tensions noted in `docs/companion-agent/brewmind-open-loops.md`
+5. Current lane: PLAN (unless Xavier has already said otherwise)
 
 Do not take any action after this — wait for Xavier's direction.

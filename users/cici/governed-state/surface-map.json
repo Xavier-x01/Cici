@@ -48,6 +48,20 @@
       "path": "users/cici/governed-state/runtime-bridges/",
       "description": "Bridge rules and policies for Supabase and any future runtime connections. Operational policy — not identity truth.",
       "status": "stub"
+    },
+    {
+      "id": "research-methodology",
+      "path": "users/cici/governed-state/research-methodology/",
+      "description": "Research conventions, citation standards, confidence annotation rules, hypothesis lifecycle, and active open questions.",
+      "status": "active",
+      "canonical_files": ["methodology.json", "hypothesis-schema.json", "open-questions.json"]
+    },
+    {
+      "id": "knowledge-graph",
+      "path": "users/cici/governed-state/knowledge-graph/",
+      "description": "Canonical concept map: definitions, domain classifications, and relationships between ideas across all projects and research domains.",
+      "status": "active",
+      "canonical_files": ["concept-schema.json", "concepts.json"]
     }
   ],
   "surface_status_values": {

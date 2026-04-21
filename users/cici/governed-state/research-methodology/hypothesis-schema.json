@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Research Hypothesis / Question",
+  "description": "A single research question tracked through its lifecycle from open to answered.",
+  "type": "object",
+  "required": ["id", "question", "domain", "status", "opened_at", "updated_at"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique slug. Format: rq-NNN",
+      "pattern": "^rq-[0-9]{3,}$"
+    },
+    "question": {
+      "type": "string",
+      "description": "The research question as a complete sentence."
+    },
+    "domain": {
+      "type": "string",
+      "description": "Primary domain: llm-architecture | ai-metacognition | ai-planning | brewmind | governance | personal"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["open", "investigating", "answered", "abandoned"],
+      "description": "Current lifecycle status."
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "File paths, URLs, arxiv IDs, or Supabase thought IDs supporting this question."
+    },
+    "finding_summary": {
+      "type": ["string", "null"],
+      "description": "What has been found so far. Must be tier-annotated ([A], [B], or [C])."
+    },
+    "confidence": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Confidence in the current finding (0.0–1.0). Null while open."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Tag vocabulary from memory-policy tag taxonomy."
+    },
+    "opened_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "description": "Xavier's active research questions. Surfaced at every session-start. Schema defined in hypothesis-schema.json.",
+  "questions": [
+    {
+      "id": "rq-001",
+      "question": "How can LLMs autonomously generate, verify, and integrate architectural optimizations without human-in-the-loop supervision?",
+      "domain": "llm-architecture",
+      "status": "open",
+      "evidence_refs": [],
+      "finding_summary": null,
+      "confidence": null,
+      "tags": ["#llm", "#architecture", "#autonomy", "#optimization"],
+      "opened_at": "2026-04-21T00:00:00Z",
+      "updated_at": "2026-04-21T00:00:00Z"
+    },
+    {
+      "id": "rq-002",
+      "question": "Can an AI develop a Theory of Mind regarding its own computational costs to optimize the Inference-to-Utility ratio?",
+      "domain": "ai-metacognition",
+      "status": "open",
+      "evidence_refs": [],
+      "finding_summary": null,
+      "confidence": null,
+      "tags": ["#metacognition", "#theory-of-mind", "#inference", "#efficiency"],
+      "opened_at": "2026-04-21T00:00:00Z",
+      "updated_at": "2026-04-21T00:00:00Z"
+    },
+    {
+      "id": "rq-003",
+      "question": "How can AI systems decompose abstract, long-term human goals into executable low-level system actions while maintaining a consistent world model?",
+      "domain": "ai-planning",
+      "status": "open",
+      "evidence_refs": [],
+      "finding_summary": null,
+      "confidence": null,
+      "tags": ["#goal-decomposition", "#world-model", "#planning", "#agency"],
+      "opened_at": "2026-04-21T00:00:00Z",
+      "updated_at": "2026-04-21T00:00:00Z"
+    }
+  ]
+}
