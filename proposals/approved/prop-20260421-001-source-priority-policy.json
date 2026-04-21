@@ -1,7 +1,7 @@
 {
   "id": "prop-20260421-001-source-priority-policy",
   "created_at": "2026-04-21T00:00:00Z",
-  "status": "proposed",
+  "status": "approved",
   "change_type": "add",
   "target_surface": "source-priority",
   "summary": "Create canonical source-priority policy governing how Cici weights and trusts information from runtime memory, evidence, governed state, and external feeds.",
@@ -12,5 +12,8 @@
     "users/cici/governed-state/surface-map.json — source-priority listed as stub"
   ],
   "proposer": "claude-code",
-  "confidence": 0.88
+  "confidence": 0.88,
+  "reviewer": "Xavier",
+  "decided_at": "2026-04-21T00:00:00Z",
+  "decision_notes": "Created users/cici/governed-state/source-priority/policy.json with four sections: source_hierarchy (5 ranked levels), evidence_tiers (A/B/C with definitions, examples, and permitted uses), conflict_resolution (4 rules + tension pattern), and agent_obligations (always/never lists). source-priority surface promoted from stub to active in surface-map.json."
 }

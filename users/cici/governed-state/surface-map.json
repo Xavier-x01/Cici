@@ -41,7 +41,8 @@
       "id": "source-priority",
       "path": "users/cici/governed-state/source-priority/",
       "description": "How to weight and trust different information sources: runtime memory, evidence, governed state, external feeds.",
-      "status": "stub"
+      "status": "active",
+      "canonical_files": ["policy.json"]
     },
     {
       "id": "runtime-bridges",

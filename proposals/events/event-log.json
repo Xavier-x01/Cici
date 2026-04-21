@@ -30,5 +30,15 @@
       "target_surface": "memory-policy",
       "notes": "Created policy.json with seven sections: capture_policy, durability_classes (transient/persistent), retention_thresholds, deduplication_rules, hygiene_schedule, tag_taxonomy, source_weighting. memory-policy surface promoted from stub to active."
     }
+  ,
+    {
+      "event_id": "evt-20260421-001",
+      "timestamp": "2026-04-21T00:00:00Z",
+      "proposal_id": "prop-20260421-001-source-priority-policy",
+      "action": "approved",
+      "reviewer": "Xavier",
+      "target_surface": "source-priority",
+      "notes": "Created policy.json with four sections: source_hierarchy (5 ranked levels), evidence_tiers (A/B/C definitions), conflict_resolution (4 rules + tension pattern), and agent_obligations. source-priority surface promoted from stub to active."
+    }
   ]
 }

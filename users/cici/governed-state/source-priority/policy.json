@@ -1,0 +1,117 @@
+{
+  "version": "1.0",
+  "description": "Canonical policy for how Cici weights and trusts information from different sources. Promoted from prop-20260421-001-source-priority-policy.",
+  "approved_at": "2026-04-21T00:00:00Z",
+
+  "source_hierarchy": {
+    "description": "When sources conflict, the source with the lower rank number wins. Rank 1 is highest authority.",
+    "levels": [
+      {
+        "rank": 1,
+        "name": "governed-state",
+        "path": "users/cici/governed-state/",
+        "description": "Owner-approved canonical truth. Changed only through the proposal workflow or direct owner edit. Always wins over lower ranks."
+      },
+      {
+        "rank": 2,
+        "name": "evidence",
+        "path": "evidence/",
+        "description": "Raw but attributed captures with a clear source and timestamp. Higher authority than processed context because it is unmodified."
+      },
+      {
+        "rank": 3,
+        "name": "prepared-context",
+        "path": "prepared-context/",
+        "description": "Processed syntheses and staging documents. Revisable working material; not yet approved into governed state."
+      },
+      {
+        "rank": 4,
+        "name": "runtime-memory",
+        "path": "supabase",
+        "description": "Supabase vector store (thoughts, recent_thoughts). Operational and high-volume. Useful as investigation input, not as authoritative fact."
+      },
+      {
+        "rank": 5,
+        "name": "in-session-context",
+        "path": "chat",
+        "description": "Current session conversation. Ephemeral. Expires when the session ends. Never treated as a primary source."
+      }
+    ]
+  },
+
+  "evidence_tiers": {
+    "description": "Three-tier trust classification for any piece of information. Must be annotated with [A], [B], or [C] when cited in working docs or responses.",
+    "tiers": [
+      {
+        "label": "A",
+        "name": "Primary evidence",
+        "definition": "Xavier supplied it directly, verified it on-site, or it carries a receipt, signed note, or on-screen confirmation he reviewed.",
+        "examples": [
+          "Signed agreement",
+          "Xavier's direct statement in a session where he said 'confirmed'",
+          "Xavier's own photo or document confirming a fact"
+        ],
+        "may_be_used_for": ["public commitments", "pricing claims", "partner announcements"]
+      },
+      {
+        "label": "B",
+        "name": "Structured summary",
+        "definition": "A structured synthesis of Tier A sources, or a third-party document with a clear traceable source.",
+        "examples": [
+          "Prepared-context synthesis of A-tier captures",
+          "A vendor's published price sheet",
+          "A public registry entry"
+        ],
+        "may_be_used_for": ["internal planning", "proposals", "working docs"]
+      },
+      {
+        "label": "C",
+        "name": "Model synthesis",
+        "definition": "Agent-generated summary, brainstormed output, unverified recall, overheard comment, or MCP recall without a clear A or B source.",
+        "examples": [
+          "Model recall from Supabase vector search",
+          "recent_thoughts MCP results",
+          "In-session agent reasoning without a traced source"
+        ],
+        "may_be_used_for": ["investigation input", "suggesting next steps"],
+        "prohibited_uses": ["public promises", "pricing claims", "partner commitments"]
+      }
+    ],
+    "promotion_rule": "Tier C never becomes a public promise, pricing claim, or partner commitment without first becoming Tier A or B through Xavier's explicit review and capture."
+  },
+
+  "conflict_resolution": {
+    "rules": [
+      {
+        "id": "CR-1",
+        "description": "When governed-state and any lower-rank source disagree, governed-state wins. Do not silently override it."
+      },
+      {
+        "id": "CR-2",
+        "description": "When two sources of the same rank disagree, annotate with a Tension: entry in the working doc, name both sources, and surface the conflict to Xavier before acting."
+      },
+      {
+        "id": "CR-3",
+        "description": "When runtime memory (Supabase) and evidence/ disagree, prefer evidence/ if it carries a traceable source. Flag the conflict in any response."
+      },
+      {
+        "id": "CR-4",
+        "description": "When in-session context contradicts a higher-rank source, trust the higher-rank source and note the discrepancy to Xavier."
+      }
+    ],
+    "tension_pattern": "Tension: [source-1] says X; [source-2] says Y. Unresolved as of YYYY-MM-DD. Resolution path: [next step]."
+  },
+
+  "agent_obligations": {
+    "always": [
+      "Annotate cited evidence with its tier: [A], [B], or [C].",
+      "State 'not in governed docs / not verified' and offer a next step when a business fact cannot be traced to Tier A or B.",
+      "Surface conflicts rather than silently resolving them."
+    ],
+    "never": [
+      "Treat MCP search results (search, recent_thoughts) as approved business facts.",
+      "Promote Tier C directly to a public commitment without Xavier's explicit review.",
+      "Override governed-state with a lower-rank source."
+    ]
+  }
+}
