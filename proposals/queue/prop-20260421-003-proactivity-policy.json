@@ -1,0 +1,20 @@
+{
+  "id": "prop-20260421-003-proactivity-policy",
+  "created_at": "2026-04-21T08:01:00Z",
+  "status": "proposed",
+  "change_type": "add",
+  "target_surface": "proactivity",
+  "summary": "Create a new proactivity governed-state surface defining Cici's daily digest schedule, content sections, and rules for sending unsolicited messages.",
+  "rationale": "Xavier wants Cici to send a morning digest without being asked. The digest content (open loops, weather, news, BrewMind status, pending proposals) and delivery schedule must be governed so they can be reviewed and changed without touching bot code. Without a governed policy, proactivity rules are embedded in code and invisible to the governance layer. This surface makes the 'when' and 'what' of proactivity transparent and changeable via proposal.",
+  "evidence_refs": [
+    "User decision: proactivity style = daily digest at 08:00 local time",
+    "docs/companion-agent/brewmind-open-loops.md — open loops are a digest input",
+    "proposals/queue/prop-20260421-002-telegram-config.json — digest delivery requires telegram-config surface"
+  ],
+  "proposed_diff_summary": "Create users/cici/governed-state/proactivity/ with policy.json containing: digest.enabled: true, digest.schedule_cron: '0 8 * * *', digest.timezone: 'America/New_York' (Xavier updates to his TZ), digest.sections (ordered list: open_loops, weather, news_headlines, brewmind_status, pending_proposals), digest.max_total_chars: 3500, opt_out.allowed: true, opt_out.command: '/nodigest', event_triggers: [] (empty, populated later). Add surface entry to surface-map.json.",
+  "confidence": 0.90,
+  "proposer": "claude-code",
+  "reviewer": null,
+  "decided_at": null,
+  "decision_notes": null
+}

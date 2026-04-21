@@ -1,0 +1,20 @@
+{
+  "id": "prop-20260421-005-tools-activation",
+  "created_at": "2026-04-21T08:03:00Z",
+  "status": "proposed",
+  "change_type": "add",
+  "target_surface": "tools",
+  "summary": "Fill the tools stub surface with a canonical config.json defining MCP tool bindings (OB1 capture/search) and external tool bindings (weather, news, web search) used by the Telegram bot.",
+  "rationale": "The tools surface has been a stub since the repo was initialized. The Telegram bot needs a governed registry of which tools it is permitted to use, what each tool's endpoint is (by env var reference), and what trust tier each tool's output carries. Centralizing this in governed state means the bot code reads tool config from the canonical source rather than embedding it in application code — making tool additions and removals auditable and proposal-gated.",
+  "evidence_refs": [
+    "users/cici/governed-state/surface-map.json — tools listed as status: stub",
+    "CLAUDE.md — 'MCP Server' section (OB1 tools: capture, search, recent_thoughts, stats)",
+    "proposals/queue/prop-20260421-004-realtime-data-policy.json — external tools defined there, referenced here"
+  ],
+  "proposed_diff_summary": "Create users/cici/governed-state/tools/config.json with two sections: mcp_tools (capture, search, recent_thoughts, stats — each with endpoint env var OB1_MCP_URL, key env var OB1_MCP_KEY, trust tier C for search/recent_thoughts output, tier A for governed-state-derived content) and external_tools (references to sources defined in realtime-data surface: weather, news, web_search, financial). Promote tools surface from stub to active in surface-map.json.",
+  "confidence": 0.87,
+  "proposer": "claude-code",
+  "reviewer": null,
+  "decided_at": null,
+  "decision_notes": null
+}

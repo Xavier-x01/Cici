@@ -1,0 +1,81 @@
+{
+  "version": "1.0",
+  "governed_by": "prop-20260421-003-proactivity-policy",
+  "description": "Canonical proactivity policy for the Cici Telegram bot. Defines when Cici sends unsolicited messages, what they contain, and how users opt out.",
+
+  "digest": {
+    "enabled": true,
+    "schedule_cron": "0 8 * * *",
+    "timezone": "America/New_York",
+    "timezone_note": "Xavier: update this to your local timezone (e.g. 'America/Los_Angeles', 'Europe/London') via proposal.",
+
+    "sections": [
+      {
+        "id": "open_loops",
+        "label": "Open Loops",
+        "description": "Unresolved items from docs/companion-agent/brewmind-open-loops.md",
+        "source": "governed-docs",
+        "source_path": "docs/companion-agent/brewmind-open-loops.md",
+        "trust_tier": "A",
+        "enabled": true,
+        "max_items": 5
+      },
+      {
+        "id": "weather",
+        "label": "Weather",
+        "description": "Current conditions and today's forecast for Xavier's location.",
+        "source": "openweathermap",
+        "trust_tier": "C",
+        "enabled": true
+      },
+      {
+        "id": "news_headlines",
+        "label": "News",
+        "description": "Top 3 headlines relevant to Xavier's interests (BrewMind, tech, market).",
+        "source": "brave_search",
+        "trust_tier": "C",
+        "enabled": true,
+        "max_items": 3
+      },
+      {
+        "id": "brewmind_status",
+        "label": "BrewMind Status",
+        "description": "Current BrewMind status read from governed docs.",
+        "source": "governed-docs",
+        "source_path": "docs/brewmind.md",
+        "trust_tier": "A",
+        "enabled": true
+      },
+      {
+        "id": "pending_proposals",
+        "label": "Pending Proposals",
+        "description": "Proposals in proposals/queue/ awaiting Xavier's decision.",
+        "source": "governed-docs",
+        "source_path": "proposals/queue/",
+        "trust_tier": "A",
+        "enabled": true,
+        "show_when": "queue_non_empty"
+      }
+    ],
+
+    "formatting": {
+      "max_total_chars": 3500,
+      "section_separator": "\n\n---\n\n",
+      "use_markdown": true,
+      "header": "Good morning, Xavier! Here's your Cici digest for {date}."
+    }
+  },
+
+  "opt_out": {
+    "allowed": true,
+    "pause_command": "/nodigest",
+    "resume_command": "/digest",
+    "pause_scope": "digest_only",
+    "pause_note": "Pausing digest does not affect Cici's ability to respond to direct messages."
+  },
+
+  "event_triggers": {
+    "description": "Future: event-driven nudges. Currently empty — populated via future proposals.",
+    "triggers": []
+  }
+}

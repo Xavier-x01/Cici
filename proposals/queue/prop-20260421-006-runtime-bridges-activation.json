@@ -1,0 +1,20 @@
+{
+  "id": "prop-20260421-006-runtime-bridges-activation",
+  "created_at": "2026-04-21T08:04:00Z",
+  "status": "proposed",
+  "change_type": "add",
+  "target_surface": "runtime-bridges",
+  "summary": "Fill the runtime-bridges stub surface with bridge policies for Supabase (OB1 MCP) and the new Telegram bot runtime, including session scoping and flush rules.",
+  "rationale": "The runtime-bridges surface has been a stub since initialization. The Telegram bot introduces a second runtime bridge alongside Supabase. Without a governed bridge policy, there are no rules for how Telegram session state maps to Supabase memory, when conversation context is flushed, or how long a 'session' window is. This surface defines those rules so the bot and memory-auditor both operate on the same model.",
+  "evidence_refs": [
+    "users/cici/governed-state/surface-map.json — runtime-bridges listed as status: stub",
+    "bridges/supabase/README.md — existing Supabase bridge description",
+    "users/cici/governed-state/memory-policy/policy.json — durability classes (transient/persistent)"
+  ],
+  "proposed_diff_summary": "Create users/cici/governed-state/runtime-bridges/policy.json with two bridge entries: supabase (type: mcp-memory, role: primary-runtime, endpoint_env: OB1_MCP_URL, key_env: OB1_MCP_KEY, sync_rules: governed-state always overrides runtime) and telegram (type: chat-interface, role: user-facing, session_window_minutes: 60, conversation_durability_class: telegram-conversation, auto_capture: true, flush_on: session_end_or_timeout). Promote runtime-bridges surface from stub to active in surface-map.json.",
+  "confidence": 0.86,
+  "proposer": "claude-code",
+  "reviewer": null,
+  "decided_at": null,
+  "decision_notes": null
+}

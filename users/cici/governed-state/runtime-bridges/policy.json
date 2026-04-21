@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "governed_by": "prop-20260421-006-runtime-bridges-activation",
+  "description": "Canonical bridge policies for Cici's runtime connections. Defines session scoping, flush rules, and sync behaviour for each bridge.",
+
+  "bridges": [
+    {
+      "id": "supabase",
+      "type": "mcp-memory",
+      "role": "primary-runtime",
+      "description": "OB1 MCP server running as a Supabase Edge Function. Primary store for all captured thoughts.",
+      "endpoint_env": "OB1_MCP_URL",
+      "key_env": "OB1_MCP_KEY",
+      "sync_rules": {
+        "governed_state_wins": true,
+        "note": "If governed-state and Supabase runtime disagree on a fact, governed-state is canonical. Never overwrite governed-state with Supabase data without an approved proposal.",
+        "conflict_action": "annotate_tension_and_surface_to_xavier"
+      },
+      "status": "active"
+    },
+    {
+      "id": "telegram",
+      "type": "chat-interface",
+      "role": "user-facing",
+      "description": "Telegram Bot API connection. Stateless from Telegram's perspective — all durable state is stored in Supabase via OB1 MCP.",
+      "bot_token_env": "TELEGRAM_BOT_TOKEN",
+      "session_policy": {
+        "session_window_minutes": 60,
+        "description": "A 'session' is a continuous conversation window. Gaps > 60 minutes start a new session context.",
+        "conversation_durability_class": "telegram-conversation",
+        "auto_capture": true,
+        "capture_what": "Each user message + Cici reply pair, tagged #telegram and #conversation",
+        "flush_on": ["session_end", "timeout_exceeded", "explicit_forget_command"]
+      },
+      "context_injection": {
+        "description": "At the start of each session, inject into the LLM system prompt: voice/session-behavior.json rules, top-3 recalled preferences (#preference), top-3 relevant memories (search by message content).",
+        "sources": [
+          "users/cici/governed-state/voice/session-behavior.json",
+          "users/cici/governed-state/identity/instance.json",
+          "supabase-search: top-3 #preference memories",
+          "supabase-search: top-3 relevant to current message"
+        ]
+      },
+      "status": "active"
+    }
+  ]
+}

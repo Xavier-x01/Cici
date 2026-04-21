@@ -1,0 +1,20 @@
+{
+  "id": "prop-20260421-004-realtime-data-policy",
+  "created_at": "2026-04-21T08:02:00Z",
+  "status": "proposed",
+  "change_type": "add",
+  "target_surface": "realtime-data",
+  "summary": "Create a new realtime-data governed-state surface listing approved external data sources, their trust tiers, env var names, and refresh policies for Cici's Telegram bot.",
+  "rationale": "Xavier wants Cici to access live data: web search, news, weather, financial/market data, and technical/observability feeds. All external data is Tier C by default (model synthesis territory) unless Xavier explicitly promotes it. Without a governed policy, the bot could silently treat any live API response as fact. This surface makes the approved source list, trust tiers, and rate limits transparent and auditable — consistent with the source-priority policy already in governed state.",
+  "evidence_refs": [
+    "users/cici/governed-state/source-priority/policy.json — evidence tier definitions",
+    "User decision: data sources = news/web, weather, financial/market, technical/observability",
+    "docs/companion-agent/brewmind-companion-contract.md — Section C (Trust Tiers) and A (Calibrated Abstention)"
+  ],
+  "proposed_diff_summary": "Create users/cici/governed-state/realtime-data/ with policy.json containing: default_trust_tier: 'C', sources array with entries for: brave_search (web + news, env: BRAVE_SEARCH_API_KEY, tier: C), openweathermap (weather, env: OPENWEATHER_API_KEY, tier: C), alpha_vantage (financial/market, env: FINANCIAL_DATA_API_KEY, tier: C, enabled: false by default), custom_mcp (MCP-compatible APIs, tier: C), brewmind_governed_docs (reads repo files, tier: A). Each source has: name, type, env_var, trust_tier, enabled, rate_limit_per_minute, stale_after_seconds. Add surface entry to surface-map.json.",
+  "confidence": 0.88,
+  "proposer": "claude-code",
+  "reviewer": null,
+  "decided_at": null,
+  "decision_notes": null
+}

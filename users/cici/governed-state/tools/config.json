@@ -1,0 +1,71 @@
+{
+  "version": "1.0",
+  "governed_by": "prop-20260421-005-tools-activation",
+  "description": "Canonical tool registry for the Cici instance. Defines which tools the Telegram bot may use, their endpoints, key env vars, and the trust tier of their output.",
+
+  "mcp_tools": {
+    "description": "OB1 MCP tools served by the Supabase Edge Function. Endpoint and key read from environment.",
+    "endpoint_env": "OB1_MCP_URL",
+    "key_env": "OB1_MCP_KEY",
+    "tools": [
+      {
+        "name": "capture",
+        "description": "Store a thought in Supabase with auto-embedding. Output trust: N/A (write-only).",
+        "required_fields": ["content", "durability_class", "tags"],
+        "permitted_callers": ["message_handler", "digest_handler"]
+      },
+      {
+        "name": "search",
+        "description": "Semantic vector search across all captured thoughts. Output trust: Tier C.",
+        "output_trust_tier": "C",
+        "max_results_default": 3,
+        "permitted_callers": ["message_handler", "digest_handler", "recall"]
+      },
+      {
+        "name": "recent_thoughts",
+        "description": "Retrieve most recently captured thoughts in chronological order. Output trust: Tier C.",
+        "output_trust_tier": "C",
+        "max_results_default": 5,
+        "permitted_callers": ["message_handler", "memory_command_handler"]
+      },
+      {
+        "name": "stats",
+        "description": "Count of total thoughts, date range, tag distribution. Output trust: Tier C.",
+        "output_trust_tier": "C",
+        "permitted_callers": ["memory_command_handler", "digest_handler"]
+      }
+    ]
+  },
+
+  "external_tools": {
+    "description": "External data integrations. All Tier C unless marked. Full source policies in realtime-data surface.",
+    "source_policy_ref": "users/cici/governed-state/realtime-data/policy.json",
+    "tools": [
+      {
+        "name": "weather",
+        "source_id": "openweathermap",
+        "output_trust_tier": "C",
+        "permitted_callers": ["digest_handler", "message_handler"]
+      },
+      {
+        "name": "news",
+        "source_id": "brave_search",
+        "output_trust_tier": "C",
+        "permitted_callers": ["digest_handler", "message_handler"]
+      },
+      {
+        "name": "web_search",
+        "source_id": "brave_search",
+        "output_trust_tier": "C",
+        "permitted_callers": ["message_handler"]
+      },
+      {
+        "name": "financial",
+        "source_id": "alpha_vantage",
+        "output_trust_tier": "C",
+        "enabled": false,
+        "permitted_callers": ["message_handler"]
+      }
+    ]
+  }
+}

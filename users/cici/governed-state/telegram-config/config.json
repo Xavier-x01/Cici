@@ -1,0 +1,46 @@
+{
+  "version": "1.0",
+  "governed_by": "prop-20260421-002-telegram-config",
+  "description": "Canonical Telegram bot runtime parameters for the Cici instance. Security-critical settings (allowed_user_ids) must be changed via proposal.",
+
+  "env_var_names": {
+    "bot_token": "TELEGRAM_BOT_TOKEN",
+    "allowed_user_ids": "TELEGRAM_ALLOWED_USER_IDS",
+    "owner_chat_id": "TELEGRAM_OWNER_CHAT_ID"
+  },
+
+  "allowed_user_ids": {
+    "description": "Comma-separated Telegram user IDs permitted to interact with Cici. Xavier must populate TELEGRAM_ALLOWED_USER_IDS in the environment. This field documents the policy; runtime enforcement reads from the env var.",
+    "policy": "deny_all_not_listed",
+    "note": "Xavier: set TELEGRAM_ALLOWED_USER_IDS=<your_telegram_user_id> in your .env file. Find your ID by messaging @userinfobot on Telegram."
+  },
+
+  "delivery": {
+    "owner_chat_id_note": "Set TELEGRAM_OWNER_CHAT_ID to Xavier's personal chat ID. Used for digest delivery and system alerts. Find it by messaging @userinfobot.",
+    "mode": "polling",
+    "mode_note": "Use 'polling' for local development. Switch to 'webhook' for production by setting TELEGRAM_WEBHOOK_URL in env and updating this field via proposal.",
+    "webhook_url_env": "TELEGRAM_WEBHOOK_URL"
+  },
+
+  "rate_limits": {
+    "messages_per_user_per_minute": 20,
+    "description": "If a user sends more than this many messages in 60 seconds, ignore additional messages until the window resets. Prevents abuse."
+  },
+
+  "message_constraints": {
+    "max_message_length_chars": 4000,
+    "description": "Telegram hard limit is 4096 chars. Cici splits responses at 4000 to leave headroom."
+  },
+
+  "bot_commands": {
+    "description": "Registered command list. Update this via proposal when adding new commands.",
+    "commands": [
+      { "command": "/start", "description": "Start a conversation with Cici" },
+      { "command": "/help", "description": "Show available commands" },
+      { "command": "/nodigest", "description": "Pause the daily digest" },
+      { "command": "/digest", "description": "Resume or trigger the daily digest now" },
+      { "command": "/memory", "description": "Show recent memories Cici has about you" },
+      { "command": "/forget", "description": "Ask Cici to note something should not be remembered" }
+    ]
+  }
+}

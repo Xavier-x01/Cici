@@ -1,0 +1,79 @@
+{
+  "version": "1.0",
+  "governed_by": "prop-20260421-004-realtime-data-policy",
+  "description": "Canonical policy for external real-time data sources used by the Cici Telegram bot. All sources are Tier C by default unless noted. Xavier may promote specific data points to Tier A/B via explicit annotation.",
+
+  "default_trust_tier": "C",
+  "trust_tier_note": "All external API responses are Tier C (unverified). Cici must annotate live data with [C] when presenting it as fact. Xavier may verify and promote to [A] or [B] via explicit confirmation.",
+
+  "sources": [
+    {
+      "id": "brave_search",
+      "name": "Brave Search",
+      "type": "web_search_and_news",
+      "description": "Live web search and news headlines via the Brave Search API.",
+      "env_var": "BRAVE_SEARCH_API_KEY",
+      "trust_tier": "C",
+      "enabled": true,
+      "rate_limit_per_minute": 10,
+      "stale_after_seconds": 300,
+      "use_cases": ["news_headlines", "web_search", "topic_lookup"]
+    },
+    {
+      "id": "openweathermap",
+      "name": "OpenWeatherMap",
+      "type": "weather",
+      "description": "Current conditions, hourly, and daily weather forecasts.",
+      "env_var": "OPENWEATHER_API_KEY",
+      "location_env_var": "WEATHER_LOCATION",
+      "location_note": "Xavier: set WEATHER_LOCATION to your city (e.g. 'New York,US') in your .env file.",
+      "trust_tier": "C",
+      "enabled": true,
+      "rate_limit_per_minute": 5,
+      "stale_after_seconds": 600
+    },
+    {
+      "id": "alpha_vantage",
+      "name": "Alpha Vantage",
+      "type": "financial_market_data",
+      "description": "Stock quotes, crypto prices, forex rates, and market indicators.",
+      "env_var": "FINANCIAL_DATA_API_KEY",
+      "trust_tier": "C",
+      "enabled": false,
+      "enabled_note": "Disabled by default. Enable by setting FINANCIAL_DATA_API_KEY and updating enabled: true via proposal.",
+      "rate_limit_per_minute": 5,
+      "stale_after_seconds": 60,
+      "use_cases": ["stock_quotes", "crypto_prices", "market_summary"]
+    },
+    {
+      "id": "brewmind_governed_docs",
+      "name": "BrewMind Governed Docs",
+      "type": "internal_governed",
+      "description": "Reads directly from governed-state and docs/ in this repo. Tier A — canonical truth.",
+      "env_var": null,
+      "trust_tier": "A",
+      "enabled": true,
+      "rate_limit_per_minute": 60,
+      "stale_after_seconds": 0,
+      "use_cases": ["open_loops", "brewmind_status", "pending_proposals", "preferences"]
+    },
+    {
+      "id": "custom_mcp",
+      "name": "Custom MCP Sources",
+      "type": "mcp_compatible",
+      "description": "Any MCP-compatible API server added in the future. Trust tier defaults to C; override per-source via proposal.",
+      "env_var": "CUSTOM_MCP_URL",
+      "trust_tier": "C",
+      "enabled": false,
+      "enabled_note": "Stub for future MCP-compatible integrations. Enable via proposal when a specific MCP source is identified.",
+      "use_cases": ["observability", "technical_metrics", "custom_feeds"]
+    }
+  ],
+
+  "citation_rules": {
+    "always_annotate_tier": true,
+    "format": "[C] {data} — source: {source_name}, retrieved {timestamp}",
+    "tier_c_disclaimer": "External data is unverified (Tier C). Do not treat as confirmed fact without Xavier's verification.",
+    "promotion_path": "Xavier confirms data → annotate [A] → optionally capture to Supabase with #decision or #insight"
+  }
+}

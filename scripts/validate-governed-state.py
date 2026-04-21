@@ -54,10 +54,18 @@ REQUIRED_PROPOSAL_FIELDS = [
 REQUIRED_SEED_FIELDS = ["instance_id", "owner", "purpose", "seed_phase_status"]
 REQUIRED_INSTANCE_FIELDS = ["instance_id", "owner", "purpose", "established_at",
                              "governed_state_version", "capabilities"]
-VALID_SURFACE_IDS = {
-    "identity", "voice", "memory-policy", "workflows",
-    "tools", "source-priority", "runtime-bridges"
-}
+def _load_surface_ids_from_map() -> set:
+    """Read surface IDs dynamically from surface-map.json so new surfaces don't require validator edits."""
+    surface_map = ROOT / "users" / "cici" / "governed-state" / "surface-map.json"
+    if not surface_map.exists():
+        return {"identity", "voice", "memory-policy", "workflows", "tools", "source-priority", "runtime-bridges"}
+    try:
+        data = json.loads(surface_map.read_text())
+        return {s["id"] for s in data.get("surfaces", [])}
+    except Exception:
+        return set()
+
+VALID_SURFACE_IDS = _load_surface_ids_from_map()
 
 PROPOSAL_DIRS = {
     "proposals/queue":    {"proposed", "under_review"},

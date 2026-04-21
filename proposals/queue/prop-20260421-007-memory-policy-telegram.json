@@ -1,0 +1,20 @@
+{
+  "id": "prop-20260421-007-memory-policy-telegram",
+  "created_at": "2026-04-21T08:05:00Z",
+  "status": "proposed",
+  "change_type": "update",
+  "target_surface": "memory-policy",
+  "summary": "Extend the memory-policy surface to add a telegram-conversation durability class (30-day retention) and two new tags (#telegram, #digest) to the canonical tag taxonomy.",
+  "rationale": "The existing memory-policy has two durability classes (transient: 7 days, persistent: 90 days). Telegram conversation turns have a different lifecycle — longer than transient but shorter than general persistent memories, and they need to be identifiable as bot-sourced. Without a dedicated class, every conversation turn either expires in 7 days (losing useful context) or pollutes the persistent class (adding noise to Xavier's personal knowledge base). Adding #telegram and #digest tags keeps Telegram-sourced entries distinguishable in audits and synthesis.",
+  "evidence_refs": [
+    "users/cici/governed-state/memory-policy/policy.json — current durability classes",
+    "proposals/queue/prop-20260421-006-runtime-bridges-activation.json — references telegram-conversation class",
+    "docs/companion-agent/brewmind-companion-contract.md — Section B (Ephemeral vs Canonical memory tiers)"
+  ],
+  "proposed_diff_summary": "Add to memory-policy/policy.json durability_classes.classes: telegram-conversation (description: 'Telegram bot conversation turns and exchanges. Bot-sourced, session-scoped but cross-session relevant.', retention_days: 30, eligible_for_synthesis: true, auto_archive: false, promotion_path: 'evidence/ → prepared-context/synthesis/ → proposal → governed-state'). Add to tag_taxonomy.tags: #telegram ('Any entry captured from a Telegram bot conversation') and #digest ('Daily digest content generated and sent by the proactivity scheduler').",
+  "confidence": 0.93,
+  "proposer": "claude-code",
+  "reviewer": null,
+  "decided_at": null,
+  "decision_notes": null
+}

@@ -35,7 +35,8 @@
       "id": "tools",
       "path": "users/cici/governed-state/tools/",
       "description": "Tool configurations, MCP client settings, AI gateway preferences, and integration policies.",
-      "status": "stub"
+      "status": "active",
+      "canonical_files": ["config.json"]
     },
     {
       "id": "source-priority",
@@ -47,8 +48,30 @@
     {
       "id": "runtime-bridges",
       "path": "users/cici/governed-state/runtime-bridges/",
-      "description": "Bridge rules and policies for Supabase and any future runtime connections. Operational policy — not identity truth.",
-      "status": "stub"
+      "description": "Bridge rules and policies for Supabase and the Telegram bot runtime. Defines session scoping, flush rules, and sync behaviour.",
+      "status": "active",
+      "canonical_files": ["policy.json"]
+    },
+    {
+      "id": "telegram-config",
+      "path": "users/cici/governed-state/telegram-config/",
+      "description": "Telegram bot runtime parameters: allowed user IDs, webhook settings, rate limits, and environment variable names.",
+      "status": "active",
+      "canonical_files": ["config.json"]
+    },
+    {
+      "id": "proactivity",
+      "path": "users/cici/governed-state/proactivity/",
+      "description": "Rules governing when and how Cici sends unsolicited messages: daily digest schedule, content sections, and opt-out commands.",
+      "status": "active",
+      "canonical_files": ["policy.json"]
+    },
+    {
+      "id": "realtime-data",
+      "path": "users/cici/governed-state/realtime-data/",
+      "description": "Approved external data sources, their trust tiers, environment variable names, and refresh policies.",
+      "status": "active",
+      "canonical_files": ["policy.json"]
     }
   ],
   "surface_status_values": {

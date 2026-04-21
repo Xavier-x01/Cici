@@ -37,6 +37,15 @@
         "eligible_for_synthesis": true,
         "auto_archive": false,
         "promotion_path": "evidence/ → prepared-context/synthesis/ → proposal → governed-state"
+      },
+      "telegram-conversation": {
+        "description": "Telegram bot conversation turns and exchanges. Bot-sourced, session-scoped but cross-session relevant. Examples: questions Xavier asked, preferences expressed in chat, follow-up context.",
+        "governed_by": "prop-20260421-007-memory-policy-telegram",
+        "retention_days": 30,
+        "eligible_for_synthesis": true,
+        "auto_archive": false,
+        "promotion_path": "evidence/ → prepared-context/synthesis/ → proposal → governed-state",
+        "required_tags": ["#telegram"]
       }
     }
   },
@@ -95,7 +104,9 @@
       "#preference": "A personal preference or working style note",
       "#brewmind": "Any entry related to the BrewMind project or its partners",
       "#health": "Health-related data not covered by #habit",
-      "#work": "Professional or technical context unrelated to BrewMind"
+      "#work": "Professional or technical context unrelated to BrewMind",
+      "#telegram": "Any entry captured from a Telegram bot conversation (governed by prop-20260421-007-memory-policy-telegram)",
+      "#digest": "Daily digest content generated and sent by the proactivity scheduler"
     },
     "multiple_tags_allowed": true,
     "unknown_tags": "flag for taxonomy review — do not silently drop"
