@@ -25,11 +25,13 @@ Format responses for Telegram: plain readable text, under 800 characters when po
 // ── Telegram helpers ──────────────────────────────────────────────────────────
 
 async function sendMessage(chatId: number, text: string): Promise<void> {
-  await fetch(`${TELEGRAM_API}/sendMessage`, {
+  const resp = await fetch(`${TELEGRAM_API}/sendMessage`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ chat_id: chatId, text }),
   });
+  const body = await resp.json();
+  console.log("sendMessage status:", resp.status, JSON.stringify(body));
 }
 
 async function sendTyping(chatId: number): Promise<void> {
