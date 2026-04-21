@@ -16,11 +16,12 @@ This file gives Claude Code context about this repository so it can assist effec
 
 ## Key Facts
 
-- **No application code lives in this repo** — the server is deployed upstream from NateBJones-Projects/OB1
+- **No application code lives in this repo** — the MCP server is deployed upstream from NateBJones-Projects/OB1
+- **Exception**: `supabase/functions/telegram-bot/` is original code that lives here
 - **Database**: Supabase (PostgreSQL with pgvector extension)
-- **Server**: Supabase Edge Function (Deno/TypeScript) at `open-brain-mcp`
+- **Servers**: Supabase Edge Functions (Deno/TypeScript) — `open-brain-mcp` (upstream) and `telegram-bot` (this repo)
 - **Protocol**: MCP over HTTP (query-param key auth)
-- **AI Gateway**: OpenRouter for embeddings and model routing
+- **AI Gateway**: OpenRouter for embeddings and model routing; Anthropic API for Telegram chat
 - **Cost**: ~$0.10/month at personal scale
 
 ## Environment Variables / Secrets (in Supabase)
@@ -31,6 +32,10 @@ This file gives Claude Code context about this repository so it can assist effec
 | `OPENROUTER_API_KEY` | OpenRouter API key for embeddings |
 | `SUPABASE_URL` | Auto-injected by Supabase Edge Functions runtime |
 | `SUPABASE_SERVICE_ROLE_KEY` | Auto-injected by Supabase Edge Functions runtime |
+| `TELEGRAM_BOT_TOKEN` | Bot token from BotFather (telegram-bot function) |
+| `TELEGRAM_WEBHOOK_SECRET` | Webhook security token (telegram-bot function) |
+| `ANTHROPIC_API_KEY` | Claude API key for Telegram chat responses |
+| `ALLOWED_TELEGRAM_USER_IDS` | Comma-separated Telegram user IDs allowed to use the bot |
 
 ## Common Tasks
 
@@ -63,6 +68,14 @@ supabase secrets set OPENROUTER_API_KEY=<new-key>
 ```bash
 curl "https://YOUR_PROJECT_REF.supabase.co/functions/v1/open-brain-mcp?key=YOUR_ACCESS_KEY"
 ```
+
+### Deploy the Telegram bot
+
+```bash
+supabase functions deploy telegram-bot --no-verify-jwt
+```
+
+Full setup walkthrough (BotFather, secrets, webhook): [docs/telegram-bot-setup.md](docs/telegram-bot-setup.md)
 
 ## Architecture Reference
 
