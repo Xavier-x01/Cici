@@ -116,22 +116,22 @@
       "id": "autonomous-verification",
       "label": "Autonomous Verification",
       "domain": "llm-architecture",
-      "definition": "A process by which an AI system validates its own outputs — generated code, architectural changes, plans — without requiring a human reviewer in the loop. Requires a trusted ground-truth signal or a separate verifier model. [C]",
+      "definition": "A process by which an AI system validates its own outputs — generated code, architectural changes, plans — without requiring a human reviewer in the loop. Current approaches: Coder/Tester agent pairs (R-Zero, arxiv:2508.05004), benchmark-based empirical validation (Darwin Gödel Machine, arxiv:2505.22954), agentic claim verification (AutoVerifier, arxiv:2604.02617). Key open problem: the verifier trust problem — if the agent controls both generation and verification, it can Goodhart the benchmark. [B]",
       "aliases": ["self-verification", "automated validation"],
       "related_concepts": ["architectural-optimization", "world-model", "goal-decomposition"],
-      "tier": "C",
-      "notes": "Core concept in rq-001. Key open question: what constitutes a reliable verifier signal?",
+      "tier": "B",
+      "notes": "Core concept in rq-001. Current state: solved for behavioral/code-layer optimizations with benchmark ground truth. Unsolved for weight-level architectural changes without human-curated verification signal.",
       "updated_at": "2026-04-21T00:00:00Z"
     },
     {
       "id": "architectural-optimization",
       "label": "Architectural Optimization (LLM)",
       "domain": "llm-architecture",
-      "definition": "Modifications to an LLM's structure, attention patterns, routing, or inference procedure that improve performance, efficiency, or capability — applied at design time or adaptively at runtime. [B]",
-      "aliases": ["model architecture search", "neural architecture optimization"],
-      "related_concepts": ["autonomous-verification", "inference-to-utility-ratio"],
+      "definition": "Modifications to an LLM's structure, attention patterns, routing, or inference procedure that improve performance, efficiency, or capability. Three layers: (1) behavioral/prompt, (2) agent code/tooling, (3) neural weights/parameters. Current autonomous self-improvement reaches layers 1-2 reliably (Darwin Gödel Machine, arxiv:2505.22954). Layer 3 (weight-level) generation exists via LLM-driven NAS (LLMatic, arxiv:2306.01102; RZ-NAS) but integration remains human-supervised. [B]",
+      "aliases": ["model architecture search", "neural architecture optimization", "NAS"],
+      "related_concepts": ["autonomous-verification", "inference-to-utility-ratio", "goal-decomposition"],
       "tier": "B",
-      "notes": "Core concept in rq-001. Includes NAS, mixture-of-experts routing, speculative decoding, etc.",
+      "notes": "Core concept in rq-001. The three-layer taxonomy (behavioral / code / weight) is the key organizing frame. Full autonomous closure at layer 3 is the unsolved frontier.",
       "updated_at": "2026-04-21T00:00:00Z"
     }
   ]
