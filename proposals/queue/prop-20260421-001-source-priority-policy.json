@@ -1,0 +1,16 @@
+{
+  "id": "prop-20260421-001-source-priority-policy",
+  "created_at": "2026-04-21T00:00:00Z",
+  "status": "proposed",
+  "change_type": "add",
+  "target_surface": "source-priority",
+  "summary": "Create canonical source-priority policy governing how Cici weights and trusts information from runtime memory, evidence, governed state, and external feeds.",
+  "rationale": "The three-tier evidence model (Tier A = Xavier-verified, Tier B = structured summary with traceable source, Tier C = model synthesis / unverified recall) is referenced throughout CLAUDE.md and the BrewMind companion contract, but no governed artifact defines it. As a result, agent sessions and the proposal-reviewer must rely on prose docs rather than a machine-readable policy. Promoting this to a governed policy.json in source-priority/ completes the core governance layer and gives future agents a canonical source to validate against. This surface has status 'stub' in surface-map.json — this proposal fills it.",
+  "evidence_refs": [
+    "CLAUDE.md — 'Three evidence tiers' section",
+    "docs/companion-agent/brewmind-companion-contract.md — Section B (Ephemeral vs Canonical) and Section C (Trust Tiers for Evidence)",
+    "users/cici/governed-state/surface-map.json — source-priority listed as stub"
+  ],
+  "proposer": "claude-code",
+  "confidence": 0.88
+}
