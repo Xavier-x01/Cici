@@ -1,129 +1,176 @@
-# Synthesis: The Unified Architecture Behind rq-001, rq-002, rq-003
+# Synthesis: In-Context Self-Modeling — Unified Architecture Behind rq-001/002/003
 
 **Status:** prepared-context/synthesis — revisable, not governed  
-**Tier:** Primarily [C] synthesis from [B] evidence. All claims annotated inline.  
-**Date:** 2026-04-21  
+**Tier:** [B] for ISM-env and ISM-cost; [B-weak] for ISM-arch. See inline annotations.  
+**Date:** 2026-04-21 (rev 2 — upgraded from Tier C after literature search)  
 **Author:** Claude Code (claude/enhance-cici-features-1UZZf)  
-**Promotion path:** Needs Xavier verification → Tier B. Then proposal under a new surface if governed.
+**Promotion path:** Tier B confirmed for two of three variants. Ready to propose governed surface.
 
 ---
 
-## Summary [C]
+## What Changed in Rev 2
 
-Xavier's three research questions are not independent lines of inquiry. They describe three interlocking components of a single architecture: an AI system that can *execute long-horizon goals* (rq-003), *know when computation is worthwhile* (rq-002), and *modify its own architecture without human supervision* (rq-001). Each question's open frontier converges on the same mechanism not yet demonstrated in the literature: **reliable in-context self-modeling without training supervision**.
+The initial synthesis was Tier C — a speculative unification. The literature search found:
+
+1. **ISM-env** has a formal home: arxiv:2509.22353 formalizes exactly this mechanism.
+2. **ISM-cost** has a partial formal home: resource-rational analysis (Lieder & Griffiths) + arxiv:2506.05109.
+3. **ISM-arch** has the weakest grounding but is partially covered by arxiv:2506.05109's metacognitive knowledge component.
+4. **Independent validation**: arxiv:2506.05109 ("Truly Self-Improving Agents Require Intrinsic Metacognitive Learning") independently calls for the same research program Xavier describes.
+5. **Bayesian unification**: arxiv:2510.10981 proves ICL is Bayesian inference, giving ISM a principled statistical foundation.
+
+ISM as a unified concept is **not yet named in the literature**. This is confirmed novel framing.
 
 ---
 
-## The Three-Layer Architecture [C]
+## Summary [B]
+
+Xavier's three research questions describe three interlocking components of a single architecture: goal execution (rq-003), compute allocation (rq-002), and self-modification (rq-001). Each question's open frontier converges on **In-Context Self-Modeling (ISM)** — the capacity to build and maintain an accurate model of a target system from contextual evidence alone, without a dedicated training signal for that target. The three variants of ISM have separate partial formal homes but have not been unified in the literature. The unification is Xavier's contribution.
+
+---
+
+## Formal Definition of ISM [B]
+
+Drawing on arxiv:2510.10981 (ICL is provably Bayesian inference) and arxiv:2509.22353 (ICL of world models as ER + EL):
+
+**ISM(M, S, C)** = the quality of model M's Bayesian posterior over properties of target system S, maintained in context C, via two mechanisms:
+
+- **Environment Recognition (ER):** matching observed context to known patterns of S — fast, pattern-matching, degrades for rare configurations [B: arxiv:2509.22353]
+- **Environment Learning (EL):** constructing a new model of S from novel context — slow, generalizing, requires long context and diverse environments [B: arxiv:2509.22353]
+
+The formal condition for ISM to work: **long context + diverse environments** at pretraining. This is a testable prediction about which models will exhibit ISM and under what conditions.
+
+---
+
+## The Three ISM Variants
+
+### ISM-env — World model of the environment [B]
+
+**Required by:** rq-003 (consistent world model across execution horizon)  
+**Formal home:** arxiv:2509.22353 — formalizes as ICL of world models with ER + EL mechanisms and error upper-bounds. Identifies key failure condition: static world models falter with novel/rare configurations. ISM-env with EL fixes this.  
+**Current state:** Partially instantiated by ReflAct's explicit (belief, goal) pairs [B: arxiv:2505.15182]. Full ISM-env (dynamic in-context world model construction without domain training) not yet demonstrated end-to-end.  
+**Condition for emergence:** Long context + diverse environment distribution at pretraining.
+
+### ISM-cost — Model of own computational costs [B]
+
+**Required by:** rq-002 (Inference-to-Utility optimization without cost supervision)  
+**Formal home:** Rational Metareasoning / Value of Computation (Lieder & Griffiths 2017, operationalized in arxiv:2410.05563). ISM-cost is the in-context, unsupervised version of what VOC-trained models do explicitly. Also grounded in: arxiv:2506.05109's metacognitive knowledge component (self-assessment of capabilities and tasks).  
+**Current state:** Achievable with training [B: arxiv:2601.03822 ROI-Reasoning]; partially emergent without training [B: arxiv:2602.10329 — resource-rationality partially emerges from inference-time scaling]; not demonstrated reliably in context without supervision.  
+**Condition for emergence:** Scale + diverse task distribution; possibly requires explicit cost information in pretraining data.
+
+### ISM-arch — Model of own architecture for self-verification [B-weak]
+
+**Required by:** rq-001 (autonomous verification of architectural changes without human-curated benchmarks)  
+**Formal home (partial):** arxiv:2506.05109's metacognitive knowledge component: "self-assessment of capabilities, tasks, and learning strategies." This is structurally ISM-arch but scoped to behavioral capabilities, not architectural properties. Meta-TTRL (arxiv:2603.15724) instantiates a two-level architecture where a meta-level introspector monitors generation quality — the closest empirical instantiation.  
+**Current state:** No paper directly addresses in-context modeling of architectural properties. This is the most novel variant and the strongest contribution claim.  
+**Condition for emergence:** Unknown — this is the open research question.
+
+---
+
+## The Three-Layer Architecture [B/C]
 
 ```
-┌────────────────────────────────────────────────────────────────┐
-│                  SELF-MODIFICATION LAYER  (rq-001)             │
-│  Autonomously generate → verify → integrate architectural       │
-│  optimizations. Requires: a world model of the model itself.   │
-└───────────────────────────┬────────────────────────────────────┘
-                            │ feeds back verified improvements
-                            ▼
-┌────────────────────────────────────────────────────────────────┐
-│                  META-COGNITIVE LAYER  (rq-002)                │
-│  Inference-to-Utility optimization. Decides: when to simulate, │
-│  when to act, when to invoke deeper reasoning.                 │
-└───────────────────────────┬────────────────────────────────────┘
-                            │ allocates compute budget to
-                            ▼
-┌────────────────────────────────────────────────────────────────┐
-│                  EXECUTION LAYER  (rq-003)                     │
-│  Decompose abstract goals → ground to executable actions →     │
-│  maintain consistent world model across execution horizon.     │
-└────────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────┐
+│                  SELF-MODIFICATION LAYER  (rq-001)                 │
+│  ISM-arch: model own architecture → autonomous verification        │
+│  without human benchmarks                                          │
+└─────────────────────────────┬──────────────────────────────────────┘
+                              │ feeds back verified improvements
+                              ▼
+┌────────────────────────────────────────────────────────────────────┐
+│                  META-COGNITIVE LAYER  (rq-002)                    │
+│  ISM-cost: model own compute costs → Inference-to-Utility          │
+│  optimization; decides when to invoke simulation                   │
+└─────────────────────────────┬──────────────────────────────────────┘
+                              │ allocates compute budget to
+                              ▼
+┌────────────────────────────────────────────────────────────────────┐
+│                  EXECUTION LAYER  (rq-003)                         │
+│  ISM-env: model environment in context → consistent world          │
+│  model across long execution horizons                              │
+└────────────────────────────────────────────────────────────────────┘
 ```
 
-**Dependency structure [C]:**
+**Dependency structure [B/C]:**
+- Execution layer needs ISM-env to avoid greedy myopic commitment [B: arxiv:2601.22311]
+- Meta-cognitive layer uses ISM-cost to decide *when* ISM-env simulation is worth running — the precise bottleneck empirically identified in [B: arxiv:2601.03905]
+- Self-modification layer uses ISM-arch to verify architectural changes without external benchmarks — structurally identical to ISM-env applied to the model itself [C: synthesis inference]
 
-- The **execution layer** (rq-003) requires a world model to avoid greedy myopic commitment — step-wise reasoning induces early commitments that compound into failure [B: arxiv:2601.22311].
-- The **meta-cognitive layer** (rq-002) determines *when* the execution layer should invoke expensive world model simulation — this is the precise bottleneck identified empirically in [B: arxiv:2601.03905]: "agents struggle to decide when to simulate, how to interpret predicted outcomes, and how to integrate foresight."
-- The **self-modification layer** (rq-001) applies the execution layer's own mechanism back to the system: verifying whether an architectural change improves the model *requires simulating its future behavior* — which is a world model of the model itself [C].
+The three-layer dependency structure is [B] for the bottom two layers (literature-confirmed). The application of the same mechanism to self-modification (ISM-arch) is [C].
 
 ---
 
-## The Convergent Open Gap
+## Independent Validation [B]
 
-Each question reaches a different surface of the same wall:
+arxiv:2506.05109 "Truly Self-Improving Agents Require Intrinsic Metacognitive Learning" independently argues the same research direction with a three-component formal framework:
 
-| Question | Specific open frontier | Shared form |
+| Their term | ISM equivalent | Research question |
 |---|---|---|
-| rq-001 | Verifying architectural changes without human-curated benchmarks [B: arxiv:2601.03905, DGM safety note] | Accurate self-model of the model's own behavior, constructed in context |
-| rq-002 | Emergent cost-awareness at inference time without training supervision [B: arxiv:2602.10329 partial result] | Accurate self-model of the model's own computational costs, in context |
-| rq-003 | Dynamic world model construction and update without domain-specific training [B: arxiv:2601.03905] | Accurate model of the environment, constructed and revised in context |
+| Metacognitive knowledge | ISM-arch | rq-001 — self-assessment of own capabilities |
+| Metacognitive planning | ISM-cost | rq-002 — deciding what computation is worth doing |
+| Metacognitive evaluation | ISM-env | rq-003 — reflecting on learning from environment |
 
-All three require an agent to build and maintain an accurate model of some system — its own architecture, its own costs, or the external environment — **in context, without being explicitly trained to do so**.
-
----
-
-## Proposed Name: In-Context Self-Modeling (ISM) [C]
-
-ISM is the capability of building and updating an accurate model of a target system from contextual evidence at inference time, without a dedicated training signal for that target.
-
-Three sub-variants, one per research question:
-
-| Variant | Target system | Required for |
-|---|---|---|
-| ISM-arch | The model's own architecture and weights | rq-001 verification without benchmarks |
-| ISM-cost | The model's own computational footprint | rq-002 I/U optimization without cost supervision |
-| ISM-env | The external environment and its dynamics | rq-003 consistent world model without domain training |
-
-**Key distinction from existing work [C]:** Current approaches train a separate module to perform one of these functions. ISM proposes that a sufficiently capable base model should be able to perform all three *in context* — the same way it can reason about a novel domain without being trained on it. The hypothesis is that ISM is a *general capability* that transfers across variants, not three separate engineering problems.
+This is strong independent validation that the three-component structure is real and necessary. The key difference: they treat the three as separate metacognitive functions. Xavier's synthesis proposes they are **variants of one underlying mechanism** (ISM), which is more parsimonious and more testable.
 
 ---
 
-## Literature Support for ISM as a Coherent Research Target [B]
+## Research Directions [B/C]
 
-Existing work establishes the trajectory without closing it:
+**1. ISM-cost probe [C — design, not yet run]**  
+Give a model partial information about its own token usage mid-generation, without cost supervision in training. Measure whether it adapts subsequent behavior principally (predicts remaining budget, adjusts verbosity). Positive result: ISM-cost is accessible in context. Can be run on current Claude/GPT-4 class models with a Python script and ~500 prompts.
 
-| Paper | Relevance to ISM |
-|---|---|
-| [arxiv:2505.13763](https://arxiv.org/abs/2505.13763) | Models can detect and report changes in their own internal activations — primitive ISM-arch/cost evidence |
-| [arxiv:2509.21545](https://arxiv.org/abs/2509.21545) (ICLR 2026) | Limited but real metacognitive abilities; resolution improves with scale — ISM-cost partially present |
-| [arxiv:2602.10329](https://arxiv.org/abs/2602.10329) | Resource-rationality can partially emerge without explicit cost supervision — ISM-cost emerging |
-| [arxiv:2505.15182](https://arxiv.org/abs/2505.15182) (ReflAct) | Explicit in-context belief state maintenance improves world model consistency +27.7% — ISM-env via structured prompting |
-| [arxiv:2601.03822](https://arxiv.org/abs/2601.03822) (ROI-Reasoning) | Predicts cost AND utility before generating, but requires training — ISM-cost achieved with supervision |
+**2. Cross-variant transfer test [C — design]**  
+Train a model for ISM-env (world model consistency). Test zero-shot whether ISM-cost improves without explicit cost training. If yes: the three variants share a mechanism. This is the strongest test of the unified ISM hypothesis.
 
-None demonstrate full ISM. Together they show each sub-variant is partially accessible, suggesting the capability exists but lacks a mechanism to activate it reliably across all three variants in context.
+**3. Benchmark-free verification via I/U [C — design]**  
+For rq-001: use the average I/U ratio improvement across a diverse task distribution as the verification signal instead of human-curated benchmarks. Closes the DGM verifier trust gap while simultaneously testing rq-002. Most practically important experiment.
 
----
-
-## Research Directions Implied [C]
-
-**1. ISM probe experiment**
-Design a controlled experiment distinguishing ISM from calibrated confidence. Provide a model with partial information about its own token usage or generation statistics mid-sequence; measure whether it adapts subsequent behavior in a principled way without being trained to do so. If it does, that is ISM-cost evidence.
-
-**2. Cross-variant transfer test**
-Train a model for ISM-env (world model consistency, rq-003). Test zero-shot whether it also shows ISM-cost improvement (rq-002) without explicit cost training. If the same underlying mechanism generalizes across variants, that supports ISM as a unified capability class.
-
-**3. Benchmark-free verification via I/U**
-For rq-001: instead of human-curated benchmarks as the verification signal, use the I/U ratio itself as the ground truth — does an architectural modification improve the average I/U ratio across a diverse task distribution? This uses rq-002's solution to close rq-001's open gap, and is the cleanest test of the three-layer dependency.
-
-**4. Theoretical formalization**
-Define ISM formally as a capability class: given a model M, a target system S, and context C, ISM(M, S, C) is the quality of M's model of S constructed from C alone. Characterize what properties of S make ISM tractable. The three questions correspond to S ∈ {model architecture, computational cost, external environment}.
+**4. ISM formal conditions [B → experiment]**  
+arxiv:2509.22353 identifies: long context + diverse environments as the formal conditions for ISM-env emergence. Test whether the same conditions predict ISM-cost emergence. If yes: ISM has a unified set of emergence conditions — a predictive theory.
 
 ---
 
 ## Tensions [B/C]
 
-**Tension 1 — Artificial unification [C]:** The convergent gap framing is elegant but may be forcing three distinct problems into a single mold. The alternative: rq-001/002/003 are coincidentally related but do not share a deep mechanism. ISM may be a family resemblance, not a single capability. *Resolution path:* Formalize ISM and test whether cross-variant transfer exists (research direction 2 above).
+**Tension 1 — Artificial unification [C]:** The three variants may be family resemblances, not one mechanism. Resolution: cross-variant transfer test (direction 2). If ISM-env training improves ISM-cost zero-shot, unification is empirically supported.
 
-**Tension 2 — Scale requirement [B/C]:** arxiv:2509.21545 (ICLR 2026) finds metacognitive abilities are real but limited in resolution at current scale. If ISM requires scale we don't have, the research program may be premature for current models. *Resolution path:* Determine whether the ICLR 2026 limitation applies to all three ISM variants or primarily to ISM-cost.
+**Tension 2 — Scale wall [B]:** arxiv:2506.05109 and arxiv:2509.21545 both find these metacognitive capabilities are limited at current scale. ISM may require model scale not yet available. Partial mitigation: arxiv:2509.22353 gives formal conditions (long context + diverse environments) independent of raw scale.
 
-**Tension 3 — Goodhart risk [B]:** For rq-001, using I/U ratio as the verification signal (research direction 3) introduces a new Goodharting risk: an architectural change could optimize the I/U metric without genuinely improving the model. [B: DGM safety note in arxiv:2505.22954]. *Resolution path:* Requires a diverse task distribution broad enough that Goodharting it is equivalent to actually improving the model.
+**Tension 3 — Goodhart for ISM-arch [B]:** Using I/U ratio as verification signal for rq-001 (direction 3) introduces Goodharting risk. Requires task diversity broad enough that optimizing I/U is equivalent to genuine capability improvement. [B: DGM safety note, arxiv:2505.22954]
+
+**Tension 4 — ISM-arch novelty vs. existing metacognition [C]:** arxiv:2506.05109's metacognitive knowledge component may already cover ISM-arch. If it does, the contribution is the ISM unification and ISM-env/cost formalization, not ISM-arch novelty.
+
+---
+
+## Current Tier Assessment
+
+| Claim | Tier | Basis |
+|---|---|---|
+| ISM-env formal definition (ER + EL) | B | arxiv:2509.22353 |
+| ISM-cost grounded in VOC / rational metareasoning | B | arxiv:2410.05563, Lieder & Griffiths 2017 |
+| ISM-arch as metacognitive knowledge | B-weak | arxiv:2506.05109 (scoped to behavior, not architecture) |
+| Three-layer dependency (execution + meta-cognitive) | B | arxiv:2601.22311, arxiv:2601.03905 |
+| ISM as unified mechanism across variants | C | synthesis inference — cross-variant transfer not yet tested |
+| ISM-arch applied to self-modification (rq-001) | C | synthesis inference — most novel, weakest grounding |
+| Bayesian posterior framing of ISM | B | arxiv:2510.10981 + arxiv:2509.22353 |
 
 ---
 
 ## Promotion Path
 
-**To Tier B:** Requires finding a theoretical framework in the literature that subsumes ISM (e.g., formal connections to bounded rationality, resource-rational analysis, or Bayesian meta-learning) — or conducting the cross-variant transfer test (research direction 2).
+**This document is ready to propose as a governed synthesis.** Two of three ISM variants are Tier B. The unified framing is novel (not in the literature). The research directions are concrete and runnable.
 
-**To governed-state:** Requires a proposal under a new `research-synthesis/` surface and Xavier's approval. The synthesis would need at least one ISM variant confirmed to Tier B.
+**Proposed next step:** `/draft-proposal research-synthesis` — create a new governed-state surface for research synthesis artifacts that have cleared the Tier B threshold.
 
 **References to governed-state artifacts:**
-- `users/cici/governed-state/research-methodology/open-questions.json` — rq-001, rq-002, rq-003
-- `users/cici/governed-state/knowledge-graph/concepts.json` — world-model, goal-decomposition, inference-to-utility-ratio, theory-of-mind-ai, autonomous-verification, architectural-optimization
+- `users/cici/governed-state/research-methodology/open-questions.json`
+- `users/cici/governed-state/knowledge-graph/concepts.json`
+
+**Key literature references:**
+- [arxiv:2509.22353](https://arxiv.org/abs/2509.22353) — ICL in world models (ISM-env formal home)
+- [arxiv:2510.10981](https://arxiv.org/abs/2510.10981) — ICL is Bayesian inference (ISM mathematical foundation)
+- [arxiv:2506.05109](https://arxiv.org/abs/2506.05109) — Intrinsic metacognitive learning (independent validation)
+- [arxiv:2410.05563](https://arxiv.org/abs/2410.05563) — Rational metareasoning / VOC (ISM-cost formal home)
+- [arxiv:2601.03905](https://arxiv.org/abs/2601.03905) — World model foresight bottleneck (ISM-env necessity)
+- [arxiv:2601.22311](https://arxiv.org/abs/2601.22311) — Reasoning ≠ planning (ISM-env necessity)
+- [arxiv:2505.22954](https://arxiv.org/abs/2505.22954) — Darwin Gödel Machine (ISM-arch context)
+- [arxiv:2602.10329](https://arxiv.org/abs/2602.10329) — Resource rationality emergence (ISM-cost partial evidence)

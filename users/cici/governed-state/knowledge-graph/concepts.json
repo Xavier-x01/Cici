@@ -3,6 +3,17 @@
   "description": "Xavier's canonical concept map. Schema defined in concept-schema.json. Concepts marked tier C are Claude-seeded and pending Xavier review.",
   "concepts": [
     {
+      "id": "in-context-self-modeling",
+      "label": "In-Context Self-Modeling (ISM)",
+      "domain": "ai-metacognition",
+      "definition": "Xavier's proposed unified capability: an AI builds and maintains an accurate model of a target system (its environment, its costs, or its own architecture) from contextual evidence alone, without a dedicated training signal for that target. Formally: ISM(M, S, C) = Bayesian posterior over properties of S, maintained in context C by model M, via environment recognition (ER) and environment learning (EL). Three variants: ISM-env (rq-003), ISM-cost (rq-002), ISM-arch (rq-001). [B — formal grounding confirmed for ISM-env and ISM-cost; ISM-arch is C]",
+      "aliases": ["ISM", "in-context self-model"],
+      "related_concepts": ["inference-to-utility-ratio", "theory-of-mind-ai", "world-model", "goal-decomposition", "autonomous-verification", "architectural-optimization"],
+      "tier": "B",
+      "notes": "Unifying concept across all three research questions. Not yet named in the literature — confirmed novel framing. ISM-env formal home: arxiv:2509.22353. ISM-cost: arxiv:2410.05563. Independent validation: arxiv:2506.05109. Emergence conditions: long context + diverse environments.",
+      "updated_at": "2026-04-21T00:00:00Z"
+    },
+    {
       "id": "cici",
       "label": "Cici",
       "domain": "governance",
