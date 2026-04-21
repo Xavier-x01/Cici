@@ -70,7 +70,19 @@ async function mcpCall(
 
 // ── Claude helper ─────────────────────────────────────────────────────────────
 
+async function fetchMemoryContext(query: string): Promise<string> {
+  const result = await mcpCall("search", { query, limit: 5 });
+  const results = result?.results as Array<Record<string, string>> | undefined;
+  if (!results?.length) return "";
+  return results.map((r) => r.content ?? "").filter(Boolean).join("\n---\n");
+}
+
 async function askClaude(userMessage: string): Promise<string> {
+  const memoryContext = await fetchMemoryContext(userMessage);
+  const systemPrompt = memoryContext
+    ? `${CICI_SYSTEM}\n\nRelevant memory context for this message:\n${memoryContext}`
+    : CICI_SYSTEM;
+
   const resp = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
@@ -81,7 +93,7 @@ async function askClaude(userMessage: string): Promise<string> {
     body: JSON.stringify({
       model: "claude-opus-4-7",
       max_tokens: 1024,
-      system: CICI_SYSTEM,
+      system: systemPrompt,
       messages: [{ role: "user", content: userMessage }],
     }),
   });
