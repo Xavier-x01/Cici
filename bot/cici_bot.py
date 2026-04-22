@@ -119,9 +119,12 @@ def main() -> None:
         )
         logger.info("Digest scheduled: %s (%s)", cron_str, timezone_str)
 
-    app.post_init = lambda a: _register_commands(a)
+    async def post_init(a):
+        await _register_commands(a)
+        scheduler.start()
 
-    scheduler.start()
+    app.post_init = post_init
+
     logger.info("Cici bot starting (polling mode)...")
     app.run_polling(drop_pending_updates=True)
 
