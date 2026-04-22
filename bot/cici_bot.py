@@ -1,43 +1,15 @@
 """
-Cici Telegram Bot — entry point.
-Registers all handlers, schedules the daily digest, and starts polling.
-
-Run from the repo root:
-    cd /path/to/Cici
-    pip install -r bot/requirements.txt
-    cp bot/.env.example bot/.env   # fill in your secrets
-    python -m bot.cici_bot
+Cici Telegram Bot — simple chat mode.
+No memory, no digest, no live data. Just Claude responses.
 """
-import asyncio
 import logging
-from datetime import time as dtime
-
+import os
 from dotenv import load_dotenv
-load_dotenv("bot/.env")  # loads before settings import
+load_dotenv("bot/.env")
 
-from telegram import BotCommand
-from telegram.ext import (
-    Application,
-    CommandHandler,
-    MessageHandler,
-    filters,
-)
-from apscheduler.schedulers.asyncio import AsyncIOScheduler
-
-from bot.config.settings import (
-    TELEGRAM_BOT_TOKEN,
-    load_json,
-    PROACTIVITY_POLICY_PATH,
-)
-from bot.handlers.message_handler import (
-    handle_message,
-    handle_memory_command,
-)
-from bot.handlers.digest_handler import (
-    handle_digest_command,
-    handle_nodigest_command,
-    send_digest,
-)
+from telegram import Update, BotCommand
+from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+import anthropic
 
 logging.basicConfig(
     format="%(asctime)s | %(levelname)s | %(name)s | %(message)s",
@@ -45,87 +17,84 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+TELEGRAM_BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
+ALLOWED_USER_IDS = {
+    int(uid.strip())
+    for uid in os.environ.get("TELEGRAM_ALLOWED_USER_IDS", "").split(",")
+    if uid.strip()
+}
+ANTHROPIC_API_KEY = os.environ["ANTHROPIC_API_KEY"]
+CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-sonnet-4-6")
 
-def _parse_cron(cron_str: str) -> dict:
-    """Parse a 5-field cron string into APScheduler kwargs."""
-    minute, hour, day, month, day_of_week = cron_str.split()
-    return {
-        "minute": minute,
-        "hour": hour,
-        "day": day,
-        "month": month,
-        "day_of_week": day_of_week,
-    }
+_anthropic = anthropic.AsyncAnthropic(api_key=ANTHROPIC_API_KEY)
 
-
-async def _register_commands(app: Application) -> None:
-    await app.bot.set_my_commands([
-        BotCommand("start", "Start a conversation with Cici"),
-        BotCommand("help", "Show available commands"),
-        BotCommand("memory", "Show recent memories Cici has about you"),
-        BotCommand("digest", "Trigger or resume the daily digest"),
-        BotCommand("nodigest", "Pause the daily digest"),
-    ])
+SYSTEM_PROMPT = (
+    "You are Cici, a friendly and knowledgeable personal AI assistant on Telegram. "
+    "You are helpful, concise, and conversational."
+)
 
 
-async def _start_command(update, context):
+def _is_allowed(user_id: int) -> bool:
+    if not ALLOWED_USER_IDS:
+        return False
+    return user_id in ALLOWED_USER_IDS
+
+
+async def _start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
-        "Hi, I'm Cici — your personal AI assistant. "
-        "I remember context across our conversations and send you a morning digest. "
-        "Just send me a message to get started, or use /help."
+        "Hi, I'm Cici — your personal AI assistant. Send me any message to get started!"
     )
 
 
-async def _help_command(update, context):
+async def _help(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
         "*Cici Commands*\n"
         "/start — Start a conversation\n"
-        "/memory — See recent memories\n"
-        "/digest — Get today's digest now\n"
-        "/nodigest — Pause the daily digest\n"
         "/help — Show this message",
         parse_mode="Markdown",
     )
 
 
+async def _handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    user = update.effective_user
+    if not user or not update.message or not update.message.text:
+        return
+    if not _is_allowed(user.id):
+        await update.message.reply_text("Sorry, I'm not configured to talk to you.")
+        return
+
+    await context.bot.send_chat_action(chat_id=update.message.chat_id, action="typing")
+
+    try:
+        response = await _anthropic.messages.create(
+            model=CLAUDE_MODEL,
+            max_tokens=1024,
+            system=SYSTEM_PROMPT,
+            messages=[{"role": "user", "content": update.message.text}],
+        )
+        reply = response.content[0].text
+    except Exception as e:
+        logger.error("Claude API error: %s", e)
+        reply = "I ran into an issue. Please try again."
+
+    for chunk in ([reply[i:i+4000] for i in range(0, len(reply), 4000)]):
+        await update.message.reply_text(chunk, parse_mode="Markdown")
+
+
+async def _post_init(app: Application) -> None:
+    await app.bot.set_my_commands([
+        BotCommand("start", "Start a conversation with Cici"),
+        BotCommand("help", "Show available commands"),
+    ])
+
+
 def main() -> None:
     app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
-
-    # ── Command handlers ─────────────────────────────────────────────────────
-    app.add_handler(CommandHandler("start", _start_command))
-    app.add_handler(CommandHandler("help", _help_command))
-    app.add_handler(CommandHandler("memory", handle_memory_command))
-    app.add_handler(CommandHandler("digest", handle_digest_command))
-    app.add_handler(CommandHandler("nodigest", handle_nodigest_command))
-
-    # ── Message handler (catches all non-command text) ───────────────────────
-    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
-
-    # ── Daily digest scheduler ───────────────────────────────────────────────
-    policy = load_json(PROACTIVITY_POLICY_PATH)
-    digest_cfg = policy.get("digest", {})
-    cron_str = digest_cfg.get("schedule_cron", "0 8 * * *")
-    timezone_str = digest_cfg.get("timezone", "America/New_York")
-    digest_enabled = digest_cfg.get("enabled", True)
-
-    scheduler = AsyncIOScheduler(timezone=timezone_str)
-    if digest_enabled:
-        cron_kwargs = _parse_cron(cron_str)
-        scheduler.add_job(
-            send_digest,
-            trigger="cron",
-            kwargs={"bot": app.bot},
-            **cron_kwargs,
-        )
-        logger.info("Digest scheduled: %s (%s)", cron_str, timezone_str)
-
-    async def post_init(a):
-        await _register_commands(a)
-        scheduler.start()
-
-    app.post_init = post_init
-
-    logger.info("Cici bot starting (polling mode)...")
+    app.add_handler(CommandHandler("start", _start))
+    app.add_handler(CommandHandler("help", _help))
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, _handle_message))
+    app.post_init = _post_init
+    logger.info("Cici bot starting (simple mode)...")
     app.run_polling(drop_pending_updates=True)
 
 
