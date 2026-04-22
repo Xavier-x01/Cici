@@ -118,6 +118,20 @@ These agents live in `.claude/agents/` and can be invoked via the Agent tool:
 | `proposal-reviewer` | Read-only | Evaluates queued proposals; flags issues |
 | `evidence-stager` | Read + Write (evidence/ + prepared-context/ only) | Stages and synthesizes evidence |
 | `memory-auditor` | Read-only | Monthly hygiene audit; finds Tier C leaks |
+| `dev-hygiene` | Read + Write + Bash | Doctor check, batch workers, mode checklists — one command for repo health |
+
+## Agent Modes
+
+Thin checklists for focused passes. Live in `.claude/modes/`; do not duplicate CLAUDE.md.
+
+| Mode file | When to use |
+|---|---|
+| `_shared.md` | Always-true context (paths, owner, no-secrets) — referenced by other modes |
+| `batch-ingest.md` | Processing multiple `prepared-context/` files in one bounded pass |
+| `proposal-review.md` | Focused pass over `proposals/queue/` (evaluate, not apply) |
+| `docsync-pass.md` | Docs-only updates: stale links, path refs, header sync |
+
+_Routines inspired by [career-ops](https://github.com/santifer/career-ops) layout (external reference; not a dependency)._
 
 ## Common Errors (Do Not Repeat)
 
