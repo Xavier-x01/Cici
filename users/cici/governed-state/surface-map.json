@@ -22,7 +22,7 @@
       "path": "users/cici/governed-state/memory-policy/",
       "description": "What to capture, what to retain, deduplication rules, archiving thresholds, and hygiene schedules.",
       "status": "active",
-      "canonical_files": ["policy.json"]
+      "canonical_files": ["policy.json", "retention-policy.md"]
     },
     {
       "id": "workflows",

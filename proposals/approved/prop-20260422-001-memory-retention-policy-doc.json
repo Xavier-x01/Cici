@@ -1,7 +1,7 @@
 {
   "id": "prop-20260422-001",
   "created_at": "2026-04-22T00:00:00Z",
-  "status": "proposed",
+  "status": "approved",
   "change_type": "add",
   "target_surface": "users/cici/governed-state/memory-policy/",
   "summary": "Add retention-policy.md, a human-readable companion to policy.json explaining transient/persistent durability classes, transition rules, promotion path, and agent obligations.",
@@ -13,7 +13,7 @@
   "proposed_diff_summary": "Add users/cici/governed-state/memory-policy/retention-policy.md with sections: Purpose, Durability Classes (transient + persistent with summary tables), Transition Rules, Promotion Path, Archived State, Agent Obligations, and Related Files. Update users/cici/governed-state/memory-policy/README.md to replace stub-era language with active-surface description listing both canonical files.",
   "confidence": 0.9,
   "proposer": "claude-code",
-  "reviewer": null,
-  "decided_at": null,
-  "decision_notes": null
+  "reviewer": "Xavier",
+  "decided_at": "2026-04-22T00:00:00Z",
+  "decision_notes": "Created users/cici/governed-state/memory-policy/retention-policy.md as human-readable companion to policy.json. DRAFT banner removed; status set to active. Updated surface-map.json to add retention-policy.md to canonical_files for memory-policy surface. README.md already corrected in prior commit."
 }

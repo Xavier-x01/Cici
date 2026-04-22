@@ -1,6 +1,6 @@
 # Memory Retention Policy: Durability Classification
 
-> **Status:** DRAFT — pending approval of proposal `prop-20260422-001`
+> **Status:** active — governed by proposal `prop-20260422-001`
 > **Machine-readable source:** `memory-policy/policy.json` (canonical, governed by `prop-20260420-001`)
 > **Last updated:** 2026-04-22
 > **Write class:** `canonical` — changes require Xavier approval or an approved proposal
