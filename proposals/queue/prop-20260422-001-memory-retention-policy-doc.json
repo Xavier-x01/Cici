@@ -1,0 +1,19 @@
+{
+  "id": "prop-20260422-001",
+  "created_at": "2026-04-22T00:00:00Z",
+  "status": "proposed",
+  "change_type": "add",
+  "target_surface": "users/cici/governed-state/memory-policy/",
+  "summary": "Add retention-policy.md, a human-readable companion to policy.json explaining transient/persistent durability classes, transition rules, promotion path, and agent obligations.",
+  "rationale": "policy.json defines durability_classes in machine-readable form (governed by prop-20260420-001) but has no human-readable companion explaining the rules, rationale, and agent obligations in plain language. Sessions and agents must currently parse JSON to understand when to classify a capture as transient vs persistent, what the no-reclassification rule means, and how the promotion path works. retention-policy.md fills this gap without duplicating policy.json as the authoritative source — it references policy.json and explains the policy in prose. A secondary change updates memory-policy/README.md, which still describes the surface as a stub despite policy.json having been active since prop-20260420-001 — a documentation mismatch that should be corrected.",
+  "evidence_refs": [
+    "users/cici/governed-state/memory-policy/policy.json",
+    "proposals/approved/prop-20260420-001-activate-memory-policy.json"
+  ],
+  "proposed_diff_summary": "Add users/cici/governed-state/memory-policy/retention-policy.md with sections: Purpose, Durability Classes (transient + persistent with summary tables), Transition Rules, Promotion Path, Archived State, Agent Obligations, and Related Files. Update users/cici/governed-state/memory-policy/README.md to replace stub-era language with active-surface description listing both canonical files.",
+  "confidence": 0.9,
+  "proposer": "claude-code",
+  "reviewer": null,
+  "decided_at": null,
+  "decision_notes": null
+}
