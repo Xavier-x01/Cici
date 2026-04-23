@@ -72,6 +72,10 @@ See [README.md](README.md) for the full architecture diagram.
 
 See [docs/setup-guide.md](docs/setup-guide.md) for the complete beginner setup walkthrough.
 
+## Session Bootstrap Prompt
+
+See [docs/session-bootstrap-prompt.md](docs/session-bootstrap-prompt.md) for a copy-paste prompt that gives any AI tool (Claude, ChatGPT, Cursor) instant full context on Cici and BrewMind.
+
 ## Governed State (Phase 1)
 
 This repo now has a file-based governed-state layer. Key locations:
