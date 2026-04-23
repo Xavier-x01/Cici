@@ -41,15 +41,19 @@ def run(dry_run: bool = True) -> None:
 
     print(f"[*] Janitor — {mode_label}")
     print(f"[*] Target table : {TABLE}")
-    print(f"[*] Filter       : metadata->>'durability' == 'transient'")
+    print(f"[*] Filter       : durability == 'transient'  AND  governed != 'true'")
     print(f"[*] Cutoff       : created_at < {cutoff}")
     print()
 
-    # SELECT to preview what would be deleted (always safe)
+    # SELECT to preview what would be deleted (always safe).
+    # Both conditions must be true to be eligible:
+    #   1. durability == 'transient'  (explicit opt-in to deletion)
+    #   2. governed  != 'true'        (secondary shield — governed rows are untouchable)
     preview = (
         supabase.table(TABLE)
         .select("id, created_at, metadata")
         .eq("metadata->>durability", "transient")
+        .neq("metadata->>governed", "true")
         .lt("created_at", cutoff)
         .execute()
     )
@@ -61,8 +65,15 @@ def run(dry_run: bool = True) -> None:
         print("[+] Nothing to purge. Exiting.")
         return
 
-    for row in candidates[:10]:  # preview first 10 rows
-        print(f"    id={row.get('id')}  created_at={row.get('created_at')}")
+    for row in candidates[:10]:
+        meta = row.get("metadata") or {}
+        durability = meta.get("durability", "<missing>")
+        governed = meta.get("governed", "<missing>")
+        print(
+            f"    id={row.get('id')}  "
+            f"created_at={row.get('created_at')}  "
+            f"durability={durability}  governed={governed}"
+        )
     if len(candidates) > 10:
         print(f"    ... and {len(candidates) - 10} more.")
 
@@ -73,11 +84,13 @@ def run(dry_run: bool = True) -> None:
         print(f"[~] Re-run with  `python {sys.argv[0]} --execute`  to delete.")
         return
 
-    # LIVE DELETE — only reached with --execute
+    # LIVE DELETE — only reached with --execute.
+    # Mirrors the SELECT filters exactly so the two can never diverge.
     response = (
         supabase.table(TABLE)
         .delete()
         .eq("metadata->>durability", "transient")
+        .neq("metadata->>governed", "true")
         .lt("created_at", cutoff)
         .execute()
     )
