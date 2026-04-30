@@ -30,6 +30,12 @@ Nothing sensitive is ever committed to `xavier_self` or `open-brain-xavier`. If 
 
 ---
 
+## Work Lanes
+
+Active coordination surfaces for Cici's work areas: Telegram, core governance, and progress tracking. See [`docs/work-lanes/README.md`](../work-lanes/README.md).
+
+---
+
 ## Repository Map
 
 | Repo | Purpose |

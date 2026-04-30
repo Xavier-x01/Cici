@@ -150,5 +150,6 @@ The actual server code lives upstream at [NateBJones-Projects/OB1](https://githu
 - Upstream project: [NateBJones-Projects/OB1](https://github.com/NateBJones-Projects/OB1)
 - Full setup guide: [docs/setup-guide.md](docs/setup-guide.md)
 - Governed state doctrine: [docs/governed-state-doctrine.md](docs/governed-state-doctrine.md)
+- Work lanes hub: [docs/work-lanes/README.md](docs/work-lanes/README.md)
 - Supabase dashboard: https://supabase.com/dashboard
 - OpenRouter: https://openrouter.ai
