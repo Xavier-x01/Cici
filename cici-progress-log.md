@@ -24,8 +24,8 @@ Running record of deliverables and open items for the cici-ai Telegram launch. O
 | Avatar SVG created | ✅ Done | `docs/brand/cici-ai-avatar.svg` — 1024×1024, navy + teal + white |
 | Wordmark SVG created | ✅ Done | `docs/brand/cici-ai-wordmark.svg` — 1500×500 for social headers |
 | Brand README | ✅ Done | `docs/brand/README.md` — export guide and color palette |
-| PNG exported for Telegram | ⏳ Operator needed | Export SVG → PNG at 1024×1024, then upload in Telegram group settings |
-| Group photo live in Telegram | ⏳ Operator needed | Confirm visible in chat list and search |
+| PNG exported for Telegram | ✅ Done 2026-04-30 | Generated via cairosvg on server → `docs/brand/cici-ai-avatar.png` |
+| Group photo live in Telegram | ✅ Done 2026-04-30 | Uploaded and confirmed by operator |
 
 ---
 
