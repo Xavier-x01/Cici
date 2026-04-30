@@ -15,31 +15,31 @@
 | Created by | Xavier (operator) |
 | Admin / owner | Xavier (@cici admin account) |
 | Purpose | Hobbyist mutual-help room for Open Brain (OB1) builders |
-| Join link | _Record the t.me link here — do not invent a new one; use only the URL confirmed by the operator_ |
-
-**Note to Cici:** The join link field above must be filled in by the operator from the actual Telegram group invite link. Do not generate or guess a t.me URL.
+| Join link | https://t.me/+B3zLRlVCi2NmMTcz |
 
 ---
 
-## Status as of 2026-04-25
+## Status as of 2026-04-30
 
 - Group created on Telegram
-- Operator confirmed admin/owner access (required to pin messages and change group photo)
-- Paste pack not yet sent; pin and welcome pending Task 1
-- Group photo not yet set; logo work pending Task 2
+- Operator confirmed admin/owner access
+- §1 pinned message sent and pinned ✅ (2026-04-30)
+- §2 welcome sent ✅ (2026-04-30)
+- Join link confirmed and recorded ✅ (2026-04-30)
+- Group photo not yet set; logo export pending Task 2
 
 ---
 
 ## Open items
 
-1. Confirm the t.me invite link and record it here (operator action)
-2. Pin §1 message from paste pack `telegram-cici-ai-pinned-and-welcome-copy.md`
-3. Send §2 welcome with global notify
-4. Set group description (§3 from paste pack)
-5. Upload group avatar PNG once logo is approved
+1. ~~Confirm the t.me invite link and record it here~~ ✅
+2. ~~Pin §1 message~~ ✅
+3. ~~Send §2 welcome~~ ✅
+4. Set group description (§3 from paste pack) — optional
+5. Upload group avatar PNG once logo is exported
 
 ---
 
 ## Source
 
-Operator-created group; details confirmed in session on 2026-04-25. This note is Tier A for the existence of the group; join link is pending operator confirmation.
+Operator-created group; join link confirmed by operator on 2026-04-30.

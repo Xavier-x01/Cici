@@ -12,9 +12,9 @@ Running record of deliverables and open items for the cici-ai Telegram launch. O
 |---|---|---|
 | Paste pack created | ✅ Done | `telegram-cici-ai-pinned-and-welcome-copy.md` — §0/§1/§2/§3 |
 | Evidence note created | ✅ Done | `evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md` |
-| t.me invite link recorded | ⏳ Operator needed | Fill in the evidence note |
-| §1 sent and pinned in Telegram | ⏳ Operator needed | — |
-| §2 welcome sent (global notify) | ⏳ Operator needed | If @all unavailable, post anyway and note here |
+| t.me invite link recorded | ✅ Done 2026-04-30 | https://t.me/+B3zLRlVCi2NmMTcz |
+| §1 sent and pinned in Telegram | ✅ Done 2026-04-30 | — |
+| §2 welcome sent (global notify) | ✅ Done 2026-04-30 | — |
 | Group description (§3) set | ⏳ Operator needed (optional) | — |
 
 **Task 2 — Logo and group avatar**
