@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><title>Export cici-ai avatar PNG</title></head>
+<body style="background:#111;display:flex;flex-direction:column;align-items:center;padding:40px;font-family:sans-serif;color:#fff">
+  <h2>cici-ai avatar export</h2>
+  <canvas id="c" width="1024" height="1024" style="border-radius:50%;width:256px;height:256px;margin:20px 0"></canvas>
+  <button onclick="dl()" style="padding:12px 32px;font-size:16px;background:#3ECFCF;border:none;border-radius:6px;cursor:pointer;color:#1A1D2E;font-weight:700">
+    Download PNG (1024×1024)
+  </button>
+  <p style="opacity:0.5;font-size:13px;margin-top:16px">Preview is shown circular (like Telegram). The downloaded file is square.</p>
+
+  <script>
+    const img = new Image();
+    img.onload = () => {
+      const ctx = document.getElementById('c').getContext('2d');
+      ctx.drawImage(img, 0, 0, 1024, 1024);
+    };
+    img.src = 'cici-ai-avatar.svg';
+
+    function dl() {
+      const a = document.createElement('a');
+      a.download = 'cici-ai-avatar.png';
+      a.href = document.getElementById('c').toDataURL('image/png');
+      a.click();
+    }
+  </script>
+</body>
+</html>
