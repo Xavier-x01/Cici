@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  cici-ai group avatar — master square mark
+  Canvas: 1024×1024 (safe zone: center 716×716)
+  Telegram crops a circle; keep all important detail inside the circular safe zone.
+  Export as PNG at 1024×1024 for the group photo upload.
+
+  Colors
+    Background : #1A1D2E  (deep navy)
+    Ring accent : #3ECFCF  (teal — "Open Brain" active signal)
+    Fill light  : #FFFFFF  (white)
+    Fill warm   : #F0C040  (amber — spark / idea)
+
+  Concept: a bold "C" (for Cici) with a small glowing node at the opening —
+  the node represents the OB1 memory connection point.
+  Reads legibly as initials at 48 px and as a mark at any size.
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1024 1024"
+  width="1024"
+  height="1024"
+>
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="#1A1D2E"/>
+
+  <!-- Outer teal ring (decorative, stays inside circle crop) -->
+  <circle cx="512" cy="512" r="460" fill="none" stroke="#3ECFCF" stroke-width="18" opacity="0.35"/>
+
+  <!-- Bold "C" letterform — open to the right -->
+  <!-- Drawn as two arcs forming a thick arc shape -->
+  <path
+    d="
+      M 690 268
+      A 310 310 0 1 0 690 756
+      L 690 672
+      A 224 224 0 1 1 690 352
+      Z
+    "
+    fill="#FFFFFF"
+  />
+
+  <!-- Connection node at the gap opening (right side, vertical center) -->
+  <!-- Outer glow ring -->
+  <circle cx="690" cy="512" r="52" fill="#3ECFCF" opacity="0.25"/>
+  <!-- Node body -->
+  <circle cx="690" cy="512" r="36" fill="#3ECFCF"/>
+  <!-- Inner spark -->
+  <circle cx="690" cy="512" r="16" fill="#F0C040"/>
+</svg>
