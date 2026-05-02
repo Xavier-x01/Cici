@@ -16,9 +16,9 @@ Track member and applicant progress and cohort health. This lane owns the applic
 ## Open Loops
 
 - [ ] Collect GitHub + country from: Ythak Pat, Y, Diwitty|, Bj Libron (not yet introduced)
+- [ ] Get country for Kathy (Chloe05688 confirmed; fork confirmed)
 - [ ] Verify OB1 fork for Jayr — was shown how but completion unconfirmed
 - [ ] Verify OB1 fork for Jonathan K — no confirmation in chat
-- [ ] Match Chloe05688 (exec report) to a remaining unintroduced member
 - [ ] Collect Task 1 proof from each member (screenshot or GitHub update)
 
 ## Next Action
@@ -72,6 +72,7 @@ _Last updated: 2026-05-02 (fork status revised). Source: Telegram chat history (
 | Y | — | — | Invited 24 Apr; no intro posted |
 | Diwitty\| | — | [diWitty00](https://github.com/diWitty00) [C] | Invited 24 Apr; handle in exec report but no chat intro |
 | Bj Libron | — | — | Invited 24 Apr; no intro posted |
+| Kathy | — | [Chloe05688](https://github.com/Chloe05688) | Fork confirmed [A]; country still needed |
 
 _diWitty00 (full-stack, JavaScript + Node.js) appears in the executive report — likely Diwitty|, but unconfirmed [C]. Owner to verify._
 
@@ -86,14 +87,14 @@ _diWitty00 (full-stack, JavaScript + Node.js) appears in the executive report �
 
 | Cluster | Handles | Signal |
 |---|---|---|
-| Frontend / UI | nana-rpix (Hannah) [C — partial match], Ka-kyle (Kyle), Mia-yana (Val Ortiz), Chloe05688 [unmatched] | Entry to junior; web UI, HTML/CSS, React-adjacent |
+| Frontend / UI | nana-rpix (Hannah) [C — partial match], Ka-kyle (Kyle), Mia-yana (Val Ortiz), Chloe05688 (Kathy) | Entry to junior; web UI, HTML/CSS, React-adjacent |
 | Backend / systems | nana-rpix (Hannah), jhon-ell16 (Ell), jiaj259 (Jiyah) | Intermediate; C++, Java/Spring Boot, PHP/SQL |
 | Automation / tooling / data | Adelle-sims (Kekerv), Troy2171 (Troy), PenguinPH739 (Pango) | Junior to intermediate; Python, shell, security/data/bot-oriented |
 | Full-stack / general tooling | diWitty00 (Diwitty\| — unconfirmed) | Intermediate; JavaScript + Node.js |
 
 Strongest technical anchors per executive report: **nana-rpix (Hannah), jhon-ell16 (Ell), Adelle-sims (Kekerv), Troy2171 (Troy)**.
 
-_Mia-yana confirmed as Val Ortiz [A]. Chloe05688 still unmatched — likely among the unintroduced members (Ythak Pat, Y, Bj Libron)._
+_All exec-report handles now matched. Mia-yana = Val Ortiz [A]. Chloe05688 = Kathy [A]._
 
 ## Key References
 
