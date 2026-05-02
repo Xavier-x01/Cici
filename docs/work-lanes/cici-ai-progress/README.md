@@ -15,7 +15,9 @@ Track member and applicant progress and cohort health. This lane owns the applic
 
 ## Open Loops
 
-- [ ] Collect GitHub + country from: Ythak Pat, Y, Diwitty|, Bj Libron (not yet introduced)
+- [x] Collect GitHub + country from Ythak Pat — confirmed: Kathy / [Chloe05688](https://github.com/Chloe05688), Philippines [A]
+- [x] Collect GitHub + country from Y — confirmed: Asameow / [asameow](https://github.com/asameow), Philippines [A]
+- [ ] Collect GitHub + country from: Diwitty|, Bj Libron (not yet introduced)
 - [x] Verify OB1 fork for Jayr — confirmed Done [A]; GitHub updated to dismantle23
 - [x] Verify OB1 fork for Jonathan K — confirmed Done [A]
 - [ ] Collect Task 1 proof from each member (screenshot or GitHub update)
@@ -46,7 +48,7 @@ Chase Task 1 proof from all members. All known members now have forks confirmed.
 
 ## Dashboard
 
-_Last updated: 2026-05-02 (fork status revised). Source: Telegram chat history (Tier A). Owner confirmation (Tier A). Executive report signal (Tier B). Unverified fields marked [C]._
+_Last updated: 2026-05-02 (all members resolved; Ythak Pat = Kathy, Y = Asameow). Source: Telegram chat history (Tier A). Owner confirmation (Tier A). Executive report signal (Tier B). Unverified fields marked [C]._
 
 ### Eligible — GitHub + Country submitted [A]
 
@@ -62,15 +64,14 @@ _Last updated: 2026-05-02 (fork status revised). Source: Telegram chat history (
 | Kyle (Ka Kyle) | Philippines | [Ka-kyle](https://github.com/Ka-kyle) | Not stated | Frontend / UI — web, HTML/CSS, React-adjacent | Done [A] | Assigned | Follow setup guide → curl test screenshot |
 | Jiyah | Philippines | [jiaj259](https://github.com/jiaj259) | Not stated | Backend / systems — C++, Java/Spring Boot, PHP/SQL | Done [A] | Assigned | Follow setup guide → curl test screenshot |
 | Val Ortiz | Philippines | [Mia-yana](https://github.com/Mia-yana) | Not stated | Frontend / UI — web, HTML/CSS, React-adjacent | Done [A] | Assigned | Follow setup guide → curl test screenshot |
-| Kathy | Philippines | [Chloe05688](https://github.com/Chloe05688) | Not stated | Frontend / UI — web, HTML/CSS, React-adjacent | Done [A] | Assigned | Follow setup guide → curl test screenshot |
+| Kathy (Ythak Pat) | Philippines | [Chloe05688](https://github.com/Chloe05688) | Not stated | Frontend / UI — web, HTML/CSS, React-adjacent | [Done [A]](https://github.com/Chloe05688/OB1) | Assigned | Follow setup guide → curl test screenshot |
+| Y (Asameow) | Philippines | [asameow](https://github.com/asameow) | Not stated | Not in exec report | Done [A] | Assigned | Follow setup guide → curl test screenshot |
 
 ### Pending intro — GitHub + Country not yet received
 
 | Name | Country | GitHub | Notes |
 |---|---|---|---|
-| Ythak Pat | — | — | Invited 24 Apr; no intro posted |
-| Y | — | — | Invited 24 Apr; no intro posted |
-| Diwitty\| | — | [diWitty00](https://github.com/diWitty00) [C] | Invited 24 Apr; handle in exec report but no chat intro |
+| Diwitty\| | — | [diWitty00](https://github.com/diWitty00) [C] | Invited 24 Apr; handle in exec report but no chat intro to confirm |
 | Bj Libron | — | — | Invited 24 Apr; no intro posted |
 
 _diWitty00 (full-stack, JavaScript + Node.js) appears in the executive report — likely Diwitty|, but unconfirmed [C]. Owner to verify._
