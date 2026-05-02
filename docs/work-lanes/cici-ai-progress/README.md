@@ -18,12 +18,32 @@ Track member and applicant progress and cohort health. This lane owns the applic
 - [ ] Collect GitHub + country from: Ythak Pat, Y, Diwitty|, Bj Libron (not yet introduced)
 - [ ] Verify OB1 fork for Jayr — was shown how but completion unconfirmed
 - [ ] Verify OB1 fork for Jonathan K — no confirmation in chat
-- [ ] Define "first-task" criteria so readiness can be assessed consistently
 - [ ] Match Chloe05688 (exec report) to a remaining unintroduced member
+- [ ] Collect Task 1 proof from each member (screenshot or GitHub update)
 
 ## Next Action
 
-Assign the first OB1 task to all confirmed-fork members (Pango, Troy, Hannah, Kekerv, Ell, Kyle, Jiyah, Val). Chase Jayr and Jonathan K to confirm their fork.
+Chase Task 1 proof from members who have confirmed their fork. Chase Jayr and Jonathan K to confirm fork so they can join Task 1.
+
+## Task Definitions
+
+### Task 1 — Get OB1 Live (assigned 2026-05-02)
+
+**Goal:** Complete the OB1 setup and store your first real thought.
+
+**Steps:**
+1. Follow the setup guide: `docs/setup-guide.md` in the Cici repo (link in pinned message)
+2. Store one real thought from your actual life — a client task, school note, personal goal, side project idea, anything
+3. Share proof in Telegram: a screenshot showing OB1 working (the `curl` test from Step 7, or OB1 connected in Claude/Cursor)
+
+**Bonus (makes it visible on GitHub):** Add a `proof/` folder to your forked repo with a short `README.md` — just one sentence describing what you stored (no personal data needed, e.g. "stored my first client request").
+
+**Pass criteria:** Screenshot shared in Telegram showing a live OB1 response, OR a `proof/` commit visible on your GitHub fork.
+
+**Notes:**
+- Claude, Cursor, or ChatGPT can help you through any step — that's the point
+- Ask in the group if you get stuck; don't go silent
+- Estimated time: 30–45 minutes following the guide
 
 ## Dashboard
 
@@ -33,16 +53,16 @@ _Last updated: 2026-05-02 (fork status revised). Source: Telegram chat history (
 
 | Name | Country | GitHub | Self-reported XP | GitHub signal [B] | OB1 fork | First task | Next prompt |
 |---|---|---|---|---|---|---|---|
-| Jonathan K | US | [JK3303](https://github.com/JK3303) | "little basic experience" | Not in exec report | — | — | Confirm OB1 fork; share first use-case |
-| Jayr (Dismantle) | Philippines | [salajosefinojr-sys](https://github.com/salajosefinojr-sys) | "no experience, willing to learn" | Not in exec report | Shown how — unconfirmed [C] | — | Confirm fork; pick one daily use-case for OB1 |
-| Pango (Penguin) | Philippines | [PenguinPH739](https://github.com/PenguinPH739) | "little experience" | Automation / tooling — Python, data, bots | Done [A] | — | Setup OB1; share first stored thought |
-| Troy | Philippines | [Troy2171](https://github.com/Troy2171) | "no knowledge about coding" | Automation / tooling — Python, shell, security | Done [A] | — | Setup OB1; pick a daily tracking use-case |
-| Hannah | Philippines | [nana-rpix](https://github.com/nana-rpix) | "don't know coding" | Backend / systems — C++, Java/Spring Boot, PHP/SQL | Done [A] | — | Setup OB1; pick a freelance or school use-case |
-| Kekerv (Kekervs) | Philippines | [Adelle-sims](https://github.com/Adelle-sims) | "don't really know how to code" | Automation / tooling — Python, shell, security | Done [A] | — | Setup OB1; pick one daily use-case |
-| Ell | Philippines | [jhon-ell16](https://github.com/jhon-ell16) | "no experience, willing to learn" | Backend / systems — Java/Spring Boot, PHP/SQL | Done [A] | — | Setup OB1; pick one daily use-case |
-| Kyle (Ka Kyle) | Philippines | [Ka-kyle](https://github.com/Ka-kyle) | Not stated | Frontend / UI — web, HTML/CSS, React-adjacent | Done [A] | — | Setup OB1; pick a small business / freelance use-case |
-| Jiyah | Philippines | [jiaj259](https://github.com/jiaj259) | Not stated | Backend / systems — C++, Java/Spring Boot, PHP/SQL | Done [A] | — | Setup OB1; pick one daily use-case |
-| Val Ortiz | Philippines | [Mia-yana](https://github.com/Mia-yana) | Not stated | Frontend / UI — web, HTML/CSS, React-adjacent | Done [A] | — | Setup OB1; pick a small business / freelance use-case |
+| Jonathan K | US | [JK3303](https://github.com/JK3303) | "little basic experience" | Not in exec report | — | Pending fork | Confirm fork first |
+| Jayr (Dismantle) | Philippines | [salajosefinojr-sys](https://github.com/salajosefinojr-sys) | "no experience, willing to learn" | Not in exec report | Unconfirmed [C] | Pending fork | Confirm fork first |
+| Pango (Penguin) | Philippines | [PenguinPH739](https://github.com/PenguinPH739) | "little experience" | Automation / tooling — Python, data, bots | Done [A] | Assigned | Follow setup guide → curl test screenshot |
+| Troy | Philippines | [Troy2171](https://github.com/Troy2171) | "no knowledge about coding" | Automation / tooling — Python, shell, security | Done [A] | Assigned | Follow setup guide → curl test screenshot |
+| Hannah | Philippines | [nana-rpix](https://github.com/nana-rpix) | "don't know coding" | Backend / systems — C++, Java/Spring Boot, PHP/SQL | Done [A] | Assigned | Follow setup guide → curl test screenshot |
+| Kekerv (Kekervs) | Philippines | [Adelle-sims](https://github.com/Adelle-sims) | "don't really know how to code" | Automation / tooling — Python, shell, security | Done [A] | Assigned | Follow setup guide → curl test screenshot |
+| Ell | Philippines | [jhon-ell16](https://github.com/jhon-ell16) | "no experience, willing to learn" | Backend / systems — Java/Spring Boot, PHP/SQL | Done [A] | Assigned | Follow setup guide → curl test screenshot |
+| Kyle (Ka Kyle) | Philippines | [Ka-kyle](https://github.com/Ka-kyle) | Not stated | Frontend / UI — web, HTML/CSS, React-adjacent | Done [A] | Assigned | Follow setup guide → curl test screenshot |
+| Jiyah | Philippines | [jiaj259](https://github.com/jiaj259) | Not stated | Backend / systems — C++, Java/Spring Boot, PHP/SQL | Done [A] | Assigned | Follow setup guide → curl test screenshot |
+| Val Ortiz | Philippines | [Mia-yana](https://github.com/Mia-yana) | Not stated | Frontend / UI — web, HTML/CSS, React-adjacent | Done [A] | Assigned | Follow setup guide → curl test screenshot |
 
 ### Pending intro — GitHub + Country not yet received
 

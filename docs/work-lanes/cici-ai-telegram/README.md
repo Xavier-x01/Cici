@@ -24,13 +24,32 @@ Coordinate the Telegram group as the social and cohort activation surface. This 
 
 ## Next Action
 
-Draft two posts for Xavier to review before sending:
+Two posts ready for Xavier to review and send. Send Post A first; send Post B as a separate message right after.
 
-**Post A — Chase missing members (short)**
-> @all — If you haven't introduced yourself yet, drop a quick note: your name, country, and GitHub link. That's all you need to be eligible. (Jiyah, Ythak Pat, Y, Diwitty, Bj, Val — you're up!)
+---
 
-**Post B — First task prompt (after forks confirmed)**
-> Great work on the forks everyone. Next step: pick one real thing in your life you want to track or organize — client work, school notes, a side project, anything. Store your first thought in OB1 and share a screenshot or GitHub update here. That's your first proof-of-work.
+**Post A — Task 1 announcement**
+
+> @all — Time for Task 1: Get OB1 Live.
+>
+> Goal: set up your own OB1 and store your first real thought — something from your actual life (a task, a goal, a client note, anything).
+>
+> How to do it:
+> 1. Open the setup guide in the pinned repo → docs/setup-guide.md
+> 2. Follow it step by step (takes 30–45 min; Claude or Cursor can help you through any step)
+> 3. Run the curl test at Step 7 — if you get a JSON response, you're live
+> 4. Store one real thought
+> 5. Share a screenshot here as your proof
+>
+> Bonus: add a proof/ folder to your forked repo with one line saying what you stored — that makes your progress visible on GitHub.
+>
+> Stuck anywhere? Ask in the group — that's what we're here for.
+
+---
+
+**Post B — Chase Jayr and Jonathan K (send right after Post A)**
+
+> Jayr and Jonathan — confirm your fork is done so you can join Task 1. Drop a message or share your GitHub link here.
 
 _Both posts require Xavier's review before sending._
 
