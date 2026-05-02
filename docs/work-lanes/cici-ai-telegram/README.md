@@ -16,13 +16,31 @@ Coordinate the Telegram group as the social and cohort activation surface. This 
 
 ## Open Loops
 
-- [ ] Next group post to solicit OB1 fork URLs / screenshots from applicants
-- [ ] Pinned message review — check if current pin reflects active cohort status
-- [ ] Welcome message audit — ensure norms reflect current scope and expectations
+- [ ] **Chase missing intros**: Jiyah, Ythak Pat, Y, Diwitty|, Bj Libron, Val Ortiz have not yet posted name + country + GitHub
+- [ ] **Fork confirmation post**: ask Jayr, Ell, and Kekerv to confirm OB1 fork is done (no confirmation in chat)
+- [ ] **First-task prompt**: draft next group post asking members to share one real use-case they will track with OB1 (freelance, school, business, family, etc.)
+- [ ] **Pinned message review**: three pins exist; confirm all three are still current and in the right order
+- [ ] **Welcome message audit**: ensure tone and scope reflect current cohort status (10 scholarships, OB1 focus, Philippines-anchored)
 
 ## Next Action
 
-Draft the next Telegram post asking applicants to share their OB1 fork URL or a screenshot showing their fork/progress. Route responses to `cici-ai-progress` for tracking.
+Draft two posts for Xavier to review before sending:
+
+**Post A — Chase missing members (short)**
+> @all — If you haven't introduced yourself yet, drop a quick note: your name, country, and GitHub link. That's all you need to be eligible. (Jiyah, Ythak Pat, Y, Diwitty, Bj, Val — you're up!)
+
+**Post B — First task prompt (after forks confirmed)**
+> Great work on the forks everyone. Next step: pick one real thing in your life you want to track or organize — client work, school notes, a side project, anything. Store your first thought in OB1 and share a screenshot or GitHub update here. That's your first proof-of-work.
+
+_Both posts require Xavier's review before sending._
+
+## Reply Templates
+
+**For "what's next?" questions:**
+> Next step is to set up your OB1 following the setup guide in the pinned message: https://github.com/Xavier-x01/Cici/blob/main/docs/setup-guide.md — takes about 20 minutes. Ask here if you get stuck at any step.
+
+**For fork confirmation questions:**
+> Fork the repo at https://github.com/NateBJones-Projects/OB1 — click the Fork button top-right on GitHub. Share your GitHub link here once done.
 
 ## Key References
 
