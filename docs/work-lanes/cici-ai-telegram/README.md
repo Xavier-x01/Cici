@@ -35,7 +35,7 @@ Two posts ready for Xavier to review and send. Send Post A first; send Post B as
 > Goal: set up your own OB1 and store your first real thought — something from your actual life (a task, a goal, a client note, anything).
 >
 > How to do it:
-> 1. Open the setup guide in the pinned repo → docs/setup-guide.md
+> 1. Open the setup guide: https://github.com/Xavier-x01/Cici/blob/main/docs/setup-guide.md
 > 2. Follow it step by step (takes 30–45 min; Claude or Cursor can help you through any step)
 > 3. Run the curl test at Step 7 — if you get a JSON response, you're live
 > 4. Store one real thought
