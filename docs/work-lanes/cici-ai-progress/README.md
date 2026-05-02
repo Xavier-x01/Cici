@@ -16,13 +16,13 @@ Track member and applicant progress and cohort health. This lane owns the applic
 ## Open Loops
 
 - [ ] Collect GitHub + country from: Ythak Pat, Y, Diwitty|, Bj Libron (not yet introduced)
-- [ ] Verify OB1 fork for Jayr — was shown how but completion unconfirmed
-- [ ] Verify OB1 fork for Jonathan K — no confirmation in chat
+- [x] Verify OB1 fork for Jayr — confirmed Done [A]; GitHub updated to dismantle23
+- [x] Verify OB1 fork for Jonathan K — confirmed Done [A]
 - [ ] Collect Task 1 proof from each member (screenshot or GitHub update)
 
 ## Next Action
 
-Chase Task 1 proof from members who have confirmed their fork. Chase Jayr and Jonathan K to confirm fork so they can join Task 1.
+Chase Task 1 proof from all members. All known members now have forks confirmed.
 
 ## Task Definitions
 
@@ -52,8 +52,8 @@ _Last updated: 2026-05-02 (fork status revised). Source: Telegram chat history (
 
 | Name | Country | GitHub | Self-reported XP | GitHub signal [B] | OB1 fork | First task | Next prompt |
 |---|---|---|---|---|---|---|---|
-| Jonathan K | US | [JK3303](https://github.com/JK3303) | "little basic experience" | Not in exec report | — | Pending fork | Confirm fork first |
-| Jayr (Dismantle) | Philippines | [salajosefinojr-sys](https://github.com/salajosefinojr-sys) | "no experience, willing to learn" | Not in exec report | Unconfirmed [C] | Pending fork | Confirm fork first |
+| Jonathan K | US | [JK3303](https://github.com/JK3303) | "little basic experience" | Not in exec report | Done [A] | Assigned | Follow setup guide → curl test screenshot |
+| Jayr (Dismantle) | Philippines | [dismantle23](https://github.com/dismantle23) | "no experience, willing to learn" | Not in exec report | Done [A] | Assigned | Follow setup guide → curl test screenshot |
 | Pango (Penguin) | Philippines | [PenguinPH739](https://github.com/PenguinPH739) | "little experience" | Automation / tooling — Python, data, bots | Done [A] | Assigned | Follow setup guide → curl test screenshot |
 | Troy | Philippines | [Troy2171](https://github.com/Troy2171) | "no knowledge about coding" | Automation / tooling — Python, shell, security | Done [A] | Assigned | Follow setup guide → curl test screenshot |
 | Hannah | Philippines | [nana-rpix](https://github.com/nana-rpix) | "don't know coding" | Backend / systems — C++, Java/Spring Boot, PHP/SQL | Done [A] | Assigned | Follow setup guide → curl test screenshot |

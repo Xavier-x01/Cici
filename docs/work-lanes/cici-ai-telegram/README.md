@@ -17,7 +17,9 @@ Coordinate the Telegram group as the social and cohort activation surface. This 
 ## Open Loops
 
 - [ ] **Chase missing intros**: Jiyah, Ythak Pat, Y, Diwitty|, Bj Libron, Val Ortiz have not yet posted name + country + GitHub
-- [ ] **Fork confirmation post**: ask Jayr, Ell, and Kekerv to confirm OB1 fork is done (no confirmation in chat)
+- [x] **Fork confirmation — Jayr**: confirmed Done [A]; GitHub handle is now dismantle23 (Philippines)
+- [x] **Fork confirmation — Jonathan K**: confirmed Done [A]; Telegram handle is G (US)
+- [ ] **Fork confirmation post**: ask Ell and Kekerv to confirm OB1 fork is done (no confirmation in chat)
 - [ ] **First-task prompt**: draft next group post asking members to share one real use-case they will track with OB1 (freelance, school, business, family, etc.)
 - [ ] **Pinned message review**: three pins exist; confirm all three are still current and in the right order
 - [ ] **Welcome message audit**: ensure tone and scope reflect current cohort status (10 scholarships, OB1 focus, Philippines-anchored)
@@ -47,9 +49,9 @@ Two posts ready for Xavier to review and send. Send Post A first; send Post B as
 
 ---
 
-**Post B — Chase Jayr and Jonathan K (send right after Post A)**
+**Post B — Chase Ell and Kekerv (send right after Post A)**
 
-> Jayr and Jonathan — confirm your fork is done so you can join Task 1. Drop a message or share your GitHub link here.
+> Ell and Kekerv — confirm your fork is done so you can join Task 1. Drop a message or share your GitHub link here.
 
 _Both posts require Xavier's review before sending._
 
