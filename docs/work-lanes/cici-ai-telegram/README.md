@@ -37,9 +37,9 @@ Two posts ready for Xavier to review and send. Send Post A first; send Post B as
 > How to do it:
 > 1. Open the setup guide: https://github.com/Xavier-x01/Cici/blob/main/docs/setup-guide.md
 > 2. Follow it step by step (takes 30–45 min; Claude or Cursor can help you through any step)
-> 3. Run the curl test at Step 7 — if you get a JSON response, you're live
-> 4. Store one real thought
-> 5. Share a screenshot here as your proof
+> 3. At the end of the guide there is a quick test — you run one command and your terminal shows a response. Screenshot that.
+> 4. Store one real thought in OB1
+> 5. Share your screenshot here as proof
 >
 > Bonus: add a proof/ folder to your forked repo with one line saying what you stored — that makes your progress visible on GitHub.
 >
