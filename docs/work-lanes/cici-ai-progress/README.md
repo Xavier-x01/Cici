@@ -16,15 +16,14 @@ Track member and applicant progress and cohort health. This lane owns the applic
 ## Open Loops
 
 - [ ] Collect GitHub + country from: Ythak Pat, Y, Diwitty|, Bj Libron (not yet introduced)
-- [ ] Get country for Jiyah (jiaj259 confirmed); get GitHub URL + country for Val Ortiz
 - [ ] Verify OB1 fork for Jayr — was shown how but completion unconfirmed
 - [ ] Verify OB1 fork for Jonathan K — no confirmation in chat
 - [ ] Define "first-task" criteria so readiness can be assessed consistently
-- [ ] Match Mia-yana and Chloe05688 (exec report) to remaining unintroduced members
+- [ ] Match Chloe05688 (exec report) to a remaining unintroduced member
 
 ## Next Action
 
-Chase GitHub + country from Val Ortiz and Jiaji (both confirmed fork but not yet in eligible table). Then assign the first OB1 task to all confirmed-fork members.
+Assign the first OB1 task to all confirmed-fork members (Pango, Troy, Hannah, Kekerv, Ell, Kyle, Jiyah, Val). Chase Jayr and Jonathan K to confirm their fork.
 
 ## Dashboard
 
@@ -42,17 +41,17 @@ _Last updated: 2026-05-02 (fork status revised). Source: Telegram chat history (
 | Kekerv (Kekervs) | Philippines | [Adelle-sims](https://github.com/Adelle-sims) | "don't really know how to code" | Automation / tooling — Python, shell, security | Done [A] | — | Setup OB1; pick one daily use-case |
 | Ell | Philippines | [jhon-ell16](https://github.com/jhon-ell16) | "no experience, willing to learn" | Backend / systems — Java/Spring Boot, PHP/SQL | Done [A] | — | Setup OB1; pick one daily use-case |
 | Kyle (Ka Kyle) | Philippines | [Ka-kyle](https://github.com/Ka-kyle) | Not stated | Frontend / UI — web, HTML/CSS, React-adjacent | Done [A] | — | Setup OB1; pick a small business / freelance use-case |
+| Jiyah | Philippines | [jiaj259](https://github.com/jiaj259) | Not stated | Backend / systems — C++, Java/Spring Boot, PHP/SQL | Done [A] | — | Setup OB1; pick one daily use-case |
+| Val Ortiz | Philippines | [Mia-yana](https://github.com/Mia-yana) | Not stated | Frontend / UI — web, HTML/CSS, React-adjacent | Done [A] | — | Setup OB1; pick a small business / freelance use-case |
 
 ### Pending intro — GitHub + Country not yet received
 
 | Name | Country | GitHub | Notes |
 |---|---|---|---|
-| Jiyah | — | [jiaj259](https://github.com/jiaj259) | Fork confirmed [A]; country still needed |
 | Ythak Pat | — | — | Invited 24 Apr; no intro posted |
 | Y | — | — | Invited 24 Apr; no intro posted |
 | Diwitty\| | — | [diWitty00](https://github.com/diWitty00) [C] | Invited 24 Apr; handle in exec report but no chat intro |
 | Bj Libron | — | — | Invited 24 Apr; no intro posted |
-| Val Ortiz | — | — | Fork confirmed [A]; GitHub URL + country still needed |
 
 _diWitty00 (full-stack, JavaScript + Node.js) appears in the executive report — likely Diwitty|, but unconfirmed [C]. Owner to verify._
 
@@ -67,14 +66,14 @@ _diWitty00 (full-stack, JavaScript + Node.js) appears in the executive report �
 
 | Cluster | Handles | Signal |
 |---|---|---|
-| Frontend / UI | nana-rpix (Hannah) [C — partial match], Ka-kyle (Kyle), Mia-yana [unmatched], Chloe05688 [unmatched] | Entry to junior; web UI, HTML/CSS, React-adjacent |
+| Frontend / UI | nana-rpix (Hannah) [C — partial match], Ka-kyle (Kyle), Mia-yana (Val Ortiz), Chloe05688 [unmatched] | Entry to junior; web UI, HTML/CSS, React-adjacent |
 | Backend / systems | nana-rpix (Hannah), jhon-ell16 (Ell), jiaj259 (Jiyah) | Intermediate; C++, Java/Spring Boot, PHP/SQL |
 | Automation / tooling / data | Adelle-sims (Kekerv), Troy2171 (Troy), PenguinPH739 (Pango) | Junior to intermediate; Python, shell, security/data/bot-oriented |
 | Full-stack / general tooling | diWitty00 (Diwitty\| — unconfirmed) | Intermediate; JavaScript + Node.js |
 
 Strongest technical anchors per executive report: **nana-rpix (Hannah), jhon-ell16 (Ell), Adelle-sims (Kekerv), Troy2171 (Troy)**.
 
-_Mia-yana and Chloe05688 are in the executive report but not yet matched to a Telegram member. Likely among the unintroduced members (Ythak Pat, Y, Bj Libron, Val Ortiz)._
+_Mia-yana confirmed as Val Ortiz [A]. Chloe05688 still unmatched — likely among the unintroduced members (Ythak Pat, Y, Bj Libron)._
 
 ## Key References
 
