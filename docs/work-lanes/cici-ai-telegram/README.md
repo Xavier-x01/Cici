@@ -16,13 +16,52 @@ Coordinate the Telegram group as the social and cohort activation surface. This 
 
 ## Open Loops
 
-- [ ] Next group post to solicit OB1 fork URLs / screenshots from applicants
-- [ ] Pinned message review — check if current pin reflects active cohort status
-- [ ] Welcome message audit — ensure norms reflect current scope and expectations
+- [ ] **Chase missing intros**: Jiyah, Ythak Pat, Y, Diwitty|, Bj Libron, Val Ortiz have not yet posted name + country + GitHub
+- [x] **Fork confirmation — Jayr**: confirmed Done [A]; GitHub handle is now dismantle23 (Philippines)
+- [x] **Fork confirmation — Jonathan K**: confirmed Done [A]; Telegram handle is G (US)
+- [ ] **Fork confirmation post**: ask Ell and Kekerv to confirm OB1 fork is done (no confirmation in chat)
+- [ ] **First-task prompt**: draft next group post asking members to share one real use-case they will track with OB1 (freelance, school, business, family, etc.)
+- [ ] **Pinned message review**: three pins exist; confirm all three are still current and in the right order
+- [ ] **Welcome message audit**: ensure tone and scope reflect current cohort status (10 scholarships, OB1 focus, Philippines-anchored)
 
 ## Next Action
 
-Draft the next Telegram post asking applicants to share their OB1 fork URL or a screenshot showing their fork/progress. Route responses to `cici-ai-progress` for tracking.
+Two posts ready for Xavier to review and send. Send Post A first; send Post B as a separate message right after.
+
+---
+
+**Post A — Task 1 announcement**
+
+> @all — Time for Task 1: Get OB1 Live.
+>
+> Goal: set up your own OB1 and store your first real thought — something from your actual life (a task, a goal, a client note, anything).
+>
+> How to do it:
+> 1. Open the setup guide: https://github.com/Xavier-x01/Cici/blob/main/docs/setup-guide.md
+> 2. Follow it step by step (takes 30–45 min; Claude or Cursor can help you through any step)
+> 3. At the end of the guide there is a quick test — you run one command and your terminal shows a response. Screenshot that.
+> 4. Store one real thought in OB1
+> 5. Share your screenshot here as proof
+>
+> Bonus: add a proof/ folder to your forked repo with one line saying what you stored — that makes your progress visible on GitHub.
+>
+> Stuck anywhere? Ask in the group — that's what we're here for.
+
+---
+
+**Post B — Chase Ell and Kekerv (send right after Post A)**
+
+> Ell and Kekerv — confirm your fork is done so you can join Task 1. Drop a message or share your GitHub link here.
+
+_Both posts require Xavier's review before sending._
+
+## Reply Templates
+
+**For "what's next?" questions:**
+> Next step is to set up your OB1 following the setup guide in the pinned message: https://github.com/Xavier-x01/Cici/blob/main/docs/setup-guide.md — takes about 20 minutes. Ask here if you get stuck at any step.
+
+**For fork confirmation questions:**
+> Fork the repo at https://github.com/NateBJones-Projects/OB1 — click the Fork button top-right on GitHub. Share your GitHub link here once done.
 
 ## Key References
 
