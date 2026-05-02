@@ -16,7 +16,6 @@ Track member and applicant progress and cohort health. This lane owns the applic
 ## Open Loops
 
 - [ ] Collect GitHub + country from: Ythak Pat, Y, Diwitty|, Bj Libron (not yet introduced)
-- [ ] Get country for Kathy (Chloe05688 confirmed; fork confirmed)
 - [ ] Verify OB1 fork for Jayr — was shown how but completion unconfirmed
 - [ ] Verify OB1 fork for Jonathan K — no confirmation in chat
 - [ ] Collect Task 1 proof from each member (screenshot or GitHub update)
@@ -63,6 +62,7 @@ _Last updated: 2026-05-02 (fork status revised). Source: Telegram chat history (
 | Kyle (Ka Kyle) | Philippines | [Ka-kyle](https://github.com/Ka-kyle) | Not stated | Frontend / UI — web, HTML/CSS, React-adjacent | Done [A] | Assigned | Follow setup guide → curl test screenshot |
 | Jiyah | Philippines | [jiaj259](https://github.com/jiaj259) | Not stated | Backend / systems — C++, Java/Spring Boot, PHP/SQL | Done [A] | Assigned | Follow setup guide → curl test screenshot |
 | Val Ortiz | Philippines | [Mia-yana](https://github.com/Mia-yana) | Not stated | Frontend / UI — web, HTML/CSS, React-adjacent | Done [A] | Assigned | Follow setup guide → curl test screenshot |
+| Kathy | Philippines | [Chloe05688](https://github.com/Chloe05688) | Not stated | Frontend / UI — web, HTML/CSS, React-adjacent | Done [A] | Assigned | Follow setup guide → curl test screenshot |
 
 ### Pending intro — GitHub + Country not yet received
 
@@ -72,7 +72,6 @@ _Last updated: 2026-05-02 (fork status revised). Source: Telegram chat history (
 | Y | — | — | Invited 24 Apr; no intro posted |
 | Diwitty\| | — | [diWitty00](https://github.com/diWitty00) [C] | Invited 24 Apr; handle in exec report but no chat intro |
 | Bj Libron | — | — | Invited 24 Apr; no intro posted |
-| Kathy | — | [Chloe05688](https://github.com/Chloe05688) | Fork confirmed [A]; country still needed |
 
 _diWitty00 (full-stack, JavaScript + Node.js) appears in the executive report — likely Diwitty|, but unconfirmed [C]. Owner to verify._
 
