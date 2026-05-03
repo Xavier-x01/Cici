@@ -113,6 +113,7 @@ These commands live in `.claude/commands/` and can be invoked with `/`:
 | `/stage-evidence [tag]` | Stage Supabase export into evidence/ and prepared-context/ |
 | `/memory-audit` | Run a full pipeline and Tier C leak audit |
 | `/self-improve` | Run a behavioral self-improvement cycle — identifies gaps in how Cici acts and proposes concrete changes |
+| `/weekly-review` | Run the weekly synthesis ritual — reads journal entries, surfaces BrewMind open loops, and prompts for knowledge worth capturing into memory |
 
 ## Available Agents
 
