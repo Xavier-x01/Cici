@@ -112,6 +112,7 @@ These commands live in `.claude/commands/` and can be invoked with `/`:
 | `/promote-to-governed-state <proposal-id>` | Apply an approved proposal to the correct surface |
 | `/stage-evidence [tag]` | Stage Supabase export into evidence/ and prepared-context/ |
 | `/memory-audit` | Run a full pipeline and Tier C leak audit |
+| `/self-improve` | Run a behavioral self-improvement cycle — identifies gaps in how Cici acts and proposes concrete changes |
 
 ## Available Agents
 
@@ -123,6 +124,7 @@ These agents live in `.claude/agents/` and can be invoked via the Agent tool:
 | `evidence-stager` | Read + Write (evidence/ + prepared-context/ only) | Stages and synthesizes evidence |
 | `memory-auditor` | Read-only | Monthly hygiene audit; finds Tier C leaks |
 | `dev-hygiene` | Read + Write + Bash | Doctor check, batch workers, mode checklists — one command for repo health |
+| `self-improver` | Read + Write + Bash | Behavioral self-improvement cycle — reviews Cici's own instructions and proposes improvements |
 
 ## Agent Modes
 
