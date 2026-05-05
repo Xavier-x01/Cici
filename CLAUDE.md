@@ -107,6 +107,7 @@ These commands live in `.claude/commands/` and can be invoked with `/`:
 | Command | Purpose |
 |---|---|
 | `/session-start` | Run the startup ceremony: reads open proposals, open loops, surfaces status paragraph |
+| `/deep-search <query>` | Multi-pass AI-augmented search — decomposes query, scans governed-state, runs parallel MCP searches, surfaces gaps and tensions, produces tier-annotated synthesis |
 | `/draft-proposal <surface>` | Scaffold a new proposal for a governed-state surface |
 | `/review-governed-change <proposal-id>` | Evaluate a queued proposal and wait for Xavier's decision |
 | `/promote-to-governed-state <proposal-id>` | Apply an approved proposal to the correct surface |
@@ -126,6 +127,7 @@ These agents live in `.claude/agents/` and can be invoked via the Agent tool:
 | `memory-auditor` | Read-only | Monthly hygiene audit; finds Tier C leaks |
 | `dev-hygiene` | Read + Write + Bash | Doctor check, batch workers, mode checklists — one command for repo health |
 | `self-improver` | Read + Write + Bash | Behavioral self-improvement cycle — reviews Cici's own instructions and proposes improvements |
+| `deep-searcher` | Read-only | Multi-pass deep search — query decomposition, governed-state cross-reference, gap/tension analysis, tier-annotated synthesis |
 
 ## Agent Modes
 
