@@ -50,8 +50,20 @@ def check(proposal: ActionProposal) -> GoalCheckResult:
     else:
         result.failed.append("alignment — action does not clearly map to stated intent")
 
-    # 2. Robustness — stub: always pass; real check would run against test cases
-    result.passed.append("robustness (stub — wire to test suite)")
+    # 2. Robustness — description must be substantive; scope must not be a wildcard
+    word_count = len(proposal.description.split())
+    broad_scope_tokens = {"all", "any", "everything", "*", "**"}
+    scope_is_broad = (
+        not proposal.scope.strip()
+        or proposal.scope.strip().lower() in broad_scope_tokens
+        or "*" in proposal.scope
+    )
+    if word_count >= 5 and not scope_is_broad:
+        result.passed.append("robustness")
+    else:
+        result.failed.append(
+            "robustness — description too vague (< 5 words) or scope is too broad"
+        )
 
     # 3. Transparency — reasoning must be provided
     if proposal.reasoning:
