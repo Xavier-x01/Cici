@@ -23,6 +23,25 @@ This file gives Claude Code context about this repository so it can assist effec
 - **AI Gateway**: OpenRouter for embeddings and model routing
 - **Cost**: ~$0.10/month at personal scale
 
+## Directory Structure
+
+Key directories for AI orientation:
+
+| Directory / File | Purpose |
+|---|---|
+| `.claude/agents/` | Sub-agents (7); invoked via the Agent tool |
+| `.claude/commands/` | Slash commands (10); invoked with `/` |
+| `.claude/modes/` | Thin mode checklists for focused passes |
+| `config/` | Authority map and surface configuration |
+| `docs/` | Architecture docs, companion contract, work lanes, personal journals |
+| `docs/work-lanes/` | Active work lanes hub (3 lanes) |
+| `evidence/` | Raw imports and captured thoughts (immutable once written) |
+| `goals/` | Goal manifesto and alignment targets |
+| `prepared-context/` | Normalized context staged for review |
+| `proposals/` | Proposal queue (`queue/`) and schemas (`schemas/`) |
+| `scripts/` | Utility scripts — CI validator, dossier, search, evidence tools |
+| `users/cici/governed-state/` | Canonical durable state (owner-approved changes only) |
+
 ## Environment Variables / Secrets (in Supabase)
 
 | Secret name | Description |
@@ -64,6 +83,33 @@ supabase secrets set OPENROUTER_API_KEY=<new-key>
 curl "https://YOUR_PROJECT_REF.supabase.co/functions/v1/open-brain-mcp?key=YOUR_ACCESS_KEY"
 ```
 
+## CI / Validation Gate
+
+A GitHub Actions workflow runs on every push or PR touching `proposals/**`, `users/**`, `config/**`, or `scripts/validate-governed-state.py`.
+
+| Step | Detail |
+|---|---|
+| Runner | `ubuntu-latest` |
+| Python | 3.11 |
+| Command | `python3 scripts/validate-governed-state.py` |
+
+The validator checks JSON syntax, required directories, schema conformance, and surface-map integrity. A failing CI run means a governed-state artifact is malformed — do not merge until it passes.
+
+## Utility Scripts
+
+Scripts live in `scripts/`. Run from the repo root.
+
+| Script | Purpose |
+|---|---|
+| `validate-governed-state.py` | CI validator — JSON, schema, required dirs, surface-map |
+| `generate-dossier.py` | Full pipeline health dossier + Tier C leak audit |
+| `deep-search-report.py` | Multi-pass search synthesis from MCP results |
+| `extract-evidence.py` | Extract + normalize Supabase exports into `evidence/` |
+| `ai-goal-check.py` | Check an action against manifesto alignment goals |
+| `daily_journal_helper.py` | Scaffold today's daily journal entry from template |
+| `doctor.sh` | Bash repo health check |
+| `janitor/` | Transient memory purge utilities (dry-run default) |
+
 ## Architecture Reference
 
 See [README.md](README.md) for the full architecture diagram.
@@ -76,9 +122,9 @@ See [docs/setup-guide.md](docs/setup-guide.md) for the complete beginner setup w
 
 See [docs/session-bootstrap-prompt.md](docs/session-bootstrap-prompt.md) for a copy-paste prompt that gives any AI tool (Claude, ChatGPT, Cursor) instant full context on Cici and BrewMind.
 
-## Governed State (Phase 1)
+## Governed State (Phase 2 — Formation + Review)
 
-This repo now has a file-based governed-state layer. Key locations:
+This repo is in **Phase 2 (Formation + Review)** of the governed-state lifecycle. Key locations:
 
 | Path | Purpose |
 |---|---|
@@ -93,6 +139,18 @@ This repo now has a file-based governed-state layer. Key locations:
 Supabase remains the primary runtime. The governed-state layer is additive — it does not change how Supabase or MCP work.
 
 When proposing material changes to governed state, create a JSON file in `proposals/queue/` following the schema in `proposals/schemas/proposal.schema.json`. Do NOT write directly to `users/cici/governed-state/` unless the change is small and obvious.
+
+### Work Lanes
+
+Active coordination surfaces. Hub: `docs/work-lanes/README.md`.
+
+| Lane | Scope |
+|---|---|
+| `cici-ai-core` | Repo architecture, governed-state, prompts, technical implementation |
+| `cici-ai-progress` | Member progress, applicant table, cohort metrics, proof packets |
+| `cici-ai-telegram` | Telegram group operations, posts, norms, applicant intake |
+
+Lane files summarize and route; they must not silently rewrite governed-state or applicant facts.
 
 ## Session Behavior
 
@@ -115,6 +173,7 @@ These commands live in `.claude/commands/` and can be invoked with `/`:
 | `/memory-audit` | Run a full pipeline and Tier C leak audit |
 | `/self-improve` | Run a behavioral self-improvement cycle — identifies gaps in how Cici acts and proposes concrete changes |
 | `/weekly-review` | Run the weekly synthesis ritual — reads journal entries, surfaces BrewMind open loops, and prompts for knowledge worth capturing into memory |
+| `/daily-task` | Generate today's AI skill-building task for Xavier and log it to the work journal |
 
 ## Available Agents
 
@@ -128,6 +187,7 @@ These agents live in `.claude/agents/` and can be invoked via the Agent tool:
 | `dev-hygiene` | Read + Write + Bash | Doctor check, batch workers, mode checklists — one command for repo health |
 | `self-improver` | Read + Write + Bash | Behavioral self-improvement cycle — reviews Cici's own instructions and proposes improvements |
 | `deep-searcher` | Read-only | Multi-pass deep search — query decomposition, governed-state cross-reference, gap/tension analysis, tier-annotated synthesis |
+| `self-directed-learning` | Read, Write, Bash, Glob, Grep | Xavier's learning partner and community pilot co-pilot. Discovers, documents, and ships experiments — teaches in-repo habits, tracks pilot funnel metrics, and drafts outreach copy. Defaults to PLAN lane. |
 
 ## Agent Modes
 
@@ -152,7 +212,7 @@ _This section is a living log. Add entries when Claude makes a mistake Xavier sh
 
 ## BrewMind companion defaults
 
-Full contract: [`docs/companion-agent/brewmind-companion-contract.md`](docs/companion-agent/brewmind-companion-contract.md)
+Full contract: [`docs/companion-agent/brewmind-companion-contract.md`](docs/companion-agent/brewmind-companion-contract.md) _(working reference — not yet canonical governed state)_
 
 - **Startup reads (every session):** `CLAUDE.md` → `proposals/queue/*.json` → `docs/companion-agent/brewmind-open-loops.md`. Surface a one-paragraph status before acting.
 - **Default lane: PLAN.** Read and propose freely. Only write to governed state or commit/push when Xavier explicitly says so (EXECUTE lane). Docs-only changes use DOCSYNC.
