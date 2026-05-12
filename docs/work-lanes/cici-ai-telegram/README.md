@@ -26,7 +26,9 @@ Coordinate the Telegram group as the social and cohort activation surface. This 
 
 ## Next Action
 
-Two posts ready for Xavier to review and send. Send Post A first; send Post B as a separate message right after.
+Three new posts ready for Xavier to review and send — roadmap announcement + Task 1 proof chase + Task 2 unlock. See [`posts-roadmap-phase1-update.md`](posts-roadmap-phase1-update.md). Send in order: Post 1 → Post 2 → Post 3.
+
+Previous drafts (Post A and Post B below) covered Task 1 announcement and fork chase — superseded by the new posts if Task 1 is already sent.
 
 ---
 
