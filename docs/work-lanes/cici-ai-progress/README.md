@@ -1,5 +1,7 @@
 # Lane: cici-ai-progress
 
+**Full 3-phase roadmap:** [`roadmap.md`](roadmap.md)
+
 ## Purpose
 
 Track member and applicant progress and cohort health. This lane owns the applicant/member table, task completion records, proof packets, and scholarship-readiness signals. Evidence labels govern all status claims — do not overstate eligibility, employment, equity, or payment commitments.
@@ -26,6 +28,8 @@ Chase Task 1 proof from all members. All known members now have forks confirmed.
 
 ## Task Definitions
 
+Task cards live in [`task-cards/`](task-cards/). Full instructions, proof format, and troubleshooting for each task are in the individual card files.
+
 ### Task 1 — Get OB1 Live (assigned 2026-05-02)
 
 **Goal:** Complete the OB1 setup and store your first real thought.
@@ -43,6 +47,14 @@ Chase Task 1 proof from all members. All known members now have forks confirmed.
 - Claude, Cursor, or ChatGPT can help you through any step — that's the point
 - Ask in the group if you get stuck; don't go silent
 - Estimated time: 30–45 minutes following the guide
+
+### Task 2 — Connect Your AI Client (next up)
+
+**Goal:** Get Claude, Cursor, or ChatGPT connected to your OB1 instance via MCP. Test all four tools live.
+
+**Pass criteria:** Screenshot of AI client with at least one OB1 tool call visible and responding.
+
+**Full instructions:** [`task-cards/task-02-connect-ai-client.md`](task-cards/task-02-connect-ai-client.md)
 
 ## Dashboard
 
