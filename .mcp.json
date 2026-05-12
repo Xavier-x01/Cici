@@ -2,7 +2,7 @@
   "mcpServers": {
     "open-brain": {
       "type": "http",
-      "url": "https://jhdxdozxmxbfcvnskvgz.supabase.co/functions/v1/open-brain-mcp?key=b66b0051331a9ddf8676f0ae225121ce3f59a4712bec491bcd6f627c6239b684"
+      "url": "https://cuwfwlcmhxxebbgolpje.supabase.co/functions/v1/open-brain-mcp?key=b66b0051331a9ddf8676f0ae225121ce3f59a4712bec491bcd6f627c6239b684"
     }
   }
 }
