@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "open-brain": {
+      "type": "http",
+      "url": "https://jhdxdozxmxbfcvnskvgz.supabase.co/functions/v1/open-brain-mcp?key=b2de3b52647764970188c4d920d7497c6bdcdb14b31be4c7cabd76b2bad7d601"
+    }
+  }
+}
