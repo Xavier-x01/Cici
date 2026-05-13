@@ -13,6 +13,11 @@
     ],
     "defaultMode": "plan"
   },
+  "sandbox": {
+    "network": {
+      "allowedDomains": ["jhdxdozxmxbfcvnskvgz.supabase.co"]
+    }
+  },
   "hooks": {
     "SessionStart": [
       {
