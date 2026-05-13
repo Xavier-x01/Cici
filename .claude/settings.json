@@ -1,4 +1,10 @@
 {
+  "mcpServers": {
+    "open-brain-mcp": {
+      "type": "http",
+      "url": "https://jhdxdozxmxbfcvnskvgz.supabase.co/functions/v1/open-brain-mcp?key=6bfc85c61bb885f75e47c3d9fa61c81bf0afef7a707b3370ae5c86e0ac95d706"
+    }
+  },
   "permissions": {
     "allow": [
       "Bash(git status)",
