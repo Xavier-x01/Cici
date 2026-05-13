@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "open-brain-mcp": {
+      "type": "http",
+      "url": "https://YOUR_PROJECT_REF.supabase.co/functions/v1/open-brain-mcp?key=YOUR_MCP_ACCESS_KEY"
+    }
+  }
+}
