@@ -1,0 +1,41 @@
+artifact_id: "civ-053-001"
+chapter_id: "civ-053"
+museum_part: "civilization"
+room: "entrance_artifact"
+
+title: "Russian Orthodox Liturgical Chant (Obikkhod)"
+item_type: "music"
+
+local_original_path: "original/russian-orthodox-chant-obikkhod.mp3"
+cloud_original_path: "Predictive History Museum/civilization/civ-053-dostoevsky-and-the-soul-of-russia/artifacts/001-russian-orthodox-chant/original/russian-orthodox-chant-obikkhod.mp3"
+
+source_url: "https://archive.org/details/russianorthodoxchant"
+source_name: "Internet Archive — Russian Orthodox Chant Collection"
+
+rights_status: "public_domain"
+storage_status: "url_only_pending_local"
+checksum_sha256: "pending"
+
+what_to_notice: >
+  The monophonic texture — a single melodic line, no harmony in the Western sense.
+  The slow, cyclical structure that resists forward narrative momentum.
+  This music does not resolve; it accumulates and returns.
+  Listen for the absence of individual performance: this is communal voice, not solo.
+
+what_this_cannot_prove: >
+  This recording cannot prove what Dostoevsky himself heard or how nineteenth-century
+  Orthodox practice sounded in St. Petersburg parishes. Recording technology did not
+  exist in his lifetime. This is a later performance of a tradition, not the tradition
+  itself. The specific recording's date and performers matter — confirm before use.
+
+lecture_connection: >
+  The chant establishes the civilizational substrate before Dostoevsky's fiction enters.
+  The underground man's rage is only intelligible against this background sound — something
+  ancient, communal, and resistant to individualist rationalism. The chapter argues that
+  modernization pressure becomes legible when you can hear what it was displacing.
+
+curator_note: >
+  Selected as the entrance artifact because it precedes and outlasts Dostoevsky. The
+  visitor needs to inhabit the tradition before encountering the man who diagnosed its
+  fracture. Internet Archive hosts multiple public domain recordings of Orthodox chant;
+  confirm the specific item's rights and note the performers before downloading.

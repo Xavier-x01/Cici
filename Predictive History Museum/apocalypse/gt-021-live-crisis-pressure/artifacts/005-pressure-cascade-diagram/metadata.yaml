@@ -1,0 +1,47 @@
+artifact_id: "gt-021-005"
+chapter_id: "gt-021"
+museum_part: "apocalypse"
+room: "pressure_systems"
+
+title: "Pressure Cascade System Diagram"
+item_type: "pressure_system"
+
+local_original_path: "original/pressure-cascade-diagram.svg"
+cloud_original_path: "Predictive History Museum/apocalypse/gt-021-live-crisis-pressure/artifacts/005-pressure-cascade-diagram/original/pressure-cascade-diagram.svg"
+
+source_url: "none — curator-authored"
+source_name: "Predictive History Museum curatorial staff"
+
+rights_status: "open_license"
+storage_status: "pending_acquisition"
+checksum_sha256: "pending"
+
+what_to_notice: >
+  The diagram should show the structural phases of a pressure cascade:
+  trigger event → cascade onset → false plateau → secondary collapse → transformation/resolution.
+  Look for the asymmetry between onset speed and resolution speed — crises tend to
+  fall faster than they recover.
+  The diagram makes the chapter's structural argument visible as a system rather than
+  as a sequence of historical events.
+
+what_this_cannot_prove: >
+  A diagram is a model, not data. It shows a pattern abstracted from specific cases;
+  it cannot prove that any particular crisis will follow this shape.
+  The pressure cascade model may not apply to all crisis types — the chapter's cases
+  are primarily financial and economic. Other domains (political, ecological, military)
+  may have different pressure signatures.
+
+lecture_connection: >
+  The pressure_systems room exists to make structural forces visible as structures —
+  not as events that happened, but as systems with identifiable shapes.
+  The diagram translates the unemployment chart (artifact 001) from empirical data
+  into an analytical framework. It is the chapter's theoretical instrument, placed
+  after the empirical evidence so it reads as derived from data, not imposed on it.
+
+curator_note: >
+  This artifact does not yet exist. It must be created by a curator or designer.
+  The diagram should be vector format (SVG) for display scaling.
+  It should be simple enough to read in a museum exhibit context — not a technical paper figure.
+  Key elements to include: labeled phases, directional arrows, the false plateau
+  specifically marked, and a note that this is a model, not a prediction.
+  Draft in original/pressure-cascade-diagram.svg when ready.

@@ -1,0 +1,47 @@
+# metadata.yaml — Predictive History Museum artifact metadata
+# Copy this file into each artifact folder. Remove all comments when filling in.
+# Every field is required. Use "pending" or "none — curator-authored" where not yet available.
+
+artifact_id: "BOOK-CHAP-NUM"           # e.g. civ-053-001 or gt-021-003
+chapter_id: "civ-053"                  # always padded: civ-053 not civ-53
+museum_part: "civilization"            # civilization | apocalypse
+room: "entrance_artifact"              # entrance_artifact | context_room | primary_artifacts_and_texts
+                                       # | comparison_artifacts | pressure_systems | caution_room
+
+title: "Artifact Title"
+item_type: "artwork"                   # artwork | artifact | object | text | manuscript | map
+                                       # | place | portrait | chart | diagram | music | speech
+                                       # | document | performance | architecture | institution
+                                       # | pressure_system | symbolic_artifact
+
+# File paths (set the intended path even if file is not yet downloaded)
+local_original_path: "original/filename.ext"
+cloud_original_path: "Predictive History Museum/civilization/civ-053-.../artifacts/001-.../original/filename.ext"
+
+# Source
+source_url: "https://..."              # or "none — curator-authored"
+source_name: "Institution or publication name"
+
+# Rights and storage
+rights_status: "needs_review"          # public_domain | open_license | external_link_only
+                                       # | needs_review | unavailable
+storage_status: "url_only_pending_local"  # local_and_cloud | url_only_pending_local
+                                          # | pending_acquisition
+checksum_sha256: "pending"             # run: sha256sum {file} when file is acquired
+
+# Curatorial content — all four fields required
+what_to_notice: >
+  Specific observable details the visitor should attend to.
+  Name concrete things: texture, date, language, composition, absence.
+
+what_this_cannot_prove: >
+  Honest statement of limits. What cannot be inferred from this artifact alone.
+  Every artifact has limits. Do not leave this blank.
+
+lecture_connection: >
+  How this artifact connects to the specific chapter argument.
+  One to three sentences tying the object to the book's claim.
+
+curator_note: >
+  Selection rationale: why this artifact over alternatives.
+  Context the visitor needs to understand the choice.

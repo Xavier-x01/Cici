@@ -1,0 +1,41 @@
+artifact_id: "gt-021-006"
+chapter_id: "gt-021"
+museum_part: "apocalypse"
+room: "caution_room"
+
+title: "Curator's Caution: The Danger of Crisis Pattern-Matching"
+item_type: "symbolic_artifact"
+
+local_original_path: "original/caution-crisis-pattern-matching.md"
+cloud_original_path: "Predictive History Museum/apocalypse/gt-021-live-crisis-pressure/artifacts/006-limits-of-crisis-pattern-matching/original/caution-crisis-pattern-matching.md"
+
+source_url: "none — curator-authored"
+source_name: "Predictive History Museum curatorial staff"
+
+rights_status: "open_license"
+storage_status: "pending_acquisition"
+checksum_sha256: "pending"
+
+what_to_notice: >
+  This is a curator-authored text, not a historical document.
+  Its presence is the exhibit's commitment to epistemic honesty.
+  The exhibit has shown you a pressure signature pattern. This artifact names
+  what you cannot do with that pattern: treat it as a template for predicting future crises.
+
+what_this_cannot_prove: >
+  A caution text cannot resolve the problems it names — it can only name them honestly.
+
+lecture_connection: >
+  The chapter identifies crisis pressure patterns across two historical cases.
+  This caution closes the exhibit by specifying the exact error the chapter is designed
+  to prevent: using pattern recognition to generate false certainty about future events.
+  Pattern families are not laws. Resemblance is not identity.
+
+curator_note: >
+  Every exhibit requires a caution_room artifact. This one must address the specific
+  methodological risk of the Apocalypse book's overall project: identifying patterns in
+  historical crises and using them to analyze present and future conditions.
+  The caution text (300–500 words) must be written by a human curator and placed in
+  original/caution-crisis-pattern-matching.md. It should name the specific errors
+  that crisis pattern-matching produces and explain why the chapter's method does not
+  claim to eliminate them.

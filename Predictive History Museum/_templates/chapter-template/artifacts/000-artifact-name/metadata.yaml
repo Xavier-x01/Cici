@@ -1,0 +1,29 @@
+artifact_id: "civ-000-000"
+chapter_id: "civ-000"
+museum_part: "civilization"
+room: "entrance_artifact"
+
+title: "Artifact Title"
+item_type: "artwork"
+
+local_original_path: "original/filename.ext"
+cloud_original_path: "Predictive History Museum/civilization/civ-000-.../artifacts/000-.../original/filename.ext"
+
+source_url: "https://..."
+source_name: "Source institution or publication"
+
+rights_status: "needs_review"
+storage_status: "url_only_pending_local"
+checksum_sha256: "pending"
+
+what_to_notice: >
+  Specific observable details.
+
+what_this_cannot_prove: >
+  Honest statement of limits.
+
+lecture_connection: >
+  Connection to the chapter argument.
+
+curator_note: >
+  Selection rationale.

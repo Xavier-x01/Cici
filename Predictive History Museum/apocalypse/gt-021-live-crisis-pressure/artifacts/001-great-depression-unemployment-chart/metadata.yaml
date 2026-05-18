@@ -1,0 +1,44 @@
+artifact_id: "gt-021-001"
+chapter_id: "gt-021"
+museum_part: "apocalypse"
+room: "entrance_artifact"
+
+title: "U.S. Unemployment Rate 1929–1940"
+item_type: "chart"
+
+local_original_path: "original/us-unemployment-1929-1940.svg"
+cloud_original_path: "Predictive History Museum/apocalypse/gt-021-live-crisis-pressure/artifacts/001-great-depression-unemployment-chart/original/us-unemployment-1929-1940.svg"
+
+source_url: "https://commons.wikimedia.org/wiki/File:US_unemployment_1929_1940.svg"
+source_name: "Wikimedia Commons — U.S. unemployment rate 1929–1940, Bureau of Labor Statistics historical data"
+
+rights_status: "public_domain"
+storage_status: "url_only_pending_local"
+checksum_sha256: "pending"
+
+what_to_notice: >
+  The shape of the curve — not a single drop but a series of pressure pulses.
+  Unemployment rose from 1929 to 1933, then partially recovered, then collapsed again
+  in 1937–1938 (the recession-within-depression).
+  The partial recovery of 1934–1937 is a false plateau: it appears to be resolution
+  but is not. Crisis pressure has this signature — it does not resolve cleanly.
+  Notice the scale: at peak, one in four American workers was unemployed.
+
+what_this_cannot_prove: >
+  This chart cannot prove what caused the Depression, what policy interventions worked,
+  or whether the recovery was genuine before WWII spending intervened.
+  It is a pressure shape, not a causal explanation.
+  The BLS historical data series has measurement limitations — unemployment was not
+  defined consistently across this period. The chart shows a shape, not a precise count.
+
+lecture_connection: >
+  The chapter's central argument is that live crisis pressure has a signature shape —
+  it does not resolve cleanly and contains false plateaus that tempt observers into
+  premature declarations of recovery. This chart is the empirical anchor for that claim.
+  The 1937 secondary collapse is the chapter's key exhibit within the exhibit.
+
+curator_note: >
+  The entrance artifact for this exhibit must be quantitative — it establishes
+  that we are dealing with measurable pressure, not narrative or anecdote.
+  All documents and speeches follow this chart; placing data first prevents
+  the visitor from treating the chapter as primarily a political or biographical story.

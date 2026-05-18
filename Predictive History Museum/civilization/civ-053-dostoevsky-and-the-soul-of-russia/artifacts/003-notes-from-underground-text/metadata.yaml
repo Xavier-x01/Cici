@@ -1,0 +1,42 @@
+artifact_id: "civ-053-003"
+chapter_id: "civ-053"
+museum_part: "civilization"
+room: "primary_artifacts_and_texts"
+
+title: "Notes from Underground — Part I, Chapter 1"
+item_type: "text"
+
+local_original_path: "original/notes-from-underground-part1-ch1.txt"
+cloud_original_path: "Predictive History Museum/civilization/civ-053-dostoevsky-and-the-soul-of-russia/artifacts/003-notes-from-underground-text/original/notes-from-underground-part1-ch1.txt"
+
+source_url: "https://www.gutenberg.org/ebooks/600"
+source_name: "Project Gutenberg — Notes from the Underground, tr. Constance Garnett"
+
+rights_status: "public_domain"
+storage_status: "url_only_pending_local"
+checksum_sha256: "pending"
+
+what_to_notice: >
+  The opening sentence: "I am a sick man... I am a wicked man."
+  Not an introduction — an assault. The narrator refuses the social contract of
+  the novel's opening before the reader can settle.
+  Notice what is absent: no name, no physical description, no location given.
+  The underground man exists as pure voice and pure resentment.
+
+what_this_cannot_prove: >
+  This text cannot prove that the underground man represents any actual Russian person
+  or social type. It cannot confirm that Dostoevsky shared the narrator's views —
+  he constructed this voice to expose, not endorse it.
+  Literary characters are not historical evidence of the people who read them.
+
+lecture_connection: >
+  Part I, Chapter 1 is the chapter's primary exhibit for the claim that Dostoevsky
+  was analyzing the psychological damage of Western rationalism on Russian consciousness.
+  The underground man is the product of European Enlightenment ideas applied to a
+  Russian sensibility — the chapter argues this fracture was civilizationally diagnostic.
+
+curator_note: >
+  The Garnett translation is the most widely read English version and is public domain.
+  The Pevear/Volokhonsky translation (Vintage, 1994) is more accurate but copyrighted.
+  For exhibit purposes the Garnett is appropriate; for scholarly citation, note the
+  translation choice matters and advise visitors to consult P/V for serious study.

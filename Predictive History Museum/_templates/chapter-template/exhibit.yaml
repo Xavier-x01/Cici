@@ -1,0 +1,21 @@
+# exhibit.yaml — chapter exhibit manifest
+# One file per chapter. Update when artifacts are added or statuses change.
+
+chapter_id: "civ-000"
+title: "Chapter Title"
+museum_part: "civilization"        # civilization | apocalypse
+exhibit_status: "in_progress"     # in_progress | complete
+curator_sign_off: null             # set to "approved — [initials] YYYY-MM-DD" when complete
+
+artifacts:
+  - id: "civ-000-001"
+    title: "Artifact Title"
+    room: "entrance_artifact"
+    item_type: "artwork"
+    storage_status: "url_only_pending_local"
+
+  - id: "civ-000-002"
+    title: "Artifact Title"
+    room: "context_room"
+    item_type: "text"
+    storage_status: "url_only_pending_local"

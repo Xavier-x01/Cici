@@ -1,0 +1,42 @@
+chapter_id: "gt-021"
+title: "Live Crisis Pressure"
+museum_part: "apocalypse"
+exhibit_status: "in_progress"
+curator_sign_off: null
+
+artifacts:
+  - id: "gt-021-001"
+    title: "U.S. Unemployment Rate 1929–1940"
+    room: "entrance_artifact"
+    item_type: "chart"
+    storage_status: "url_only_pending_local"
+
+  - id: "gt-021-002"
+    title: "U.S. WWII Home Front Rationing Poster (1943)"
+    room: "context_room"
+    item_type: "document"
+    storage_status: "url_only_pending_local"
+
+  - id: "gt-021-003"
+    title: "New York Times front page, October 24, 1907"
+    room: "primary_artifacts_and_texts"
+    item_type: "text"
+    storage_status: "url_only_pending_local"
+
+  - id: "gt-021-004"
+    title: "FDR Fireside Chat No. 1 — On the Banking Crisis (March 12, 1933)"
+    room: "primary_artifacts_and_texts"
+    item_type: "speech"
+    storage_status: "url_only_pending_local"
+
+  - id: "gt-021-005"
+    title: "Pressure Cascade System Diagram"
+    room: "pressure_systems"
+    item_type: "pressure_system"
+    storage_status: "pending_acquisition"
+
+  - id: "gt-021-006"
+    title: "Curator's Caution: The Danger of Crisis Pattern-Matching"
+    room: "caution_room"
+    item_type: "symbolic_artifact"
+    storage_status: "pending_acquisition"

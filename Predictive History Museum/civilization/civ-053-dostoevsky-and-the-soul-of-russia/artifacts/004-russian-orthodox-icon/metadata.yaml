@@ -1,0 +1,44 @@
+artifact_id: "civ-053-004"
+chapter_id: "civ-053"
+museum_part: "civilization"
+room: "primary_artifacts_and_texts"
+
+title: "Icon of Christ Pantocrator (Novgorod School, 12th century)"
+item_type: "artwork"
+
+local_original_path: "original/christ-pantocrator-novgorod-12c.jpg"
+cloud_original_path: "Predictive History Museum/civilization/civ-053-dostoevsky-and-the-soul-of-russia/artifacts/004-russian-orthodox-icon/original/christ-pantocrator-novgorod-12c.jpg"
+
+source_url: "https://commons.wikimedia.org/wiki/File:Christ_Pantocrator_Sinai_6th_century.jpg"
+source_name: "Wikimedia Commons — Christ Pantocrator, Saint Catherine's Monastery, Sinai (6th c.) — used as representative type"
+
+rights_status: "public_domain"
+storage_status: "url_only_pending_local"
+checksum_sha256: "pending"
+
+what_to_notice: >
+  The frontal gaze — Christ looking directly at the viewer, unmediated.
+  The asymmetry of the face (common in Byzantine iconography): two different expressions
+  in the two halves — mercy on one side, judgment on the other.
+  The gold ground: not a background but the divine light that makes the figure visible.
+  This image is not representational in the Western sense; it is a window, not a picture.
+
+what_this_cannot_prove: >
+  This specific icon was not known to Dostoevsky. It is used as a representative type
+  of the tradition he grew up within, not as an object he saw or cited.
+  Icons cannot prove what the Orthodox faithful actually believed or experienced —
+  they are the tradition's self-expression, not a sociological survey.
+
+lecture_connection: >
+  The icon places the spiritual world that the underground man is fleeing — or failing to
+  flee — into visible form. Dostoevsky's argument about Russian civilization's spiritual
+  fracture is only legible if the visitor can see what was being fractured.
+  The Christ Pantocrator type appears directly in The Brothers Karamazov (Zosima's teaching);
+  its presence here bridges the exhibit to the broader Dostoevsky corpus.
+
+curator_note: >
+  Note on source: the Wikimedia image linked is the Sinai Pantocrator (6th century),
+  the most famous icon of this type. For an explicitly Russian/Novgorod School example,
+  a Tretyakov Gallery or Russian Museum scan may be more appropriate.
+  Curator should confirm whether Sinai or Novgorod example is more accurate to the
+  chapter's claims about specifically Russian Orthodox tradition before finalizing.

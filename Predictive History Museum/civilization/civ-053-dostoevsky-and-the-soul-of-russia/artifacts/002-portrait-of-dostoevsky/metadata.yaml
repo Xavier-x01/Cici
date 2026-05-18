@@ -1,0 +1,41 @@
+artifact_id: "civ-053-002"
+chapter_id: "civ-053"
+museum_part: "civilization"
+room: "context_room"
+
+title: "Portrait of Fyodor Dostoevsky (Perov, 1872)"
+item_type: "portrait"
+
+local_original_path: "original/perov-portrait-dostoevsky-1872.jpg"
+cloud_original_path: "Predictive History Museum/civilization/civ-053-dostoevsky-and-the-soul-of-russia/artifacts/002-portrait-of-dostoevsky/original/perov-portrait-dostoevsky-1872.jpg"
+
+source_url: "https://commons.wikimedia.org/wiki/File:Vasily_Perov_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%A4.%D0%9C.%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg"
+source_name: "Wikimedia Commons — Vasily Perov, Portrait of Dostoevsky, 1872 (Tretyakov Gallery)"
+
+rights_status: "public_domain"
+storage_status: "url_only_pending_local"
+checksum_sha256: "pending"
+
+what_to_notice: >
+  The eyes — looking past the viewer, not at them. This is the canonical Dostoevsky:
+  intense, inward, not performing for an audience.
+  The hands are not shown; the figure is cropped to head and chest, isolating the face.
+  Perov painted him in the same year as The Possessed — this is the man in full crisis.
+
+what_this_cannot_prove: >
+  A portrait cannot reveal inner states. Perov's artistic choices shaped this image
+  as much as Dostoevsky's appearance did. This is how one painter saw him in one session,
+  not an objective record. Dostoevsky's own accounts of his appearance and manner
+  differ from how others described him.
+
+lecture_connection: >
+  The portrait grounds the chapter in a specific person, not an abstraction. Before
+  the chapter makes claims about "Dostoevsky's diagnosis of Russian civilization,"
+  the visitor needs to see the man: aged, epileptic, recently returned from Siberian
+  exile, writing against deadline. The context makes the diagnosis credible.
+
+curator_note: >
+  The Perov portrait is the most reproduced and most authoritative likeness — painted
+  with Dostoevsky's cooperation at the peak of his career. Placed in context_room
+  rather than entrance because the sound of the tradition (001) must precede the man
+  who wrestled with it.

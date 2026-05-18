@@ -1,0 +1,39 @@
+artifact_id: "civ-053-007"
+chapter_id: "civ-053"
+museum_part: "civilization"
+room: "caution_room"
+
+title: "Curator's Caution: What Literature Cannot Prove About History"
+item_type: "symbolic_artifact"
+
+local_original_path: "original/caution-literature-as-history.md"
+cloud_original_path: "Predictive History Museum/civilization/civ-053-dostoevsky-and-the-soul-of-russia/artifacts/007-limits-of-literature-as-history/original/caution-literature-as-history.md"
+
+source_url: "none — curator-authored"
+source_name: "Predictive History Museum curatorial staff"
+
+rights_status: "open_license"
+storage_status: "pending_acquisition"
+checksum_sha256: "pending"
+
+what_to_notice: >
+  This is a curator-authored text, not a historical document.
+  Its presence is the exhibit's most important act of intellectual honesty:
+  the museum acknowledges what its own exhibits cannot establish.
+
+what_this_cannot_prove: >
+  A caution text cannot itself resolve the methodological problems it names.
+  It can only name them honestly.
+
+lecture_connection: >
+  The chapter uses literature as civilizational evidence. This caution artifact
+  closes the exhibit by making explicit what the chapter's methodology cannot
+  deliver: proof. It can offer illumination, pattern recognition, and interpretive
+  frameworks — not evidentiary certainty.
+
+curator_note: >
+  Every exhibit in this museum requires a caution_room artifact. For this chapter,
+  the specific caution is methodological: using fiction as historical evidence is
+  legitimate but limited. The caution text must be written by a human curator —
+  this field is a placeholder until that text is drafted and placed in original/.
+  Draft the caution as a short essay (300–500 words) in original/caution-literature-as-history.md.

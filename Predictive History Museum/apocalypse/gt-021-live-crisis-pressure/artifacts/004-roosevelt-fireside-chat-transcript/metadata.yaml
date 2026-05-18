@@ -1,0 +1,49 @@
+artifact_id: "gt-021-004"
+chapter_id: "gt-021"
+museum_part: "apocalypse"
+room: "primary_artifacts_and_texts"
+
+title: "FDR Fireside Chat No. 1 — On the Banking Crisis (March 12, 1933)"
+item_type: "speech"
+
+local_original_path: "original/fdr-fireside-chat-01-banking-crisis-1933.txt"
+cloud_original_path: "Predictive History Museum/apocalypse/gt-021-live-crisis-pressure/artifacts/004-roosevelt-fireside-chat-transcript/original/fdr-fireside-chat-01-banking-crisis-1933.txt"
+
+source_url: "https://www.presidency.ucsb.edu/documents/fireside-chat-0"
+source_name: "UCSB American Presidency Project — FDR Fireside Chat No. 1, March 12, 1933"
+
+rights_status: "public_domain"
+storage_status: "url_only_pending_local"
+checksum_sha256: "pending"
+
+what_to_notice: >
+  The register: FDR addresses the audience as "my friends." This is not a formal
+  presidential address — it is calibrated to sound like a neighbor explaining
+  something calmly over the radio.
+  Notice what he explains: the mechanics of banking. FDR assumes his audience
+  does not understand how banks work and teaches them.
+  The speech is an act of institutional confidence restoration, not policy announcement.
+  Read for what it does, not only what it says.
+
+what_this_cannot_prove: >
+  The transcript cannot prove how listeners received the speech or whether it
+  actually restored confidence. It is the state's communication, not the public's
+  response. Polling on the speech's effect is retrospective; contemporaneous
+  reception is harder to establish.
+  The speech also cannot prove the banking policies it described were correct
+  or that they caused subsequent recovery.
+
+lecture_connection: >
+  The chapter's argument about institutional response to crisis pressure is anchored
+  here. FDR's first Fireside Chat is the primary document of the moment when the
+  state intervened not with direct resources but with communication — an attempt to
+  convert panic (irrational mass behavior) into patience (cooperative institutional behavior).
+  Whether it worked is a separate question from whether it was the institutional response
+  designed for the pressure signature the chapter describes.
+
+curator_note: >
+  The UCSB American Presidency Project is the authoritative source for presidential
+  speech texts. The transcript is public domain as a government document.
+  Consider pairing the transcript with an audio clip if a public domain recording
+  exists — FDR's voice was central to the speech's effect; text alone loses that.
+  The FDR Library holds recordings; confirm public domain status before acquiring audio.

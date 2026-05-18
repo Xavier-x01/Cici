@@ -1,0 +1,48 @@
+chapter_id: "civ-053"
+title: "Dostoevsky and the Soul of Russia"
+museum_part: "civilization"
+exhibit_status: "in_progress"
+curator_sign_off: null
+
+artifacts:
+  - id: "civ-053-001"
+    title: "Russian Orthodox Liturgical Chant (Obikkhod)"
+    room: "entrance_artifact"
+    item_type: "music"
+    storage_status: "url_only_pending_local"
+
+  - id: "civ-053-002"
+    title: "Portrait of Fyodor Dostoevsky (Perov, 1872)"
+    room: "context_room"
+    item_type: "portrait"
+    storage_status: "url_only_pending_local"
+
+  - id: "civ-053-003"
+    title: "Notes from Underground — Part I, Chapter 1"
+    room: "primary_artifacts_and_texts"
+    item_type: "text"
+    storage_status: "url_only_pending_local"
+
+  - id: "civ-053-004"
+    title: "Icon of Christ Pantocrator (Novgorod School, 12th c.)"
+    room: "primary_artifacts_and_texts"
+    item_type: "artwork"
+    storage_status: "url_only_pending_local"
+
+  - id: "civ-053-005"
+    title: "Map of St. Petersburg ca. 1860s"
+    room: "context_room"
+    item_type: "map"
+    storage_status: "url_only_pending_local"
+
+  - id: "civ-053-006"
+    title: "Dostoevsky Manuscript Draft Page"
+    room: "primary_artifacts_and_texts"
+    item_type: "manuscript"
+    storage_status: "url_only_pending_local"
+
+  - id: "civ-053-007"
+    title: "Curator's Caution: What Literature Cannot Prove About History"
+    room: "caution_room"
+    item_type: "symbolic_artifact"
+    storage_status: "pending_acquisition"

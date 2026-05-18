@@ -1,0 +1,49 @@
+artifact_id: "gt-021-003"
+chapter_id: "gt-021"
+museum_part: "apocalypse"
+room: "primary_artifacts_and_texts"
+
+title: "New York Times front page, October 24, 1907"
+item_type: "text"
+
+local_original_path: "pending_download"
+cloud_original_path: "pending — external_link_only artifact; no local file"
+
+source_url: "https://timesmachine.nytimes.com/timesmachine/1907/10/24/issue.html"
+source_name: "New York Times — TimesMachine archive, October 24, 1907"
+
+rights_status: "external_link_only"
+storage_status: "url_only_pending_local"
+checksum_sha256: "not_applicable"
+
+what_to_notice: >
+  The front-page headline communicates institutional breakdown in real time.
+  Read the language: is it panicked or restrained? How newspapers reported financial
+  crisis in 1907 shaped public understanding of what was happening.
+  The Panic of 1907 was resolved by J.P. Morgan's private coordination — no Federal
+  Reserve existed yet. The institutional response context is absent from the page itself.
+
+what_this_cannot_prove: >
+  A newspaper front page cannot prove what actually happened in financial markets
+  that day, what ordinary depositors believed or did, or whether the headline
+  accurately characterized conditions.
+  Newspapers in 1907 were not objective financial reporters; editorial choices shaped
+  what "panic" looked like in print.
+
+lecture_connection: >
+  The 1907 panic is the chapter's earlier case, predating the Federal Reserve (1913)
+  and the regulatory infrastructure built after 1933. It shows the same pressure
+  signature (bank runs, institutional cascades, emergency coordination) at a moment
+  when the institutional response capacity was weaker. The comparison to the 1929–1933
+  period shows how much the response infrastructure changed — and how the pressure
+  signature persisted anyway.
+
+curator_note: >
+  IMPORTANT: NYT TimesMachine requires a subscription to access full pages.
+  This artifact is classified external_link_only because downloading and hosting
+  the image locally would raise rights concerns.
+  A public domain alternative: the Library of Congress Chronicling America collection
+  (chroniclingamerica.loc.gov) holds 1907 newspapers from other publications.
+  If a contemporaneous alternative from a public domain source is found,
+  update rights_status to public_domain and storage_status accordingly.
+  Do not acquire this artifact locally without rights confirmation.

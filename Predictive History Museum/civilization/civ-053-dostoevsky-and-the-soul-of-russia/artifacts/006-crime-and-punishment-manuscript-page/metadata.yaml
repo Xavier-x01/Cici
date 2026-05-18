@@ -1,0 +1,43 @@
+artifact_id: "civ-053-006"
+chapter_id: "civ-053"
+museum_part: "civilization"
+room: "primary_artifacts_and_texts"
+
+title: "Dostoevsky Manuscript Draft Page (ca. 1875–1876)"
+item_type: "manuscript"
+
+local_original_path: "original/dostoevsky-manuscript-draft-1876.jpg"
+cloud_original_path: "Predictive History Museum/civilization/civ-053-dostoevsky-and-the-soul-of-russia/artifacts/006-crime-and-punishment-manuscript-page/original/dostoevsky-manuscript-draft-1876.jpg"
+
+source_url: "https://commons.wikimedia.org/wiki/File:Dostoevsky_1876_manuscript.jpg"
+source_name: "Wikimedia Commons — Dostoevsky manuscript page, Russian State Library, ca. 1876"
+
+rights_status: "public_domain"
+storage_status: "url_only_pending_local"
+checksum_sha256: "pending"
+
+what_to_notice: >
+  The handwriting is dense and rushed — margins are filled, lines corrected mid-sentence.
+  The Cyrillic script is not calligraphic; this is working draft, not fair copy.
+  Look for crossed-out words and insertions: Dostoevsky revised constantly, often reversing
+  himself. The chaos of the page reflects the method: exploratory, not planned.
+
+what_this_cannot_prove: >
+  A manuscript page cannot prove what Dostoevsky intended by his novels as a whole.
+  It shows one moment of composition, not the completed argument.
+  Without translation and scholarly annotation, the specific content of this page
+  is inaccessible to most visitors — the page's value here is visual, not textual.
+
+lecture_connection: >
+  The manuscript page is the physical evidence that this is a made thing — a text
+  produced by a specific person in specific working conditions, not a revelation.
+  The chapter's argument depends on taking Dostoevsky seriously as a thinker;
+  seeing the labor of composition makes the thought visible as thought, not as
+  oracular pronouncement.
+
+curator_note: >
+  The specific Wikimedia file referenced is a ca. 1876 draft, which corresponds to
+  the period of A Writer's Diary — Dostoevsky's most direct civilizational commentary.
+  If a manuscript page specifically from Notes from Underground or The Brothers Karamazov
+  is available in public domain, it would be more directly relevant to the chapter.
+  Curator should verify which work this draft belongs to and update title accordingly.

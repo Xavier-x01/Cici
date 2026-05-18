@@ -1,0 +1,44 @@
+artifact_id: "civ-053-005"
+chapter_id: "civ-053"
+museum_part: "civilization"
+room: "context_room"
+
+title: "Map of St. Petersburg ca. 1860s"
+item_type: "map"
+
+local_original_path: "original/st-petersburg-map-1860s.jpg"
+cloud_original_path: "Predictive History Museum/civilization/civ-053-dostoevsky-and-the-soul-of-russia/artifacts/005-map-of-st-petersburg/original/st-petersburg-map-1860s.jpg"
+
+source_url: "https://commons.wikimedia.org/wiki/File:Saint_Petersburg_from_Illustrated_London_News.jpg"
+source_name: "Wikimedia Commons — St. Petersburg engraving, Illustrated London News, ca. 1860s"
+
+rights_status: "public_domain"
+storage_status: "url_only_pending_local"
+checksum_sha256: "pending"
+
+what_to_notice: >
+  The grid layout of the city: St. Petersburg was a planned city, built by Peter the
+  Great as Russia's European window. This geometry is not organic — it was imposed.
+  The Neva River divides the city. The underground man lives in a basement somewhere
+  in this European grid, unable to reach the river.
+  Note the Western European style of the engraving itself: this is how London saw Russia.
+
+what_this_cannot_prove: >
+  A map or engraving cannot prove what daily life in St. Petersburg felt like for
+  ordinary residents in the 1860s. It cannot establish Dostoevsky's own spatial
+  experience of the city. The Illustrated London News view is an outsider's image,
+  shaped by British editorial and artistic conventions.
+
+lecture_connection: >
+  St. Petersburg is not neutral geography in this chapter — it is the site of
+  Russia's deliberate self-Europeanization, the city that was itself an act of
+  civilizational will. Understanding that Dostoevsky's fiction was set in this
+  specific, planned, imposed city is prerequisite to understanding why his
+  characters suffer as they do.
+
+curator_note: >
+  The Illustrated London News engraving is public domain and gives a contemporaneous
+  Western view of the city. An alternative is a Russian-produced map or plan of the
+  period, which would show the city's self-image rather than its image in the Western
+  press. Both perspectives are valid; the choice shapes the exhibit's framing.
+  Curator should confirm which perspective better serves the chapter's argument.

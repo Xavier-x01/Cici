@@ -1,0 +1,44 @@
+artifact_id: "gt-021-002"
+chapter_id: "gt-021"
+museum_part: "apocalypse"
+room: "context_room"
+
+title: "U.S. WWII Home Front Rationing Poster (1943)"
+item_type: "document"
+
+local_original_path: "original/wwii-rationing-poster-1943.jpg"
+cloud_original_path: "Predictive History Museum/apocalypse/gt-021-live-crisis-pressure/artifacts/002-wartime-rationing-poster/original/wwii-rationing-poster-1943.jpg"
+
+source_url: "https://commons.wikimedia.org/wiki/Category:World_War_II_rationing_posters_of_the_United_States"
+source_name: "Wikimedia Commons — U.S. WWII rationing poster collection, Office of War Information, 1943"
+
+rights_status: "public_domain"
+storage_status: "url_only_pending_local"
+checksum_sha256: "pending"
+
+what_to_notice: >
+  The poster addresses the civilian population directly: ordinary people, not soldiers.
+  The design asks for behavioral compliance — rationing is a distributed sacrifice.
+  The graphic style is confident and instructional, not panicked. Crisis pressure
+  had been institutionally absorbed by 1943; the state is now managing scarcity, not reacting to it.
+  Compare the tone here to what the 1907 newspaper headline communicates.
+
+what_this_cannot_prove: >
+  A government poster cannot prove what civilians actually believed or how they
+  experienced rationing. Compliance posters represent the state's communication
+  strategy, not the population's response. Compliance rates varied significantly.
+  The poster's confident tone does not establish that confidence was uniformly felt.
+
+lecture_connection: >
+  This artifact places crisis pressure in its downstream consequence — the Depression
+  was followed by wartime mobilization that imposed its own sustained pressure.
+  The chapter argues that crisis pressure does not end; it transforms. The exhibit
+  shows the pressure shape (chart), its acute moment (1907 newspaper), the institutional
+  response (FDR speech), and then this: the extended mobilization that followed.
+
+curator_note: >
+  The rationing poster is in context_room because it is background to the chapter's
+  primary argument rather than a direct exhibit of the argument itself. It contextualizes
+  the duration of the pressure period — from 1929 through the early 1940s was a
+  sustained crisis arc, not a single event. A specific poster should be selected;
+  the source_url currently points to a collection category.
