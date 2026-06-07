@@ -5,6 +5,14 @@ description: Run the required startup ceremony for every Cici/BrewMind session. 
 
 You are starting a Cici session. Follow the startup ceremony defined in the companion contract exactly.
 
+## Step 0 — Optional: Run orchestrated session start (if langgraph is installed)
+
+```bash
+python3 scripts/langgraph/cli.py
+```
+
+If this succeeds, use the printed report as the session status and skip to Step 4. If langgraph is not installed or the command fails, proceed with Steps 1–4 manually.
+
 ## Step 1 — Read open proposals
 
 Read every file in `proposals/queue/` and list each proposal with:
