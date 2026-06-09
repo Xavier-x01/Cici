@@ -42,6 +42,13 @@ class ProposalReviewResult(TypedDict):
     issues_found: bool
 
 
+class LaneStatus(TypedDict):
+    lane: str
+    open_blockers: list
+    next_action: str
+    last_updated: str
+
+
 class SessionState(TypedDict):
     run_date: str
     repo_root: str
@@ -51,6 +58,9 @@ class SessionState(TypedDict):
     dossier: Optional[DossierData]
     proposal_review: Optional[ProposalReviewResult]
     memory_audit: Optional[MemoryAuditResult]
+    lane_statuses: list
+    use_llm: bool
+    llm_summary: str
     report: str
     branches_taken: list
     errors: list

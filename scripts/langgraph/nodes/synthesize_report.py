@@ -47,6 +47,27 @@ def synthesize_report_node(state: SessionState) -> dict:
             lines.append(f"| {loop['domain']} | {status} |")
     lines.append("")
 
+    # --- Work Lanes ---
+    lines += ["---", "", "### Work Lanes", ""]
+    lane_statuses = state.get("lane_statuses", [])
+    if not lane_statuses:
+        lines.append("Lane data not available.")
+    else:
+        lines += ["| Lane | Open Loops | Next Action |", "|---|---|---|"]
+        for ls in lane_statuses:
+            blockers = ls.get("open_blockers", [])
+            blocker_str = str(len(blockers)) if blockers else "none"
+            next_action = ls.get("next_action", "")[:80]
+            lines.append(f"| `{ls['lane']}` | {blocker_str} | {next_action} |")
+        any_blockers = [ls for ls in lane_statuses if ls.get("open_blockers")]
+        if any_blockers:
+            lines.append("")
+            for ls in any_blockers:
+                lines.append(f"**{ls['lane']} open loops:**")
+                for b in ls["open_blockers"]:
+                    lines.append(f"- {b}")
+    lines.append("")
+
     # --- Pipeline Health (from dossier) ---
     lines += ["---", "", "### Pipeline Health", ""]
     dossier = state.get("dossier")

@@ -33,6 +33,7 @@ def main():
     parser.add_argument("--repo-root", default=None, help="Path to repo root")
     parser.add_argument("--dry-run", action="store_true", help="Dump state JSON instead of report")
     parser.add_argument("--format", choices=["md", "json"], default="md")
+    parser.add_argument("--llm", action="store_true", help="Call Claude to generate Today's Focus (requires ANTHROPIC_API_KEY)")
     args = parser.parse_args()
 
     try:
@@ -57,6 +58,9 @@ def main():
         "dossier": None,
         "proposal_review": None,
         "memory_audit": None,
+        "lane_statuses": [],
+        "use_llm": args.llm,
+        "llm_summary": "",
         "report": "",
         "branches_taken": [],
         "errors": [],
