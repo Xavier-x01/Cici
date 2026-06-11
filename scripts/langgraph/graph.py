@@ -18,7 +18,7 @@ from nodes.synthesize_report import synthesize_report_node
 from nodes.llm_synthesis import llm_synthesis_node
 
 
-def build_graph():
+def build_graph(checkpointer=None):
     builder = StateGraph(SessionState)
 
     builder.add_node("load_context", load_context_node)
@@ -54,4 +54,4 @@ def build_graph():
 
     builder.add_edge("llm_synthesis", END)
 
-    return builder.compile(checkpointer=MemorySaver())
+    return builder.compile(checkpointer=checkpointer or MemorySaver())

@@ -8,6 +8,7 @@ Usage:
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -48,7 +49,18 @@ def main():
 
     repo_root = args.repo_root or detect_repo_root()
 
-    graph = build_graph()
+    checkpointer = None
+    db_url = os.environ.get("DATABASE_URL")
+    if db_url:
+        try:
+            from langgraph.checkpoint.postgres import PostgresSaver
+            checkpointer = PostgresSaver.from_conn_string(db_url)
+            checkpointer.setup()
+        except Exception as e:
+            print(f"[warn] PostgreSQL checkpointer unavailable ({e}), falling back to MemorySaver", file=sys.stderr)
+            checkpointer = None
+
+    graph = build_graph(checkpointer=checkpointer)
     initial_state = {
         "run_date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
         "repo_root": repo_root,
