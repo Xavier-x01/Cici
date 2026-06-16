@@ -14,11 +14,4 @@
 
 ## Key paths
 
-| Path | Purpose |
-|------|---------|
-| `evidence/` | Raw captured artifacts (Tier B/C) |
-| `prepared-context/` | Staged synthesis awaiting proposal |
-| `proposals/queue/` | Pending proposals — agent drafts, Xavier approves |
-| `users/cici/governed-state/` | Canonical durable state (proposal-gated) |
-| `docs/` | Architecture, doctrine, skills |
-| `scripts/` | Utility scripts (validate, extract, doctor) |
+See `CLAUDE.md` → "Directory Structure" table for the canonical path list.

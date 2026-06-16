@@ -109,6 +109,7 @@ Scripts live in `scripts/`. Run from the repo root.
 | `daily_journal_helper.py` | Scaffold today's daily journal entry from template |
 | `doctor.sh` | Bash repo health check |
 | `janitor/` | Transient memory purge utilities (dry-run default) |
+| `scripts/langgraph/cli.py` | Session Ritual Orchestrator — LangGraph state machine running session-start, proposal review, and memory audit in one conditional graph; install with `pip install -r scripts/langgraph/requirements.txt` |
 
 ## Architecture Reference
 
