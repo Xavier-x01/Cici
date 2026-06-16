@@ -128,9 +128,11 @@ def validate_proposal(path, expected_statuses=None):
 
     # Validate target_surface is a known surface (warn, not error — surface list may expand)
     target_surface = data.get("target_surface", "")
-    if target_surface and target_surface not in VALID_SURFACE_IDS:
-        warn(f"{rel}: target_surface '{target_surface}' is not a known surface — "
-             f"known: {sorted(VALID_SURFACE_IDS)}")
+    if target_surface:
+        surface_key = target_surface.rstrip("/").rsplit("/", 1)[-1]
+        if surface_key not in VALID_SURFACE_IDS:
+            warn(f"{rel}: target_surface '{target_surface}' resolves to unknown surface '{surface_key}' — "
+                 f"known: {sorted(VALID_SURFACE_IDS)}")
 
 
 def _valid_proposal_id(proposal_id):
