@@ -1,0 +1,19 @@
+{
+  "id": "prop-20260617-001",
+  "created_at": "2026-06-17T00:00:00Z",
+  "status": "proposed",
+  "change_type": "update",
+  "target_surface": "CLAUDE.md",
+  "summary": "Add a mandatory inline evidence-tier annotation rule to CLAUDE.md's Common Errors section and Session Behavior section.",
+  "rationale": "The source-priority/policy.json canonical surface explicitly requires [A], [B], [C] annotations whenever citing evidence in responses. The companion contract repeats this requirement. However, CLAUDE.md's Common Errors section only prohibits the negative behavior ('do not cite Supabase recall as fact') without mandating the positive counterpart ('always annotate with tier when citing BrewMind facts'). This gap means the rule is buried in governed state where it may not surface during a session, while the operator instruction file (CLAUDE.md) gives no positive cue. Adding a rule to both Common Errors and Session Behavior closes the loop between canonical policy and front-loaded operating instructions.",
+  "evidence_refs": [
+    "users/cici/governed-state/source-priority/policy.json",
+    "docs/companion-agent/brewmind-companion-contract.md"
+  ],
+  "proposed_diff_summary": "1. Add to CLAUDE.md Common Errors: 'Do not cite a BrewMind fact without an inline tier annotation ([A], [B], or [C]). The absence of an annotation is itself an error — treat unannotated claims as Tier C by default.' 2. Add to CLAUDE.md Session Behavior: 'Evidence annotation: when referencing any BrewMind fact (partner, pricing, date, site status), state its tier inline: [A] = Xavier-verified, [B] = structured summary, [C] = model synthesis or Supabase recall.'",
+  "confidence": 0.9,
+  "proposer": "self-improver",
+  "reviewer": null,
+  "decided_at": null,
+  "decision_notes": null
+}

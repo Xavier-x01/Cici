@@ -1,0 +1,20 @@
+{
+  "id": "prop-20260617-003",
+  "created_at": "2026-06-17T00:00:00Z",
+  "status": "proposed",
+  "change_type": "update",
+  "target_surface": "voice",
+  "summary": "Promote the plan-mode-first rule to users/cici/governed-state/voice/session-behavior.json so all three CLAUDE.md session behavior rules have canonical governed status.",
+  "rationale": "CLAUDE.md Session Behavior defines three rules: (1) git_context_always_restate, (2) disagreement_limit_per_decision, and (3) plan-mode-first. Rules 1 and 2 were promoted to governed state via prop-20260413-001 and live in users/cici/governed-state/voice/session-behavior.json. Rule 3 — the default PLAN lane — was not promoted. This means the most consequential behavioral rule (never write without explicit permission) exists only in CLAUDE.md, which is not owner-approved governed state and can drift. Promoting this rule to session-behavior.json gives it the same durability as the other two rules and makes the governed surface complete relative to CLAUDE.md's declared intent.",
+  "evidence_refs": [
+    "users/cici/governed-state/voice/session-behavior.json",
+    "CLAUDE.md",
+    "docs/companion-agent/brewmind-companion-contract.md"
+  ],
+  "proposed_diff_summary": "Add a third rule object to the 'rules' array in users/cici/governed-state/voice/session-behavior.json: { 'id': 'plan_mode_first', 'value': 'PLAN', 'description': 'Default lane is PLAN. Begin complex or ambiguous tasks by stating the plan before acting. Switch to EXECUTE or DOCSYNC only when Xavier explicitly says so.', 'source': 'CLAUDE.md#session-behavior' }. No other files change.",
+  "confidence": 0.92,
+  "proposer": "self-improver",
+  "reviewer": null,
+  "decided_at": null,
+  "decision_notes": null
+}
