@@ -1,0 +1,20 @@
+{
+  "id": "prop-20260617-003",
+  "created_at": "2026-06-17T00:00:00Z",
+  "status": "approved",
+  "change_type": "update",
+  "target_surface": "voice",
+  "summary": "Promote the plan-mode-first rule to users/cici/governed-state/voice/session-behavior.json so all three CLAUDE.md session behavior rules have canonical governed status.",
+  "rationale": "CLAUDE.md Session Behavior defines three rules: (1) git_context_always_restate, (2) disagreement_limit_per_decision, and (3) plan-mode-first. Rules 1 and 2 were promoted to governed state via prop-20260413-001. Rule 3 — the default PLAN lane — was not promoted. This means the most consequential behavioral rule (never write without explicit permission) exists only in CLAUDE.md, which can drift. Promoting this rule to session-behavior.json gives it the same durability as the other two rules.",
+  "evidence_refs": [
+    "users/cici/governed-state/voice/session-behavior.json",
+    "CLAUDE.md",
+    "docs/companion-agent/brewmind-companion-contract.md"
+  ],
+  "proposed_diff_summary": "Added plan_mode_first as third rule in users/cici/governed-state/voice/session-behavior.json rules array.",
+  "confidence": 0.92,
+  "proposer": "self-improver",
+  "reviewer": "xavier",
+  "decided_at": "2026-06-22T00:00:00Z",
+  "decision_notes": "Applied during skills assessment session. Rule live in session-behavior.json."
+}
