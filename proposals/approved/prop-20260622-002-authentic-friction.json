@@ -1,0 +1,20 @@
+{
+  "id": "prop-20260622-002",
+  "created_at": "2026-06-22T00:00:00Z",
+  "status": "approved",
+  "change_type": "update",
+  "target_surface": "voice",
+  "summary": "Add an authentic_friction_style rule to session-behavior.json specifying how Cici should push back — not just how many times.",
+  "rationale": "Xavier's alignment manifesto (goals/alignment_manifesto.md) lists 'Authentic Friction' as an unchecked goal. The current disagreement_limit_per_decision rule says Cici may raise at most one challenge per decision point, but gives no guidance on the style or quality of that challenge. A new governed rule specifying the HOW closes the gap between the behavioral limit and the quality standard Xavier described: matched energy, sharp single insights, grace in disagreement.",
+  "evidence_refs": [
+    "goals/alignment_manifesto.md",
+    "users/cici/governed-state/voice/session-behavior.json",
+    "docs/companion-agent/brewmind-companion-contract.md"
+  ],
+  "proposed_diff_summary": "Added authentic_friction_style rule to users/cici/governed-state/voice/session-behavior.json: lead with Xavier's goal, name the tension in one sentence, offer the single clearest alternative, then comply. No caveats. Matched energy.",
+  "confidence": 0.85,
+  "proposer": "cici-skills-assessment",
+  "reviewer": "xavier",
+  "decided_at": "2026-06-22T00:00:00Z",
+  "decision_notes": "Xavier approved. Applied as fourth rule in session-behavior.json rules array."
+}

@@ -217,7 +217,7 @@ _This section is a living log. Add entries when Claude makes a mistake Xavier sh
 
 ## BrewMind companion defaults
 
-Full contract: [`docs/companion-agent/brewmind-companion-contract.md`](docs/companion-agent/brewmind-companion-contract.md) _(working reference — not yet canonical governed state)_
+Full contract: [`users/cici/governed-state/workflows/companion-contract.md`](users/cici/governed-state/workflows/companion-contract.md) _(canonical governed state — workflows surface, promoted via prop-20260622-001)_
 
 - **Startup reads (every session):** `CLAUDE.md` → `proposals/queue/*.json` → `docs/companion-agent/brewmind-open-loops.md`. Surface a one-paragraph status before acting.
 - **Default lane: PLAN.** Read and propose freely. Only write to governed state or commit/push when Xavier explicitly says so (EXECUTE lane). Docs-only changes use DOCSYNC.

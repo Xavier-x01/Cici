@@ -29,7 +29,7 @@
       "path": "users/cici/governed-state/workflows/",
       "description": "Recurring operator flows: review cadence, capture habits, promotion triggers, and maintenance rituals.",
       "status": "active",
-      "canonical_files": ["brewmind-companion-contract-ref.json"]
+      "canonical_files": ["brewmind-companion-contract-ref.json", "companion-contract.md"]
     },
     {
       "id": "tools",

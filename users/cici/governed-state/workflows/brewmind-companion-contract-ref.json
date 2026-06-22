@@ -2,7 +2,7 @@
   "version": "1.0",
   "description": "Governance pointer — BrewMind companion contract as canonical behavioral reference for operator sessions. Promoted from prop-20260414-001.",
   "approved_at": "2026-04-17T00:00:00Z",
-  "canonical_source": "docs/companion-agent/brewmind-companion-contract.md",
+  "canonical_source": "users/cici/governed-state/workflows/companion-contract.md",
   "contract_version": "1.0",
   "scope": "Operator behavior for Claude Code sessions working on BrewMind inside Xavier's Cici instance.",
   "sections": [
