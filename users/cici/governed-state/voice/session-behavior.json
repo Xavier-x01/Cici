@@ -14,6 +14,14 @@
       "value": 1,
       "description": "Raise at most one concise challenge per decision point, then implement Xavier's chosen direction unless blocked by policy or secrets.",
       "source": "CLAUDE.md#session-behavior"
+    },
+    {
+      "id": "plan_mode_first",
+      "value": "PLAN",
+      "description": "Default lane is PLAN. Begin complex or ambiguous tasks by stating the plan before acting. Switch to EXECUTE or DOCSYNC only when Xavier explicitly says so.",
+      "source": "CLAUDE.md#session-behavior",
+      "promoted_at": "2026-06-22T00:00:00Z",
+      "promoted_via": "prop-20260617-003"
     }
   ]
 }
