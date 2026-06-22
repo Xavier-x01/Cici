@@ -158,6 +158,7 @@ Lane files summarize and route; they must not silently rewrite governed-state or
 - **Git / fork context:** Assume Xavier may be learning git workflows. Before any git advice, restate the current branch and remote in one line (e.g. "You're on `main`, tracking `origin/main`"). Link to `docs/personal/intentions-and-preferences.md` for fuller context on collaboration style.
 - **Disagreement:** Raise at most one concise challenge per decision point, then implement Xavier's chosen direction unless the action is blocked by a policy constraint or would expose secrets.
 - **Plan-mode-first:** Begin complex or ambiguous tasks in Plan mode (shift+tab twice in the CLI, or state the plan before acting). Switch to edits only once the approach is confirmed. This enforces the PLAN lane default.
+- **Evidence annotation:** When referencing any BrewMind fact (partner, pricing, date, site status), state its tier inline: `[A]` = Xavier-verified, `[B]` = structured summary, `[C]` = model synthesis or Supabase recall.
 
 ## Available Slash Commands
 
@@ -175,6 +176,8 @@ These commands live in `.claude/commands/` and can be invoked with `/`:
 | `/self-improve` | Run a behavioral self-improvement cycle — identifies gaps in how Cici acts and proposes concrete changes |
 | `/weekly-review` | Run the weekly synthesis ritual — reads journal entries, surfaces BrewMind open loops, and prompts for knowledge worth capturing into memory |
 | `/daily-task` | Generate today's AI skill-building task for Xavier and log it to the work journal |
+| `/log-tension <source-1> vs <source-2>: <claim-1> / <claim-2> [domain]` | Record a two-source conflict into brewmind-open-loops.md without resolving it |
+| `/surface-next` | Proactively scan open loops, manifesto goals, pending proposals, and journal to surface a ranked 3–5 item action list |
 
 ## Available Agents
 
@@ -210,10 +213,11 @@ _This section is a living log. Add entries when Claude makes a mistake Xavier sh
 - **Do not cite Supabase recall as fact.** MCP search results and `recent_thoughts` are Tier C. Always annotate and offer a verification step.
 - **Do not write to governed-state surfaces without a proposal.** Even obvious improvements need the proposal → approval flow unless Xavier explicitly says "direct edit is fine."
 - **Do not generate pricing, partner commitment, or launch date language** without an explicit Tier A or B source and Xavier's go-ahead.
+- **Do not cite a BrewMind fact without an inline tier annotation.** When referencing any BrewMind fact (partner status, pricing, launch date, site status), always state its tier inline: `[A]` = Xavier-verified, `[B]` = structured summary, `[C]` = model synthesis or Supabase recall. The absence of an annotation is itself an error — treat unannotated claims as Tier C by default.
 
 ## BrewMind companion defaults
 
-Full contract: [`docs/companion-agent/brewmind-companion-contract.md`](docs/companion-agent/brewmind-companion-contract.md) _(working reference — not yet canonical governed state)_
+Full contract: [`users/cici/governed-state/workflows/companion-contract.md`](users/cici/governed-state/workflows/companion-contract.md) _(canonical governed state — workflows surface, promoted via prop-20260622-001)_
 
 - **Startup reads (every session):** `CLAUDE.md` → `proposals/queue/*.json` → `docs/companion-agent/brewmind-open-loops.md`. Surface a one-paragraph status before acting.
 - **Default lane: PLAN.** Read and propose freely. Only write to governed state or commit/push when Xavier explicitly says so (EXECUTE lane). Docs-only changes use DOCSYNC.

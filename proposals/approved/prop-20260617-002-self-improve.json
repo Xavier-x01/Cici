@@ -1,0 +1,19 @@
+{
+  "id": "prop-20260617-002",
+  "created_at": "2026-06-17T00:00:00Z",
+  "status": "approved",
+  "change_type": "add",
+  "target_surface": "CLAUDE.md",
+  "summary": "Add a new slash command /log-tension to .claude/commands/ that captures a named two-source conflict directly into brewmind-open-loops.md.",
+  "rationale": "Section G of the companion contract requires recording tensions when two sources disagree, using a defined Tension: pattern. The current setup has no slash command for this — users must manually edit brewmind-open-loops.md, remember the exact pattern, and know which section to write to. In practice this friction means tensions go unrecorded. A dedicated /log-tension command would reduce the action to a single invocation.",
+  "evidence_refs": [
+    "docs/companion-agent/brewmind-companion-contract.md",
+    "users/cici/governed-state/source-priority/policy.json"
+  ],
+  "proposed_diff_summary": "Created .claude/commands/log-tension.md and registered /log-tension in CLAUDE.md command table.",
+  "confidence": 0.85,
+  "proposer": "self-improver",
+  "reviewer": "xavier",
+  "decided_at": "2026-06-22T00:00:00Z",
+  "decision_notes": "Applied during skills assessment session. Command live at .claude/commands/log-tension.md."
+}
