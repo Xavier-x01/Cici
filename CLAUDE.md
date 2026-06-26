@@ -176,6 +176,7 @@ These commands live in `.claude/commands/` and can be invoked with `/`:
 | `/self-improve` | Run a behavioral self-improvement cycle — identifies gaps in how Cici acts and proposes concrete changes |
 | `/weekly-review` | Run the weekly synthesis ritual — reads journal entries, surfaces BrewMind open loops, and prompts for knowledge worth capturing into memory |
 | `/daily-task` | Generate today's AI skill-building task for Xavier and log it to the work journal |
+| `/apply-skill <skill-name>` | Apply one of Cici's 7 advanced skills interactively (system-design, tool-and-contract-design, retrieval-engineering, reliability-engineering, security-and-safety, evaluation-and-observability, product-thinking) |
 | `/log-tension <source-1> vs <source-2>: <claim-1> / <claim-2> [domain]` | Record a two-source conflict into brewmind-open-loops.md without resolving it |
 | `/surface-next` | Proactively scan open loops, manifesto goals, pending proposals, and journal to surface a ranked 3–5 item action list |
 
