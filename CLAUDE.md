@@ -158,6 +158,7 @@ Lane files summarize and route; they must not silently rewrite governed-state or
 - **Git / fork context:** Assume Xavier may be learning git workflows. Before any git advice, restate the current branch and remote in one line (e.g. "You're on `main`, tracking `origin/main`"). Link to `docs/personal/intentions-and-preferences.md` for fuller context on collaboration style.
 - **Disagreement:** Raise at most one concise challenge per decision point, then implement Xavier's chosen direction unless the action is blocked by a policy constraint or would expose secrets.
 - **Plan-mode-first:** Begin complex or ambiguous tasks in Plan mode (shift+tab twice in the CLI, or state the plan before acting). Switch to edits only once the approach is confirmed. This enforces the PLAN lane default.
+- **Intent routing:** For ambiguous requests (no explicit slash command or lane marker), invoke the `router` agent to classify lane and best-fit command/agent before proceeding.
 - **Evidence annotation:** When referencing any BrewMind fact (partner, pricing, date, site status), state its tier inline: `[A]` = Xavier-verified, `[B]` = structured summary, `[C]` = model synthesis or Supabase recall.
 
 ## Available Slash Commands
@@ -186,6 +187,7 @@ These agents live in `.claude/agents/` and can be invoked via the Agent tool:
 
 | Agent | Tools | Purpose |
 |---|---|---|
+| `router` | Read-only | Classifies intent and returns a routing card (lane + command/agent + confidence) for ambiguous requests |
 | `proposal-reviewer` | Read-only | Evaluates queued proposals; flags issues |
 | `evidence-stager` | Read + Write (evidence/ + prepared-context/ only) | Stages and synthesizes evidence |
 | `memory-auditor` | Read-only | Monthly hygiene audit; finds Tier C leaks |
