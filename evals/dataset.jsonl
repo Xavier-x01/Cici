@@ -1,0 +1,50 @@
+{"id": "router-001", "surface": "router", "input": "scan my proposals for issues", "expected": {"lane": "PLAN", "command": "/review-governed-change", "agent": "none"}}
+{"id": "router-002", "surface": "router", "input": "push the approved proposal to memory-policy", "expected": {"lane": "EXECUTE", "command": "/promote-to-governed-state", "agent": "none"}}
+{"id": "router-003", "surface": "router", "input": "what do we know about BrewMind pricing strategy", "expected": {"lane": "PLAN", "command": "/deep-search", "agent": "none"}}
+{"id": "router-004", "surface": "router", "input": "start the session", "expected": {"lane": "PLAN", "command": "/session-start", "agent": "none"}}
+{"id": "router-005", "surface": "router", "input": "run a memory audit", "expected": {"lane": "PLAN", "command": "/memory-audit", "agent": "none"}}
+{"id": "router-006", "surface": "router", "input": "what should I work on next", "expected": {"lane": "PLAN", "command": "/surface-next", "agent": "none"}}
+{"id": "router-007", "surface": "router", "input": "improve Cici's behavior around evidence annotation", "expected": {"lane": "PLAN", "command": "none", "agent": "self-improver"}}
+{"id": "router-008", "surface": "router", "input": "run the doctor check", "expected": {"lane": "PLAN", "command": "none", "agent": "dev-hygiene"}}
+{"id": "router-009", "surface": "router", "input": "do a weekly review", "expected": {"lane": "PLAN", "command": "/weekly-review", "agent": "none"}}
+{"id": "router-010", "surface": "router", "input": "draft a proposal for the memory-policy surface", "expected": {"lane": "PLAN", "command": "/draft-proposal", "agent": "none"}}
+{"id": "router-011", "surface": "router", "input": "commit and push my changes to the feature branch", "expected": {"lane": "EXECUTE", "command": "none", "agent": "none"}}
+{"id": "router-012", "surface": "router", "input": "update the README to fix the broken link in setup-guide", "expected": {"lane": "DOCSYNC", "command": "none", "agent": "none"}}
+{"id": "router-013", "surface": "router", "input": "log a tension between the companion contract and the open-loop doc", "expected": {"lane": "PLAN", "command": "/log-tension", "agent": "none"}}
+{"id": "router-014", "surface": "router", "input": "stage the latest supabase export into evidence", "expected": {"lane": "PLAN", "command": "none", "agent": "evidence-stager"}}
+{"id": "router-015", "surface": "router", "input": "what's today's AI skill-building task", "expected": {"lane": "PLAN", "command": "/daily-task", "agent": "none"}}
+{"id": "router-016", "surface": "router", "input": "open loops", "expected": {"lane": "PLAN", "command": "/session-start", "agent": "none"}}
+{"id": "router-017", "surface": "router", "input": "find all mentions of BrewMind revenue in memory", "expected": {"lane": "PLAN", "command": "/deep-search", "agent": "none"}}
+{"id": "router-018", "surface": "router", "input": "apply the skill for system design to this architecture question", "expected": {"lane": "PLAN", "command": "none", "agent": "none"}}
+{"id": "router-019", "surface": "router", "input": "create a new proposal for the tools surface", "expected": {"lane": "PLAN", "command": "/draft-proposal", "agent": "none"}}
+{"id": "router-020", "surface": "router", "input": "build and deploy the updated MCP server", "expected": {"lane": "EXECUTE", "command": "none", "agent": "none"}}
+{"id": "tier-c-001", "surface": "tier-c", "input": "BrewMind launches Q1 2025 at $49/month", "expected": {"flagged": true}}
+{"id": "tier-c-002", "surface": "tier-c", "input": "The [A] verified launch date is Q1 2025", "expected": {"flagged": false}}
+{"id": "tier-c-003", "surface": "tier-c", "input": "Our partnership with local roasters covers 12 cafes", "expected": {"flagged": true}}
+{"id": "tier-c-004", "surface": "tier-c", "input": "[B] Partner count from signed agreements doc: 12 cafes", "expected": {"flagged": false}}
+{"id": "tier-c-005", "surface": "tier-c", "input": "Revenue is projected at $200k ARR by end of year", "expected": {"flagged": true}}
+{"id": "tier-c-006", "surface": "tier-c", "input": "This is a general note about the architecture", "expected": {"flagged": false}}
+{"id": "tier-c-007", "surface": "tier-c", "input": "The fee structure has not been finalized yet", "expected": {"flagged": true}}
+{"id": "tier-c-008", "surface": "tier-c", "input": "[A] Xavier confirmed: no pricing set as of 2026-06-01", "expected": {"flagged": false}}
+{"id": "tier-c-009", "surface": "tier-c", "input": "We committed to a partnership with Roast Co in April", "expected": {"flagged": true}}
+{"id": "tier-c-010", "surface": "tier-c", "input": "Cici should annotate all claims with tier tags", "expected": {"flagged": false}}
+{"id": "tier-c-011", "surface": "tier-c", "input": "Charging $5/user/month for the beta cohort", "expected": {"flagged": true}}
+{"id": "tier-c-012", "surface": "tier-c", "input": "[B] Pricing model draft from 2026-05-10 notes: $5/user", "expected": {"flagged": false}}
+{"id": "tier-c-013", "surface": "tier-c", "input": "Revenue from subscriptions is expected to cover costs", "expected": {"flagged": true}}
+{"id": "tier-c-014", "surface": "tier-c", "input": "> Quoted blockquote about launch timeline", "expected": {"flagged": false}}
+{"id": "tier-c-015", "surface": "tier-c", "input": "# Heading about cost structure", "expected": {"flagged": false}}
+{"id": "tier-c-016", "surface": "tier-c", "input": "The cost model depends on Supabase hosting tier", "expected": {"flagged": true}}
+{"id": "tier-c-017", "surface": "tier-c", "input": "[A] Cost confirmed at ~$0.10/month per Xavier's Supabase invoice", "expected": {"flagged": false}}
+{"id": "tier-c-018", "surface": "tier-c", "input": "Launch event planned for August community meetup", "expected": {"flagged": true}}
+{"id": "tier-c-019", "surface": "tier-c", "input": "This node processes session state for the graph", "expected": {"flagged": false}}
+{"id": "tier-c-020", "surface": "tier-c", "input": "Partner commitment requires 3-month minimum", "expected": {"flagged": true}}
+{"id": "prop-001", "surface": "proposal", "input": {"id": "prop-test-001", "target_surface": "memory-policy", "summary": "Add retention rule for thoughts older than 90 days", "status": "proposed", "created_at": "2026-06-01T00:00:00Z"}, "expected": {"valid": true, "issues": []}}
+{"id": "prop-002", "surface": "proposal", "input": {"id": "prop-test-002", "target_surface": "memory-policy", "summary": "Update search ranking weights", "status": "badstatus", "created_at": "2026-06-01T00:00:00Z"}, "expected": {"valid": false, "issues": ["unknown status"]}}
+{"id": "prop-003", "surface": "proposal", "input": {"id": "prop-test-003", "target_surface": "memory-policy", "summary": "", "created_at": "2026-06-01T00:00:00Z"}, "expected": {"valid": false, "issues": ["missing fields"]}}
+{"id": "prop-004", "surface": "proposal", "input": {"id": "prop-test-004", "target_surface": "memory-policy", "summary": "Enable pgvector IVFFlat index", "status": "approved", "created_at": "2026-06-15T00:00:00Z"}, "expected": {"valid": true, "issues": []}}
+{"id": "prop-005", "surface": "proposal", "input": {"id": "prop-test-005", "target_surface": "memory-policy", "summary": "Set deduplication threshold", "status": "rejected", "created_at": "2026-05-01T00:00:00Z"}, "expected": {"valid": true, "issues": []}}
+{"id": "prop-006", "surface": "proposal", "input": {"id": "prop-test-006", "target_surface": "memory-policy", "summary": "Add thought tagging system", "status": "deferred", "created_at": "2026-06-20T00:00:00Z"}, "expected": {"valid": true, "issues": []}}
+{"id": "prop-007", "surface": "proposal", "input": {"id": "prop-test-007", "summary": "Missing target_surface field entirely", "status": "proposed", "created_at": "2026-06-01T00:00:00Z"}, "expected": {"valid": false, "issues": ["missing fields"]}}
+{"id": "prop-008", "surface": "proposal", "input": {"id": "prop-test-008", "target_surface": "memory-policy", "summary": "Add capture rate limit", "status": "draft", "created_at": "2026-06-10T00:00:00Z"}, "expected": {"valid": true, "issues": []}}
+{"id": "prop-009", "surface": "proposal", "input": {"target_surface": "memory-policy", "summary": "Missing id field", "status": "proposed", "created_at": "2026-06-01T00:00:00Z"}, "expected": {"valid": false, "issues": ["missing fields"]}}
+{"id": "prop-010", "surface": "proposal", "input": {"id": "prop-test-010", "target_surface": "memory-policy", "summary": "Normalize embedding dimensions to 1536", "status": "pending_review", "created_at": "2026-06-25T00:00:00Z"}, "expected": {"valid": true, "issues": []}}
